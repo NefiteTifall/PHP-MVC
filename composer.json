@@ -1,0 +1,9 @@
+{
+    "name": "aoriol/mvc",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Foxwind\\": "src/"
+        }
+    }
+}
