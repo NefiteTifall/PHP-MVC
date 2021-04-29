@@ -5,7 +5,7 @@ namespace Foxwind\Controllers;
 use Foxwind\Models\TestManager;
 use Foxwind\Validator;
 
-/** Class UserController **/
+/** Class TestController **/
 class TestController {
     private $manager;
     private $validator;

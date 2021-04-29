@@ -4,46 +4,106 @@ namespace Foxwind\Models;
 /** Class User **/
 class User {
 
-    private $username;
+    private $id_user;
     private $email;
-    private $password;
-    private $idUser;
-
-    public function getUsername():string {
-        return $this->username;
+    private $user_preusdo;
+    private $mdp;
+    private $id_role;
+    private $role_nom;
+    /**
+     * @return mixed
+     */
+    public function getUserPreusdo()
+    {
+        return $this->user_preusdo;
     }
 
-    public function getEmail():string {
+    /**
+     * @return mixed
+     */
+    public function getMdp()
+    {
+        return $this->mdp;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdUser()
+    {
+        return $this->id_user;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
         return $this->email;
     }
 
-    public function getPassword():string {
-        return $this->password;
+    /**
+     * @return mixed
+     */
+    public function getIdRole()
+    {
+        return $this->id_role;
     }
 
-    public function getId():string {
-        return $this->id;
+    /**
+     * @return mixed
+     */
+    public function getRoleNom()
+    {
+        return $this->role_nom;
     }
 
-    public function setUsername(String $username) {
-        $this->username = $username;
+    /**
+     * @param mixed $mdp
+     */
+    public function setMdp($mdp)
+    {
+        $this->mdp = $mdp;
     }
 
-    public function setPassword(String $password) {
-        $this->password = $password;
+    /**
+     * @param mixed $id_user
+     */
+    public function setIdUser($id_user)
+    {
+        $this->id_user = $id_user;
     }
 
-    public function setEmail(String $email) {
+    /**
+     * @param mixed $email
+     */
+    public function setEmail($email)
+    {
         $this->email = $email;
     }
 
-    public function setId(Int $id) {
-        $this->id = $id;
+    /**
+     * @param mixed $user_preusdo
+     */
+    public function setUserPreusdo($user_preusdo)
+    {
+        $this->user_preusdo = $user_preusdo;
     }
 
-    public function roles(){
-        $manager = new UserManager();
-        $oui = $manager->getRoles($this->id);
-        var_dump($oui);
+    /**
+     * @param mixed $id_role
+     */
+    public function setIdRole($id_role)
+    {
+        $this->id_role = $id_role;
     }
+
+    /**
+     * @param mixed $role_nom
+     */
+    public function setRoleNom($role_nom)
+    {
+        $this->role_nom = $role_nom;
+    }
+
 }
