@@ -1,6 +1,3 @@
-<?php
-ob_start();
-?>
 <footer>
     <!--Waves Start-->
     <div>
@@ -21,7 +18,7 @@ ob_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-4 left">
-                    <h2>Utiliaires</h2>
+                    <h2>Utilitaires</h2>
                     <ul>
                         <li><a href="#">Sitemap</a></li>
                         <li><a href="#">FAQ</a></li>
@@ -50,15 +47,3 @@ ob_start();
         <p class="copyright">Copyright 2020-2021 FoxWind | All Right Reserved</p>
     </section>
 </footer>
-<?php
-
-$footer = ob_get_clean();
-?>
-
-<?php
-ob_start();
-?>
-<link rel="stylesheet" href="/resources/style/footer/footer.css">
-<?php
-
-$footerStyle = ob_get_clean();

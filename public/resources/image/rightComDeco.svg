@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="134.368" height="645.182" viewBox="0 0 134.368 645.182">
+  <g id="right_deco" data-name="right deco" transform="translate(0.501 1.666)">
+    <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(19.029 439.738)" fill="none" stroke="#7d8f41" stroke-width="3">
+      <ellipse cx="7" cy="7" rx="7" ry="7" stroke="none"/>
+      <ellipse cx="7" cy="7" rx="5.5" ry="5.5" fill="none"/>
+    </g>
+    <path id="Tracé_146" data-name="Tracé 146" d="M134.316,3189.262S-.741,3394.019.965,3521.991c.326,24.443,5.392,50.877,13.452,77.905,3.914,13.125,13.652,39.462,13.652,39.462l106.248,193.179Z" transform="translate(-0.949 -3189.262)" fill="none" stroke="#7d8f41" stroke-width="1" opacity="0.47"/>
+  </g>
+</svg>

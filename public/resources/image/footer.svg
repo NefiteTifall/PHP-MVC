@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="222" viewBox="0 0 1920 222">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#606c38"/>
+      <stop offset="1" stop-color="#7d8f41"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_41" data-name="Rectangle 41" width="1920" height="222" transform="translate(-28 2413.412)" fill="#fff"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_19" data-name="Rectangle 19" width="1920" height="708" transform="translate(0 -95.067)" fill="url(#linear-gradient)"/>
+    </clipPath>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#606c38"/>
+      <stop offset="1" stop-color="#30361c"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_de_masques_10" data-name="Groupe de masques 10" transform="translate(28 -2413.412)" clip-path="url(#clip-path)">
+    <g id="Groupe_de_masques_1" data-name="Groupe de masques 1" transform="matrix(1, 0, 0, -1, -28, 3026.345)" clip-path="url(#clip-path-2)">
+      <path id="Tracé_161" data-name="Tracé 161" d="M0,0H1920V39H0Z" transform="translate(0 -61.067)" fill="#31371d"/>
+      <path id="path92" d="M1505.34,12.387c-37.37,17.2-63.87,51.246-96.916,75.8a221.379,221.379,0,0,1-126.5,43.369c-82.637,1.661-158.125-42.468-232.149-79.24S889.683-15.418,812.1,13.1C762.727,31.32,724.464,71.177,677.461,94.9,586.478,140.691,476.7,119.98,380.1,87.785,283.464,55.519,186.951,12.1,85.148,15.235,56.323,16.065,28.066,20.929,0,27.287v575.92H1920v-448.4c-57.723-4.864-117.79-38.624-167.569-73.262-73.66-51.365-165.523-106.809-247.09-69.158" transform="matrix(1, 0, 0, -1, 0, 569.074)" fill="url(#linear-gradient-2)"/>
+    </g>
+  </g>
+</svg>
