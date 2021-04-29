@@ -1,9 +1,9 @@
 <?php
 namespace Foxwind\Models;
 
-use Foxwind\Models\Test;
-/** Class TodoManager **/
-class TestManager {
+//use Foxwind\Models\Test;
+/** Class MainManager **/
+class MainManager {
 
     private $bdd;
 

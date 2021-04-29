@@ -2,21 +2,21 @@
 
 namespace Foxwind\Controllers;
 
-use Foxwind\Models\TestManager;
+use Foxwind\Models\MainManager;
 use Foxwind\Validator;
 
-/** Class TestController **/
-class TestController {
+/** Class MainController **/
+class MainController {
     private $manager;
     private $validator;
 
     public function __construct() {
-        $this->manager = new TestManager();
+        $this->manager = new MainManager();
         $this->validator = new Validator();
     }
 
     public function index() {
-        require VIEWS . ROAD.'/homepage.php';
+        require VIEWS . ROAD.'/accueil.php';
     }
 
     public function create() {

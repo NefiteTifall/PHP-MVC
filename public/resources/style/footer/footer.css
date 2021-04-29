@@ -1,0 +1,111 @@
+/* Variable */
+footer {
+  text-align: center;
+}
+footer section {
+  background: #525c30;
+  background: linear-gradient(180deg, #525c30 0%, #10120a 100%);
+  padding: 40px 0;
+}
+footer img {
+  width: 100%;
+  margin-bottom: -5px;
+}
+footer a, footer h2, footer p {
+  color: white;
+}
+footer a {
+  font-family: "Montserrat Medium";
+}
+footer p {
+  padding: 15px 0 0;
+  font-family: "Montserrat Bold";
+  font-size: 22px;
+  margin: 0;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  padding: 5px;
+}
+footer .center {
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+}
+footer .col-md-4 {
+  border-bottom: solid 1px white;
+}
+
+@media screen and (max-width: 1300px) {
+  footer h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 966px) {
+  footer .center {
+    border-right: none;
+    border-left: none;
+  }
+  footer .col-md-4 {
+    border-bottom: none;
+  }
+  footer p {
+    font-size: 18px;
+  }
+}
+.dark-footer {
+  background: #774418;
+  background: linear-gradient(180deg, #774418 0%, #3c220c 100%);
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.wavesEffect > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.wavesEffect > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.wavesEffect > use:nth-child(2) {
+  animation-delay: -6s;
+  animation-duration: 10s;
+}
+
+.wavesEffect > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.wavesEffect > use:nth-child(4) {
+  animation-delay: -3s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

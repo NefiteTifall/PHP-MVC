@@ -1,0 +1,147 @@
+@import "./variable.scss";
+@import "./fonts.scss";
+@import "./footer/footer.scss";
+@import "./header/header.scss";
+
+img{
+    user-select: none;
+}
+
+h1{
+    font-family: "Montserrat Bold";
+    font-size: 48px;
+}
+
+h2{
+    font-family: "Montserrat Bold";
+    font-size: 42px;
+}
+
+h3{
+    font-family: "Montserrat Bold";
+    font-size: 36px;
+}
+
+h4{
+    font-family: "Montserrat Bold";
+    font-size: 32px;
+}
+
+h5{
+    font-family: "Montserrat Bold";
+    font-size: 30px;
+}
+
+h6{
+    font-family: "Montserrat Bold";
+    font-size: 28px;
+}
+
+p{
+    font-size: 27px;
+    color: #434832;
+    font-family: "Lato Regular";
+}
+
+.rond{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: -10;
+}
+
+.rond-clair{
+    border: white 2px solid;
+}
+
+.rond-fonce{
+    border: $VertPrincipale1 2px solid;
+}
+
+.square{
+    width: 25px;
+    height: 25px;
+    z-index: -10;
+}
+
+.square-clair{
+    border: white 2px solid;
+}
+
+.square-fonce{
+    border: $VertPrincipale1 2px solid;
+}
+
+.rond-inv{
+    border-radius: 50%;
+    background-color: #EBEBEB;
+    opacity: 0.3;
+    z-index: -10;
+}
+
+a.animation{
+    position: relative;
+}
+a.animation:after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background-color: white;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.25s ease-in-out;
+}
+a.animation:hover::after{
+    width: 100%;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.full-button-white{
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 0;
+    color: $VertPrincipale1;
+    font-family: "Lato Bold";
+}
+
+.full-button-green{
+    background-color: $VertPrincipale1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    font-family: "Lato Bold";
+    font-size: 32px;
+    transition: 0.2s;
+}
+
+.full-button-green:hover{
+    background-color: transparent;
+    color: $VertPrincipale1;
+    border: $VertPrincipale1 1px solid;
+}
+
+@media screen and (max-width: 767px){
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 38px ;
+    }
+}

@@ -7,7 +7,7 @@ require '../vendor/autoload.php';
 require SRC . 'helper.php';
 
 $router = new Foxwind\Router($_SERVER["REQUEST_URI"]);
-$router->get('/', "TestController@index");
+$router->get('/', "MainController@index");
 $router->get('/login/', "UserController@showLogin");
 $router->get('/register/', "UserController@showRegister");
 $router->get('/logout/', "UserController@logout");

@@ -1,0 +1,493 @@
+/* Variable */
+/* Fonts */
+@font-face {
+  font-family: "Lato Light";
+  src: url("font/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url("font/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url("font/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("font/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("font/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("font/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("font/Montserrat-Bold.ttf");
+}
+/* Fonts */
+/*# sourceMappingURL=fonts.css.map */
+/* Variable */
+footer {
+  text-align: center;
+}
+footer section {
+  background: #525c30;
+  background: linear-gradient(180deg, #525c30 0%, #10120a 100%);
+  padding: 40px 0;
+}
+footer img {
+  width: 100%;
+  margin-bottom: -5px;
+}
+footer a, footer h2, footer p {
+  color: white;
+}
+footer a {
+  font-family: "Montserrat Medium";
+}
+footer p {
+  padding: 15px 0 0;
+  font-family: "Montserrat Bold";
+  font-size: 22px;
+  margin: 0;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  padding: 5px;
+}
+footer .center {
+  border-right: solid 1px white;
+  border-left: solid 1px white;
+}
+footer .col-md-4 {
+  border-bottom: solid 1px white;
+}
+
+@media screen and (max-width: 1300px) {
+  footer h2 {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 966px) {
+  footer .center {
+    border-right: none;
+    border-left: none;
+  }
+  footer .col-md-4 {
+    border-bottom: none;
+  }
+  footer p {
+    font-size: 18px;
+  }
+}
+.dark-footer {
+  background: #774418;
+  background: linear-gradient(180deg, #774418 0%, #3c220c 100%);
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.wavesEffect > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.wavesEffect > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.wavesEffect > use:nth-child(2) {
+  animation-delay: -6s;
+  animation-duration: 10s;
+}
+
+.wavesEffect > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.wavesEffect > use:nth-child(4) {
+  animation-delay: -3s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+}
+/* Variable */
+nav {
+  height: 212px;
+  padding: 16px !important;
+}
+nav a.nav-link {
+  color: white;
+  font-family: "Montserrat Regular", serif;
+  text-align: center;
+  padding: 5px;
+  font-size: 25px;
+}
+nav a.navbar-brand {
+  margin: 0;
+  color: #606C38;
+  font-family: "Montserrat Bold";
+}
+nav li.separator {
+  display: none;
+  width: 100px;
+  height: 1px;
+  background-color: white;
+  margin: 0 auto;
+}
+nav .custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+nav div.navbar-collapse {
+  position: absolute;
+  right: 50px;
+}
+nav li.nav-item {
+  width: auto;
+  margin: auto 0;
+}
+nav li.nav-item div svg {
+  margin: auto 0;
+}
+
+.rightDecoration {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  z-index: -10;
+}
+
+#rightDecorationDefault {
+  display: block;
+}
+
+#rightDecoration1301 {
+  display: none;
+}
+
+@media screen and (max-width: 1500px) {
+  .rightDecoration {
+    right: -490px;
+  }
+
+  #rightDecorationDefault {
+    display: none;
+  }
+
+  #rightDecoration1301 {
+    display: block;
+    top: 210px;
+  }
+
+  .navbar {
+    background-color: #7D8F41;
+  }
+}
+@media screen and (max-width: 1059px) {
+  .rightDecoration {
+    display: none !important;
+  }
+}
+.HeaderWave {
+  display: none;
+}
+
+.logo {
+  width: 430px;
+}
+
+#HeaderLogo_dark {
+  display: block;
+}
+
+#HeaderLogo_light {
+  display: none;
+}
+
+@media screen and (max-width: 1500px) {
+  .rightDecoration {
+    right: -490px;
+  }
+
+  #HeaderLogo_dark {
+    display: none;
+  }
+
+  #HeaderLogo_light {
+    display: block;
+  }
+
+  .navbar {
+    background-color: #7D8F41;
+  }
+}
+@media screen and (max-width: 1301px) {
+  nav a.nav-link {
+    font-size: 19px;
+    padding: 0;
+  }
+  nav img.logo {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1059px) {
+  nav {
+    background: #7d8f41;
+    background: linear-gradient(180deg, #283618 0%, #415024 40%, #7d8f41 100%);
+    min-height: 212px !important;
+    height: auto;
+    display: block !important;
+  }
+  nav .containerLogo {
+    display: flex;
+    justify-content: center;
+  }
+  nav .navbar-collapse {
+    position: relative !important;
+    right: 0 !important;
+    display: block;
+    justify-content: center;
+    box-sizing: content-box;
+  }
+  nav .navbar-collapse ul {
+    margin: 0 !important;
+  }
+
+  .HeaderWave {
+    display: block;
+    transform: rotate(0.5turn);
+  }
+}
+@media screen and (max-width: 767px) {
+  nav {
+    background: #7d8f41;
+    background: linear-gradient(180deg, #283618 0%, #415024 40%, #7d8f41 100%);
+  }
+  nav li.separator {
+    display: flex;
+  }
+  nav div.navbar-collapse {
+    position: relative;
+  }
+  nav div.collapse {
+    display: none;
+  }
+  nav li.nav-item {
+    margin: 10px;
+  }
+  nav a.nav-link.animation:hover::after {
+    width: 0;
+  }
+  nav .none-res {
+    display: none;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3C3C3C;
+  border: none;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+
+::-webkit-scrollbar-track {
+  background: #BEBEBE;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+img {
+  user-select: none;
+}
+
+h1 {
+  font-family: "Montserrat Bold";
+  font-size: 48px;
+}
+
+h2 {
+  font-family: "Montserrat Bold";
+  font-size: 42px;
+}
+
+h3 {
+  font-family: "Montserrat Bold";
+  font-size: 36px;
+}
+
+h4 {
+  font-family: "Montserrat Bold";
+  font-size: 32px;
+}
+
+h5 {
+  font-family: "Montserrat Bold";
+  font-size: 30px;
+}
+
+h6 {
+  font-family: "Montserrat Bold";
+  font-size: 28px;
+}
+
+p {
+  font-size: 27px;
+  color: #434832;
+  font-family: "Lato Regular";
+}
+
+.rond {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  z-index: -10;
+}
+
+.rond-clair {
+  border: white 2px solid;
+}
+
+.rond-fonce {
+  border: #606C38 2px solid;
+}
+
+.square {
+  width: 25px;
+  height: 25px;
+  z-index: -10;
+}
+
+.square-clair {
+  border: white 2px solid;
+}
+
+.square-fonce {
+  border: #606C38 2px solid;
+}
+
+.rond-inv {
+  border-radius: 50%;
+  background-color: #EBEBEB;
+  opacity: 0.3;
+  z-index: -10;
+}
+
+a.animation {
+  position: relative;
+}
+
+a.animation:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 0;
+  background-color: white;
+  left: 0;
+  bottom: 5px;
+  transition: all 0.25s ease-in-out;
+}
+
+a.animation:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.full-button-white {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  border: 0;
+  color: #606C38;
+  font-family: "Lato Bold";
+}
+
+.full-button-green {
+  background-color: #606C38;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid white;
+  color: white;
+  font-family: "Lato Bold";
+  font-size: 32px;
+  transition: 0.2s;
+}
+
+.full-button-green:hover {
+  background-color: transparent;
+  color: #606C38;
+  border: #606C38 1px solid;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */
