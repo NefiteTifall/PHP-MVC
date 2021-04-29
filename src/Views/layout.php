@@ -14,13 +14,17 @@
     <script src="https://kit.fontawesome.com/c1d0ab37d6.js" crossorigin="anonymous"></script>
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="/resources/style/common.css">
+    <?= isset($style)?$style:''?>
 </head>
 <body>
     <?php include "header.php"?>
 
+    <!-- Contenu de la page -->
     <main>
         <?= $content;?>
     </main>
+    <!-- Contenu de la page -->
+
     <?php include "footer.php"?>
 </body>
 </html>

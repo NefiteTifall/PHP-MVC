@@ -1,0 +1,165 @@
+/* Imports */
+@import "../variable";
+@import "../fonts";
+/* Imports */
+/* SVG Forms */
+.topRight{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    img{
+        position: absolute;
+        right: -30px;
+        pointer-events: none;
+    }
+    img:nth-child(1){
+        top: 0;
+        width: 50%;
+        z-index:-99;
+    }
+    img:nth-child(2){
+        top: -50px;
+        width: 44%;
+        z-index:-98;
+    }
+}
+
+.bottomLeftFormSVG {
+    bottom: 0px;
+    position: fixed;
+    z-index: -100;
+    left: -100px;
+    pointer-events: none;
+}
+
+.rond-trans{ width: 200px; height: 200px; background-color: white; z-index: 100 !important; position: absolute;}
+.rond{ position: absolute; }
+.square { position: absolute; }
+
+
+#carre01 { z-index: 100; left: 60px; top: 175px; transform: rotate(45deg);}
+#carre02 { z-index: 100; right: 80px; bottom: 50px; transform: rotate(50deg);}
+#carre03 { z-index: 100; right: 150px; top: 250px; transform: rotate(47deg);}
+#rond01 { z-index: 100; left: 40px; bottom: 100px;}
+#rond02 { z-index: -100; right: 800px; bottom: 15px;}
+#rondForm01{ right: -150px; bottom: 40px;}
+#rondForm02{ left: -50px; top: 10px; opacity: 0.1;}
+
+/* SVG Forms */
+
+/* Style du formulaire et de ses enfants */
+.Form {
+    background-color: rgb(119, 68, 24);
+    border-radius: 70px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 10px 0px 0px rgba(119, 68, 24, 0.4);
+    width: 100px;
+
+    /* Titre du formulaire */
+    h1{
+        padding-top: 50px;
+        padding-bottom: 10px;
+        color: white;
+        font-family: "Lato Bold";
+    }
+    /* Titre du formulaire */
+    /* Inputs du formulaire */
+    input[type="text"], input[type="password"], input[type="button"], input[type="email"]{
+        margin: 10px;
+        padding: 10px;
+        border-width: 0 0 3px;
+        height: 40px;
+        width: 80%;
+        border-color: white;
+        font-family: "Lato Bold", serif; 
+        color: white;
+        background-color: transparent;
+        outline: 0;
+    }
+    input[type="submit"]{
+        margin: 15px;
+        border-radius: 100px;
+        font-size: 38px;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: white;
+        border: 3px solid white;
+        font-family: "Lato Bold", serif;
+        color: white;
+        background-color: transparent;
+        outline: 0;
+
+    }
+    input::placeholder {
+        color: white;
+    }
+    /* Inputs du formulaire */
+    /* Formulaire */
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Formulaire */
+    /* Captcha */
+    .g-recaptcha{
+        padding: 15px;
+    }
+    /* Captcha */
+    /* Link */
+    a{
+        color: white;
+        text-decoration: underline;
+        padding-bottom: 15px;
+    }
+    /* Link */
+}
+
+/* Responsive */
+@media screen and (max-width: 1500px){
+    .Form{
+        margin: 50px 0 0 0;
+    }
+
+}
+
+@media screen and (max-width: 1059px){
+    body{
+        background-color: $MarronSecondaire1;
+    }
+
+    /* Desactive les formes */
+    .topRight{
+        img{
+            display: none;
+        }
+    }
+    .rond-trans, .square, .rond{
+        display: none;
+    }
+    /* Desactive les formes */
+
+    .bottomLeftFormSVG {
+        display: none;
+    }
+    .Form{
+        margin: 0 0 0 0;
+        box-shadow: 0px 0px 0px 0px;
+        border-radius: 00px;
+        h1{
+            padding: 0px 0 0 0;
+            font-size: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    .Form{
+        margin: 0 0 0 0;
+        h1{
+            padding: 10px 0 0 0;
+            font-size: 30px;
+        }
+    }
+}

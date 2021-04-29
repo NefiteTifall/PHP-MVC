@@ -13,7 +13,8 @@ function msg($field) {
 }
 
 function exist($var) {
-    return isset($var) ? $var : "";
+    var_dump($$var);
+    return isset($$var) ? $$var : "";
 }
 
 function existFalse($var) {
