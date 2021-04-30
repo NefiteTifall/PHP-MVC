@@ -14,27 +14,27 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link animation" href="#">Accueil</a>
+                    <a class="nav-link animation" href="/">Accueil</a>
                 </li>
                 <li class="separator"></li>
 
                 <li class="nav-item">
-                    <a class="nav-link animation" href="./eolienne.html">L'éolienne</a>
+                    <a class="nav-link animation" href="./eolienne">L'éolienne</a>
                 </li>
                 <li class="separator"></li>
 
                 <li class="nav-item">
-                    <a class="nav-link animation" href="#">Blog</a>
+                    <a class="nav-link animation" href="/blog">Blog</a>
                 </li>
                 <li class="separator"></li>
 
                 <li class="nav-item">
-                    <a class="nav-link animation" href="#">L'équipe</a>
+                    <a class="nav-link animation" href="/team">L'équipe</a>
                 </li>
                 <li class="separator"></li>
 
                 <li class="nav-item">
-                    <a class="nav-link animation" href="#">Contact</a>
+                    <a class="nav-link animation" href="/contact">Contact</a>
                 </li>
 
                 <li class="nav-item none-res">
@@ -42,7 +42,7 @@
                 </li>
                 <li class="separator"></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/cart">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                 </li>

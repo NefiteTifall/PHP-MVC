@@ -29,11 +29,11 @@
                 <div class="col-md-4 center">
                     <h2>Navigation</h2>
                     <ul>
-                        <li><a href="#">Accueil</a></li>
-                        <li><a href="#">L'éolienne</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">L'équipe</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li> <a href="/">Accueil</a> </li>
+                        <li> <a href="/eolienne">L'éolienne</a> </li>
+                        <li> <a href="/blog">Blog</a> </li>
+                        <li> <a href="/team">L'équipe</a> </li>
+                        <li> <a href="/contact">Contact</a> </li>
                     </ul>
                 </div>
                 <div class="col-md-4 right">

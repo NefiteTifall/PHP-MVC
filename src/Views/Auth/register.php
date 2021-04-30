@@ -1,6 +1,8 @@
 <?php
 ob_start();
 ?>
+    <img class="rightDecoration" id="rightDecorationDefault" src="/resources/image/HeaderBackground_default.svg" alt="">
+    <img class="rightDecoration" id="rightDecoration1301" src="/resources/image/HeaderBackground_1301.svg" alt="">
     <!-- register Form -->
     <div class="container">
         <div class="row justify-content-center">
@@ -11,10 +13,26 @@ ob_start();
                     <div id="rondForm01" class="rond-trans rond-inv"></div>
                     <div id="rondForm02" class="rond-trans rond-inv"></div>
 
-                    <input class="input" type="email" name="" placeholder="E-mail" value=""/>
-                    <input class="input" type="text" name="" placeholder="Nom d'utilisateur" value=""/>
-                    <input class="input" type="password" name="" placeholder="Mot de passe" value=""/>
-                    <input class="input" type="password" name="" placeholder="Confirmation mot de passe" value=""/>
+                    <div class="group">
+                        <input class="input <?= !empty(error("email"))? "bt-red": ""?>" type="email" name="email" placeholder="E-mail" value="<?= old("email")?>"/>
+                        <p class="error"><?= error("email")?></p>
+                    </div>
+
+                    <div class="group">
+                        <input class="input <?= !empty(error("username"))? "bt-red": ""?>" type="text" name="username" placeholder="Nom d'utilisateur" value="<?= old("username")?>"/>
+                        <p class="error"><?= error("username")?></p>
+                    </div>
+
+                    <div class="group">
+                        <input class="input <?= !empty(error("password"))? "bt-red": ""?>" type="password" name="password" placeholder="Mot de passe" />
+                        <p class="error"><?= error("password")?></p>
+                    </div>
+
+                    <div class="group">
+                        <input class="input <?= !empty(error("passwordConfirm"))? "bt-red": ""?>" type="password" name="passwordConfirm" placeholder="Confirmation mot de passe" />
+                        <p class="error"><?= error("passwordConfirm")?></p>
+                    </div>
+
                     <div class="g-recaptcha" data-sitekey="6Ldvq28aAAAAANm9OPFQ6ntihii70-A2cJ6uGIvJ"></div>
                     <input class="submitInput" type="submit" value="Inscription">
 

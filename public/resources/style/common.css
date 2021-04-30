@@ -2,31 +2,31 @@
 /* Fonts */
 @font-face {
   font-family: "Lato Light";
-  src: url("font/Lato-Light.ttf");
+  src: url("/resources/style/font/Lato-Light.ttf");
 }
 @font-face {
   font-family: "Lato Regular";
-  src: url("font/Lato-Regular.ttf");
+  src: url("/resources/style/font/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Lato Bold";
-  src: url("font/Lato-Bold.ttf");
+  src: url("/resources/style/font/Lato-Bold.ttf");
 }
 @font-face {
   font-family: "Montserrat Light";
-  src: url("font/Montserrat-Light.ttf");
+  src: url("../font/Montserrat-Light.ttf");
 }
 @font-face {
   font-family: "Montserrat Medium";
-  src: url("font/Montserrat-Medium.ttf");
+  src: url("/resources/style/font/Montserrat-Medium.ttf");
 }
 @font-face {
   font-family: "Montserrat Regular";
-  src: url("font/Montserrat-Regular.ttf");
+  src: url("/resources/style/font/Montserrat-Regular.ttf");
 }
 @font-face {
   font-family: "Montserrat Bold";
-  src: url("font/Montserrat-Bold.ttf");
+  src: url("/resources/style/font/Montserrat-Bold.ttf");
 }
 /* Fonts */
 /*# sourceMappingURL=fonts.css.map */
@@ -254,6 +254,8 @@ nav li.nav-item div svg {
     font-size: 19px;
     padding: 0;
   }
+}
+@media screen and (max-width: 1301px) and (min-width: 350px) {
   nav img.logo {
     width: 350px;
   }
@@ -308,6 +310,11 @@ nav li.nav-item div svg {
   }
   nav .none-res {
     display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  nav .logo {
+    width: 95%;
   }
 }
 ::-webkit-scrollbar {
@@ -474,6 +481,10 @@ button {
   background-color: transparent;
   color: #606C38;
   border: #606C38 1px solid;
+}
+
+.error {
+  color: red;
 }
 
 @media screen and (max-width: 767px) {

@@ -134,6 +134,10 @@ button{
     border: $VertPrincipale1 1px solid;
 }
 
+.error{
+    color: red;
+}
+
 @media screen and (max-width: 767px){
     h1{
         font-size: 40px;

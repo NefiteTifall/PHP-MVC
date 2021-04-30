@@ -3,31 +3,31 @@
 /* Fonts */
 @font-face {
   font-family: "Lato Light";
-  src: url("font/Lato-Light.ttf");
+  src: url("/resources/style/font/Lato-Light.ttf");
 }
 @font-face {
   font-family: "Lato Regular";
-  src: url("font/Lato-Regular.ttf");
+  src: url("/resources/style/font/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Lato Bold";
-  src: url("font/Lato-Bold.ttf");
+  src: url("/resources/style/font/Lato-Bold.ttf");
 }
 @font-face {
   font-family: "Montserrat Light";
-  src: url("font/Montserrat-Light.ttf");
+  src: url("../font/Montserrat-Light.ttf");
 }
 @font-face {
   font-family: "Montserrat Medium";
-  src: url("font/Montserrat-Medium.ttf");
+  src: url("/resources/style/font/Montserrat-Medium.ttf");
 }
 @font-face {
   font-family: "Montserrat Regular";
-  src: url("font/Montserrat-Regular.ttf");
+  src: url("/resources/style/font/Montserrat-Regular.ttf");
 }
 @font-face {
   font-family: "Montserrat Bold";
-  src: url("font/Montserrat-Bold.ttf");
+  src: url("/resources/style/font/Montserrat-Bold.ttf");
 }
 /* Fonts */
 /*# sourceMappingURL=fonts.css.map */
@@ -123,8 +123,13 @@
 }
 
 /* SVG Forms */
+body {
+  overflow-x: hidden;
+}
+
 /* Style du formulaire et de ses enfants */
 .Form {
+  margin-bottom: 50px;
   background-color: #774418;
   border-radius: 70px;
   display: flex;
@@ -148,8 +153,13 @@
   color: white;
   font-family: "Lato Bold";
 }
+.Form .group {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
 .Form input[type=text], .Form input[type=password], .Form input[type=button], .Form input[type=email] {
-  margin: 10px;
+  margin: 0;
   padding: 10px;
   border-width: 0 0 3px;
   height: 40px;
@@ -161,6 +171,7 @@
   outline: 0;
 }
 .Form input[type=submit] {
+  cursor: pointer;
   margin: 15px;
   border-radius: 100px;
   font-size: 38px;
@@ -169,9 +180,11 @@
   color: white;
   border: 3px solid white;
   font-family: "Lato Bold", serif;
-  color: white;
   background-color: transparent;
   outline: 0;
+}
+.Form input.bt-red {
+  border-bottom: solid #dc3545 3px;
 }
 .Form input::placeholder {
   color: white;
@@ -180,6 +193,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.Form p.error {
+  height: 25px;
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+  font-size: 15px;
 }
 .Form .g-recaptcha {
   padding: 15px;
@@ -193,7 +213,7 @@
 /* Responsive */
 @media screen and (max-width: 1500px) {
   .Form {
-    margin: 50px 0 0 0;
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 1059px) {
@@ -216,6 +236,7 @@
   }
 
   .Form {
+    padding: 100px 0;
     margin: 0 0 0 0;
     box-shadow: 0px 0px 0px 0px;
     border-radius: 0px;

@@ -9,7 +9,6 @@ class User {
     private $user_preusdo;
     private $mdp;
     private $id_role;
-    private $role_nom;
     /**
      * @return mixed
      */
@@ -50,13 +49,6 @@ class User {
         return $this->id_role;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getRoleNom()
-    {
-        return $this->role_nom;
-    }
 
     /**
      * @param mixed $mdp
@@ -98,12 +90,5 @@ class User {
         $this->id_role = $id_role;
     }
 
-    /**
-     * @param mixed $role_nom
-     */
-    public function setRoleNom($role_nom)
-    {
-        $this->role_nom = $role_nom;
-    }
 
 }

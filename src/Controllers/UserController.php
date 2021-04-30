@@ -25,14 +25,11 @@ class UserController {
 
     public function logout()
     {
-        $redirect = "/";
-        if (isset($_GET["redirect"])) {
-            $redirect = $_GET["redirect"];
-        }
+
 
         //Déconnecte l'utilisateur
         session_destroy();
-        header("Location: ".$redirect);
+        header("Location: /");
     }
 
     public function isUserNameValide($name){
@@ -45,11 +42,8 @@ class UserController {
     }
 
     public function register() {
-        $redirect = "/";
-        if (isset($_POST["redirect"])) {
-            $redirect = $_POST["redirect"];
-        }
         $this->validator->validate([
+            "email"=>["required", "min:3", "email"],
             "username"=>["required", "min:3", "alphaNum"],
             "password"=>["required", "min:6", "alphaNum", "confirm"],
             "passwordConfirm"=>["required", "min:6", "alphaNum"]
@@ -58,16 +52,21 @@ class UserController {
 
         if (!$this->validator->errors()) {
             $res = $this->manager->find($_POST["username"]);
-
             if (empty($res)) {
-                $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-                $this->manager->store($password);
+                $resMail = $this->manager->findMail($_POST["email"]);
+                if (empty($resMail)){
+                    $password = hash("sha256",$_POST["password"]);
+                    $this->manager->store($password);
 
-                $_SESSION["user"] = [
-                    "id" => $this->manager->getBdd()->lastInsertId(),
-                    "username" => $_POST["username"]
-                ];
-                header("Location: ".$redirect);
+                    $_SESSION["user"] = [
+                        "id" => $this->manager->getBdd()->lastInsertId(),
+                        "role" => 1
+                    ];
+                    header("Location: /");
+                }else{
+                    $_SESSION["error"]['email'] = "Le mail choisi est déjà utilisé !";
+                    header("Location: /register");
+                }
             } else {
                 $_SESSION["error"]['username'] = "Le username choisi est déjà utilisé !";
                 header("Location: /register");
@@ -78,10 +77,6 @@ class UserController {
     }
 
     public function login() {
-        $redirect = "/";
-        if (isset($_POST["redirect"])) {
-            $redirect = $_POST["redirect"];
-        }
         $this->validator->validate([
             "username"=>["required", "min:3", "max:9", "alphaNum"],
             "password"=>["required", "min:6", "alphaNum"]
@@ -91,12 +86,12 @@ class UserController {
 
         if (!$this->validator->errors()) {
             $res = $this->manager->find($_POST["username"]);
-            if ($res && password_verify($_POST['password'], $res->getPassword())) {
+            if ($res &&  (hash($_POST["password"]) == $res->getPassword())) {
                 $_SESSION["user"] = [
                     "id" => $res->getId(),
                     "username" => $res->getUsername()
                 ];
-                header("Location: ".$redirect);
+                header("Location: /");
             } else {
                 $_SESSION["error"]['message'] = "Une erreur sur les identifiants";
                 header("Location: /login");
@@ -124,7 +119,7 @@ class UserController {
             $manager = new UserManager();
             $roles = $manager->getRoles($_SESSION["user"]["id"]);
             foreach ($roles as $key => $role) {
-                if ($role["id_role"] == 1) {
+                if ($role["id_role"] == 3) {
                     return true;
                 }
             }
