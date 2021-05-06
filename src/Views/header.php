@@ -19,7 +19,7 @@
                 <li class="separator"></li>
 
                 <li class="nav-item">
-                    <a class="nav-link animation" href="./eolienne">L'éolienne</a>
+                    <a class="nav-link animation" href="/eolienne">L'éolienne</a>
                 </li>
                 <li class="separator"></li>
 

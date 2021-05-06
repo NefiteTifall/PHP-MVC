@@ -123,13 +123,8 @@
 }
 
 /* SVG Forms */
-body {
-  overflow-x: hidden;
-}
-
 /* Style du formulaire et de ses enfants */
 .Form {
-  margin-bottom: 100px;
   background-color: #774418;
   border-radius: 70px;
   display: flex;
@@ -159,7 +154,7 @@ body {
   margin-bottom: 15px;
 }
 .Form input[type=text], .Form input[type=password], .Form input[type=button], .Form input[type=email] {
-  margin: 0;
+  margin: 10px;
   padding: 10px;
   border-width: 0 0 3px;
   height: 40px;
@@ -171,7 +166,6 @@ body {
   outline: 0;
 }
 .Form input[type=submit] {
-  cursor: pointer;
   margin: 15px;
   border-radius: 100px;
   font-size: 38px;
@@ -180,11 +174,9 @@ body {
   color: white;
   border: 3px solid white;
   font-family: "Lato Bold", serif;
+  color: white;
   background-color: transparent;
   outline: 0;
-}
-.Form input.bt-red {
-  border-bottom: solid #dc3545 3px;
 }
 .Form input::placeholder {
   color: white;
@@ -213,7 +205,7 @@ body {
 /* Responsive */
 @media screen and (max-width: 1500px) {
   .Form {
-    margin-top: 50px;
+    margin: 50px 0 0 0;
   }
 }
 @media screen and (max-width: 1059px) {
@@ -236,7 +228,6 @@ body {
   }
 
   .Form {
-    padding: 100px 0;
     margin: 0 0 0 0;
     box-shadow: 0px 0px 0px 0px;
     border-radius: 0px;
@@ -256,4 +247,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=register.css.map */
+/*# sourceMappingURL=login.css.map */

@@ -78,18 +78,18 @@ class UserController {
 
     public function login() {
         $this->validator->validate([
-            "username"=>["required", "min:3", "max:9", "alphaNum"],
+            "email"=>["required", "min:3", "email"],
             "password"=>["required", "min:6", "alphaNum"]
         ]);
 
         $_SESSION['old'] = $_POST;
 
         if (!$this->validator->errors()) {
-            $res = $this->manager->find($_POST["username"]);
-            if ($res &&  (hash($_POST["password"]) == $res->getPassword())) {
+            $res = $this->manager->findMail($_POST["email"]);
+            if ($res &&  (hash("sha256",$_POST["password"]) == $res->getMdp())) {
                 $_SESSION["user"] = [
-                    "id" => $res->getId(),
-                    "username" => $res->getUsername()
+                    "id" => $res->getIdUser(),
+                    "role" => $res->getIdRole()
                 ];
                 header("Location: /");
             } else {

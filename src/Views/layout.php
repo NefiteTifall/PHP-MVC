@@ -15,6 +15,7 @@
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="/resources/style/common.css">
     <?= isset($style)?$style:''?>
+    <?= isset($script)?$script:''?>
 </head>
 <body>
     <?php include "header.php"?>

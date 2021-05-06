@@ -6,32 +6,9 @@ class User {
 
     private $id_user;
     private $email;
-    private $user_preusdo;
+    private $username;
     private $mdp;
     private $id_role;
-    /**
-     * @return mixed
-     */
-    public function getUserPreusdo()
-    {
-        return $this->user_preusdo;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMdp()
-    {
-        return $this->mdp;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getIdUser()
-    {
-        return $this->id_user;
-    }
 
     /**
      * @return mixed
@@ -49,21 +26,28 @@ class User {
         return $this->id_role;
     }
 
-
     /**
-     * @param mixed $mdp
+     * @return mixed
      */
-    public function setMdp($mdp)
+    public function getIdUser()
     {
-        $this->mdp = $mdp;
+        return $this->id_user;
     }
 
     /**
-     * @param mixed $id_user
+     * @return mixed
      */
-    public function setIdUser($id_user)
+    public function getMdp()
     {
-        $this->id_user = $id_user;
+        return $this->mdp;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUsername()
+    {
+        return $this->username;
     }
 
     /**
@@ -75,14 +59,6 @@ class User {
     }
 
     /**
-     * @param mixed $user_preusdo
-     */
-    public function setUserPreusdo($user_preusdo)
-    {
-        $this->user_preusdo = $user_preusdo;
-    }
-
-    /**
      * @param mixed $id_role
      */
     public function setIdRole($id_role)
@@ -90,5 +66,27 @@ class User {
         $this->id_role = $id_role;
     }
 
+    /**
+     * @param mixed $id_user
+     */
+    public function setIdUser($id_user)
+    {
+        $this->id_user = $id_user;
+    }
 
+    /**
+     * @param mixed $mdp
+     */
+    public function setMdp($mdp)
+    {
+        $this->mdp = $mdp;
+    }
+
+    /**
+     * @param mixed $username
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+    }
 }

@@ -61,5 +61,5 @@ $content = ob_get_clean();
 $description = 'Créer vous un compte FoxWind ici ! ';
 $title = 'Créer un compte';
 $style = '<link rel="stylesheet" href="/resources/style/register/register.css">';
-
+$script = "<script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>";
 require VIEWS . '/layout.php';
