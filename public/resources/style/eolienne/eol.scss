@@ -1,0 +1,485 @@
+@import "../variable.scss";
+
+#rightDecoration{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -10;
+    width: 70%;
+} 
+
+section{
+    padding: 80px 150px;
+}
+
+#firstSec{
+    //padding-top: 250px;
+    padding :200px 80px 150px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    .left{
+        width: 40%;
+        .help{
+            margin: auto 0;
+            font-family: "Montserrat Bold";
+            font-size: 38px;
+            color: black;
+        }
+    }
+    .right{
+        width: 50%;
+        div{ 
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    #rondInv1{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: -150px;
+        bottom: -50px;
+    }
+    #rondInv2{
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        bottom: 90px;
+        left: 570px;
+    }
+    .square{
+        position: absolute;
+    }
+
+    #squareFonce{
+        left: 350px;
+        bottom: 50px;
+        transform: rotate(45deg);
+    }
+    #squareClaire{
+        right: 50px;
+        bottom: 25px;
+        transform: rotate(45deg);
+    }
+}
+
+#secondSec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    padding: 150px 0;
+    .left{
+        background-image: url("../../image/leftMiddle.svg");
+        background-repeat: no-repeat;
+        width: 50%;
+        background-size: contain;
+        min-width: 432px;
+        padding: 150px 10px 150px 50px;
+        img{
+            width: 80%;
+        }
+
+        #rondInvSecondSec1{
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            left: 33%;
+            top: 240px;
+            z-index: 10;
+        }
+        #rondInvSecondSec2{
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            left: 31%;
+            bottom: 200px;
+            z-index: 10;
+        }
+
+    }
+    .right{
+        min-width: 540px;
+        width: 50%;
+        margin: auto 0;
+        position: relative;
+        .advElem{
+            display: flex;
+            flex-direction: row;
+        }
+        p{
+            color: rgba($color: #000000, $alpha: 0.5);
+        }
+        #rondInvSecondSec3{
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            bottom: 20%;
+            right: 0;
+        }
+    }
+    #rondClaire{
+        position: absolute;
+        left: 50px;
+        top: 50%;
+        z-index: 10;
+    }
+
+    #rondFonce{
+        position: absolute;
+        right: 300px;
+        z-index: 10;
+    }
+}
+
+#thirdSec{
+    padding: 80px;
+    #buy{
+        position: relative;
+        box-shadow: 20px 20px 0 0 #bdaa99;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 25px;
+        background: $MarronSecondaire1;
+        background: linear-gradient(90deg, $MarronSecondaire1 0%, rgba(60,34,12,1) 100%);
+        width: 100%;
+        border-radius: 50px;
+        #eolImages{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            .eolContainer{
+                cursor: pointer;
+                border-radius: 25px;
+                position:relative;
+                padding: 20px;
+                background: rgb(217,183,153);
+                background: linear-gradient(311deg, rgba(217,183,153,0.36) 36%, rgba(60,34,12,0.36) 100%);
+                width: 180px;
+                width: 187px;
+                height: 187px;
+                margin: 12px;
+
+                img{
+                    position:absolute;
+                    top: 0; bottom: 0; left: 0; right: 0;
+                    margin: auto;
+                }
+            }
+
+        }
+        #bigEolImage{
+            position: relative;
+            margin: auto 0;
+            img{
+                width: 450px;
+                height: 450px;
+            }
+        }
+        #eolDescription{
+            position: relative;
+            flex: 1;
+            *{
+                font-family: "Montserrat Bold";
+            }
+            margin: auto 0;
+            color: white;
+            h2{
+                color: $VertPrincipale3;
+                margin-left: 25px;
+                font-size: 40px;
+                .price{
+                    color: white;
+                    padding: 10px;
+                    background-color: $VertPrincipale3;
+                    border-radius: 25px;
+                }
+            }
+            .star-container{
+                margin-top: 10px;
+                margin-left: 25px;
+                position: relative;
+                border-radius: 50px;
+                background-color : $MarronSecondaire1;
+                padding : 5px 5px 5px 25px ;
+                vertical-align: middle;
+                display: inline-block;
+                height: 30px;
+                
+                .star{
+                    position: relative;
+                    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+                    display: inline-block;
+                    height: 15px;
+                    width: 15px;
+                    background-color: white;
+                }
+
+                .fill{
+                    background-color: $jaune;
+                }
+                .star:nth-child(2){
+                    margin-left: 5px;
+                }
+                .note{
+                    position: absolute;
+                    background-color:$jaune;
+                    border-radius: 50%;
+                    color: #272626;
+                    height: 50px;
+                    width: 50px;
+                    line-height:50px;
+                    display: inline-block;
+                    text-align: center;
+                    left: -25px;
+                    top: 50%;
+                    bottom: 50%;
+                    transform: translate(0,-50%);
+                }
+            }
+            .advice{
+                display: inline-block;
+                margin: 10px 0 0;
+                vertical-align: middle;
+                font-family: "Montserrat Regular";
+            }
+            .desc{
+                margin: 25px 0 45px 0;
+                
+            }
+            p{
+                color: white;
+                font-size: 24px;
+            }
+            .number{
+                text-align: center;
+                display: flex;
+                flex-wrap: nowrap;
+                .left-number{
+                    user-select: none;
+                    cursor: pointer;
+                    font-size: 33px;
+                    background-color: $VertPrincipale3;
+                    width: 40px;
+                    border-top-left-radius: 50px;
+                    border-bottom-left-radius: 50px;
+                }
+                .right-number{
+                    user-select: none;
+                    cursor: pointer;
+                    font-size: 33px;
+                    //height: 50px;
+                    background-color: $VertPrincipale3;
+                    width: 40px;
+                    border-top-right-radius: 50px;
+                    border-bottom-right-radius: 50px;
+                }
+                input{
+                    border: none;
+                    width: 65px;
+                    padding: 5px;
+                    color: $VertPrincipale3;
+                    text-align: center;
+                }
+                input[type=number]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
+                input:focus{
+                    outline: none;
+                }
+            }
+            .add-to-cart{
+                border: none;
+                background-color: $VertPrincipale3;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 30px;
+                font-size: 25px;
+                img{
+                    padding: 5px;
+                    height: 45px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        #rondClaireBuy{
+            position: absolute;
+            z-index: 10;
+            top: 50px;
+            right: -50px;
+        }
+        #squareClaireBuy{
+            position: absolute;
+            z-index: 10;
+            transform: rotate(30deg);
+            bottom: -50px;
+            left: -15px;
+        }
+        .rond-inv{
+            position: absolute;
+            height: 180px;
+            width: 180px;
+            z-index: 10;
+        }
+        #rondInvThirdSec1{
+            bottom: -130px;
+            left: 250px;
+        }
+
+        #rondInvThirdSec2{
+            bottom: -80px;
+            right: 150px;
+        }
+        #rondInvThirdSec3{
+            top: -90px;
+            left: 50%;
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:1245px){
+    #thirdSec{
+        #buy{
+            justify-content: space-between;
+            #bigEolImage{
+                flex: 1;
+                img{
+                    width: 100%;
+                }
+            }
+            #eolDescription{
+                margin-top: 15px;
+                flex-basis: 100%;
+                h2{
+                    font-size: 35px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+
+}
+@media screen and (max-width:1100px){
+    #firstSec{
+        padding: 100px 40px 100px;
+        .right{
+            position:relative;
+            img{
+                position:absolute;
+                top: 0; bottom: 0; left: 0; right: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    #secondSec{
+        flex-direction: row;
+        .left{
+            background-image: none;
+            padding: 0;
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }    
+    }
+    .rond, .rond-inv, .square{
+        display: none;     
+    }
+
+}
+
+@media screen and (max-width: 888px){
+    #thirdSec{
+        #buy{
+            justify-content: space-between;
+            #eolImages{
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                .break{
+                    flex-basis: 100%;
+                    height: 0;
+                }
+            }
+            #bigEolImage{
+                flex-basis: 100%;
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    #rightDecoration{
+        display: none;
+    }
+
+    #firstSec{
+        padding: 5px 5%;
+        .left{
+            .help{
+                font-size: 25px;
+            }
+        }
+        .left, .right{
+            width: 90%;
+        }
+        .right{
+            position:relative;
+            img{
+                position:relative;
+            }
+        }
+
+    }
+
+    #secondSec{
+        .right, .left{
+            width: 100%;
+            min-width: 0;
+        }
+        .left{
+            width: 80%;
+        }
+        .right{
+            .advElem{
+                padding: 5px;
+                flex-direction: column;
+                p{
+                    font-size: 20px;
+                }
+                h3{
+                    font-size: 30px;
+                }
+                img{
+                    width: 100px ;
+                }
+            }
+        }
+
+    }
+    #thirdSec{
+        padding: 10px;
+        #buy{
+            padding: 20px 10px;
+            width: 100%;
+            box-shadow: none;
+        }
+    }
+}

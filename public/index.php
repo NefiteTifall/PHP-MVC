@@ -11,7 +11,7 @@ $router->get('/', "MainController@index");
 $router->get('/login/', "UserController@showLogin");
 $router->get('/register/', "UserController@showRegister");
 $router->get('/logout/', "UserController@logout");
-//$router->get('/eolienne', "placeholder@placeholder");
+$router->get('/eolienne', "MainController@eolienne");
 //$router->get('/blog', "placeholder@placeholder");
 //$router->get('/article/:id', "placeholder@placeholder");
 //$router->get('/team', "placeholder@placeholder");
