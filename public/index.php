@@ -15,7 +15,7 @@ $router->get('/eolienne', "MainController@eolienne");
 //$router->get('/blog', "placeholder@placeholder");
 //$router->get('/article/:id', "placeholder@placeholder");
 //$router->get('/team', "placeholder@placeholder");
-//$router->get('/contact', "placeholder@placeholder");
+$router->get('/contact', "MainController@contact");
 //$router->get('/cart', "placeholder@placeholder");
 //$router->get('/checkout', "placeholder@placeholder");
 
@@ -25,5 +25,6 @@ $router->post('/login/', "UserController@login");
 $router->post('/register/', "UserController@register");
 //$router->post('/addCart', "placeholder@placeholder");
 //$router->post('/checkout', "placeholder@placeholder");
+//$router->post('/contact', "placeholder@placeholder");
 
 $router->run();

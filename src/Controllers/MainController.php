@@ -23,4 +23,8 @@ class MainController {
         require VIEWS . ROAD.'/eolienne.php';
     }
 
+    public function contact(){
+        require VIEWS . ROAD.'/contact.php';
+    }
+
 }

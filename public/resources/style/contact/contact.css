@@ -1,0 +1,153 @@
+/* Variable */
+#rightDecoContact {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 75%;
+  z-index: -10;
+}
+
+#rondInvContact1, #rondInvContact2, #squareContact1, #squareContact2 {
+  position: absolute;
+}
+
+#rondInvContact1 {
+  width: 300px;
+  height: 300px;
+  left: -150px;
+  top: 40%;
+}
+
+#rondInvContact2 {
+  width: 180px;
+  height: 180px;
+  top: 40%;
+  left: 40%;
+}
+
+#squareContact1 {
+  transform: rotate(45deg);
+  right: 300px;
+  bottom: 150px;
+}
+
+#squareContact2 {
+  transform: rotate(45deg);
+  left: 150px;
+  bottom: 100px;
+}
+
+#contactFirstSec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 13vw;
+}
+#contactFirstSec .left, #contactFirstSec .right {
+  width: 40%;
+  margin: auto 0;
+  min-width: 320px;
+}
+#contactFirstSec img {
+  width: 100%;
+}
+
+#contact {
+  padding: 0 50px;
+  margin: 0 0 50px 0;
+  display: flex;
+  justify-content: center;
+}
+#contact .content {
+  width: 90%;
+}
+#contact .content img {
+  vertical-align: middle;
+  margin-left: 25px;
+}
+#contact .content form * {
+  display: block;
+  margin: 10px 0;
+  padding: 5px 15px;
+  border-radius: 3px;
+  border: solid 1px lightgray;
+  transition: 0.2s;
+}
+#contact .content form *:focus {
+  outline: none;
+}
+#contact .content form input {
+  width: 30%;
+  margin: 25px 0;
+  min-width: 280px;
+}
+#contact .content form textarea {
+  padding: 5px;
+  width: 100%;
+  min-height: 150px;
+  resize: none;
+  margin: 0 0 25px 0;
+}
+#contact .content .button-white {
+  border: solid 1px #606C38;
+  background-color: transparent;
+  transition: 0.2s;
+  padding: 10px 65px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+#contact .content .button-white:hover {
+  border: solid 1px lightgray;
+  background-color: #606C38;
+  color: white;
+}
+
+.decoration-title {
+  position: relative;
+}
+
+.decoration-title::after {
+  content: url("../../image/wave.svg");
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #rondInvContact1, #rondInvContact2, #squareContact1, #squareContact2 {
+    display: none;
+  }
+
+  .decoration-title::after {
+    content: none;
+  }
+
+  #rightDecoContact {
+    display: none;
+  }
+
+  #contactFirstSec {
+    margin-bottom: 50px;
+  }
+  #contactFirstSec .left, #contactFirstSec .right {
+    width: 90%;
+    text-align: center;
+    min-width: 0;
+  }
+  #contactFirstSec h1 {
+    font-size: 35px;
+  }
+
+  #contact {
+    padding: 5px;
+  }
+  #contact h2 {
+    font-size: 25px;
+  }
+  #contact form textarea {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */
