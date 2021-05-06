@@ -1,0 +1,424 @@
+/* Variable */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 80px 150px;
+}
+
+#presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 150px;
+}
+#presentation .left {
+  width: 40%;
+  min-width: 450px;
+  margin: auto 0;
+}
+#presentation .left h1::after {
+  content: url("../../image/handWH.svg");
+}
+#presentation h1 {
+  font-size: 61px;
+}
+#presentation .right {
+  width: 50%;
+  min-width: 450px;
+}
+#presentation .right img {
+  width: 100%;
+}
+#presentation #rondInv1 {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  right: 780px;
+  bottom: 210px;
+  z-index: -10;
+}
+#presentation #rondInv2 {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: -125px;
+  bottom: 200px;
+}
+#presentation #rondPres {
+  position: absolute;
+  right: 100px;
+  bottom: 400px;
+}
+#presentation #squarePres {
+  position: absolute;
+  left: 230px;
+  bottom: 200px;
+  transform: rotate(30deg);
+}
+
+#steps {
+  background-color: #F8F8F8;
+}
+#steps .card {
+  width: 280px;
+  height: 290px;
+  align-items: center;
+  padding: 50px 25px 25px;
+  border-radius: 25px;
+  box-shadow: -7px 7px 10px 5px rgba(0, 0, 0, 0.51);
+  background-color: white;
+  text-align: center;
+  margin: 15px 0;
+}
+#steps .card img {
+  width: 75%;
+}
+#steps .card .stepsDesc {
+  color: #606C38;
+}
+#steps #allCards {
+  margin: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#advantages {
+  position: relative;
+}
+#advantages > div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#advantages h2 {
+  margin-bottom: 50px;
+}
+#advantages .left {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  min-width: 450px;
+}
+#advantages .left .advElem {
+  display: flex;
+  flex-direction: row;
+}
+#advantages .left p {
+  font-size: 24px;
+  width: 85%;
+}
+#advantages .right {
+  width: 40%;
+  min-width: 450px;
+}
+#advantages .right img {
+  width: 100%;
+}
+#advantages #rondAdvantage1 {
+  position: absolute;
+  right: 50px;
+  top: 150px;
+}
+#advantages #rondAdvantage2 {
+  position: absolute;
+  left: 500px;
+  bottom: 100px;
+}
+#advantages #squareAdvantage1 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transform: rotate(20deg);
+}
+#advantages #squareAdvantage2 {
+  position: absolute;
+  top: 375px;
+  left: 55%;
+  transform: rotate(20deg);
+}
+#advantages #rondInvAdvantage1 {
+  position: absolute;
+  right: -150px;
+  top: -130px;
+  width: 300px;
+  height: 300px;
+}
+#advantages #rondInvAdvantage2 {
+  position: absolute;
+  z-index: -10;
+  left: 600px;
+  bottom: 300px;
+  width: 180px;
+  height: 180px;
+}
+
+#donation {
+  position: relative;
+  z-index: 1;
+  background-image: url("../../image/fond.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  color: white;
+}
+#donation * {
+  margin: auto 0;
+  z-index: 10;
+}
+#donation img {
+  width: 150px;
+}
+#donation h2 {
+  font-family: "Lato Bold";
+  width: 730px;
+}
+#donation #rondDon {
+  position: absolute;
+  left: 100px;
+  bottom: 25px;
+}
+#donation #squareDon {
+  position: absolute;
+  right: 100px;
+  top: 100px;
+  transform: rotate(70deg);
+}
+#donation button {
+  font-size: 32px;
+}
+
+#why {
+  padding: 80px 75px;
+  position: relative;
+}
+#why h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#why > div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#why .left, #why .right {
+  text-align: left;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 400px;
+}
+#why .left .advElem, #why .right .advElem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+#why .left p, #why .right p {
+  font-size: 26px;
+  font-family: "Montserrat Bold";
+  margin: auto 0 auto 0;
+  width: 100%;
+}
+#why .right {
+  text-align: right;
+}
+#why .center {
+  width: 40%;
+  min-width: 500px;
+}
+#why .center img {
+  width: 100%;
+}
+#why .leftDecoration {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 115px;
+}
+#why .rightDecoration {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  width: 115px;
+  z-index: -10;
+}
+#why #squareWhy {
+  position: absolute;
+  bottom: 50px;
+  left: 40%;
+  transform: rotate(-19deg);
+}
+
+.decoration-title {
+  position: relative;
+}
+
+.decoration-title::after {
+  content: url("../../image/wave.svg");
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+.decoration-title-center {
+  position: relative;
+}
+
+.decoration-title-center::after {
+  content: url("../../image/wave.svg");
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  right: 50%;
+}
+
+@media screen and (max-width: 1504px) {
+  #why .left {
+    order: 0;
+  }
+  #why .right {
+    order: 1;
+  }
+  #why .center {
+    order: 2;
+  }
+  #why .leftDecoration, #why .rightDecoration {
+    display: none;
+  }
+}
+@media screen and (max-width: 1442px) {
+  #advantages > #squareAdvantage2 {
+    display: none;
+  }
+
+  #donation h2 {
+    color: white;
+    width: 100%;
+    margin: 25px 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1300px) {
+  section {
+    padding: 40px 75px;
+  }
+
+  .rond, .square, .rond-inv {
+    display: none;
+  }
+
+  #advantages > .rond, #advantages > .square, #advantages > .rond-inv {
+    display: none;
+  }
+
+  #advantages .left {
+    width: 80%;
+  }
+  #advantages .left p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 966px) {
+  #why .left {
+    order: 0;
+  }
+  #why .right {
+    order: 2;
+    text-align: left;
+  }
+  #why .right p {
+    order: 2;
+  }
+  #why .right img {
+    order: 1;
+  }
+  #why .center {
+    order: 1;
+  }
+  #why img {
+    float: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .decoration-title::after {
+    content: none;
+  }
+
+  .decoration-title-center::after {
+    content: none;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  .rightDecoration {
+    display: none;
+  }
+
+  #presentation h1 {
+    font-size: 44px;
+  }
+  #presentation .left {
+    width: auto;
+    min-width: auto;
+  }
+  #presentation .right {
+    width: 100%;
+    min-width: auto;
+  }
+  #presentation .right img {
+    width: 100%;
+  }
+
+  #advantages .left {
+    width: 100%;
+    min-width: auto;
+  }
+  #advantages .left .advElem {
+    flex-direction: column;
+  }
+  #advantages .right {
+    width: 100%;
+    min-width: auto;
+  }
+
+  #why {
+    padding: 40px 5px;
+  }
+  #why .left, #why .right, #why .center {
+    width: 100%;
+    min-width: auto;
+  }
+  #why .left .icon, #why .right .icon, #why .center .icon {
+    width: 100px;
+  }
+  #why .left p, #why .right p, #why .center p {
+    font-size: 20px;
+  }
+  #why .left .advElem, #why .right .advElem, #why .center .advElem {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #why .center {
+    width: 100%;
+  }
+  #why .center img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=accueil.css.map */

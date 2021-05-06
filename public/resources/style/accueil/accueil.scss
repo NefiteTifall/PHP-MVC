@@ -1,0 +1,493 @@
+@import "../variable.scss";
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 80px 150px;
+}
+#presentation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .left {
+        width: 40%;
+        min-width: 450px;
+        margin: auto 0;
+
+        h1::after {
+            content: url("../../image/handWH.svg");
+        }
+    }
+    h1 {
+        font-size: 61px;
+    }
+    .right {
+        width: 50%;
+        min-width: 450px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    margin-bottom: 150px;
+
+    #rondInv1 {
+        width: 180px;
+        height: 180px;
+        position: absolute;
+        right: 780px;
+        bottom: 210px;
+        z-index: -10;
+    }
+
+    #rondInv2 {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        left: -125px;
+        bottom: 200px;
+    }
+
+    #rondPres {
+        position: absolute;
+        right: 100px;
+        bottom: 400px;
+    }
+
+    #squarePres {
+        position: absolute;
+        left: 230px;
+        bottom: 200px;
+        transform: rotate(30deg);
+    }
+}
+
+#steps {
+    background-color: #F8F8F8;
+
+    .card {
+        width: 280px;
+        height: 290px;
+        align-items: center;
+        padding: 50px 25px 25px;
+        border-radius: 25px;
+        box-shadow: -7px 7px 10px 5px rgba(0, 0, 0, 0.51);
+        background-color: white;
+        text-align: center;
+        margin: 15px 0;
+
+        img {
+            width: 75%;
+        }
+
+        .stepsDesc {
+            color: $VertPrincipale1;
+        }
+    }
+
+    #allCards {
+        margin: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+#advantages {
+    position: relative;
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    h2 {
+        margin-bottom: 50px;
+    }
+    .left {
+        margin: auto 0;
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        min-width: 450px;
+        .advElem {
+            display: flex;
+            flex-direction: row;
+        }
+        p {
+            font-size: 24px;
+            width: 85%;
+        }
+    }
+    .right {
+        width: 40%;
+        min-width: 450px;
+        img {
+            width: 100%;
+        }
+    }
+
+    #rondAdvantage1 {
+        position: absolute;
+        right: 50px;
+        top: 150px;
+    }
+
+    #rondAdvantage2 {
+        position: absolute;
+        left: 500px;
+        bottom: 100px;
+    }
+
+    #squareAdvantage1 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        transform: rotate(20deg);
+    }
+
+    #squareAdvantage2 {
+        position: absolute;
+        top: 375px;
+        left: 55%;
+        transform: rotate(20deg);
+    }
+
+    #rondInvAdvantage1 {
+        position: absolute;
+        right: -150px;
+        top: -130px;
+        width: 300px;
+        height: 300px;
+    }
+
+    #rondInvAdvantage2 {
+        position: absolute;
+        z-index: -10;
+        left: 600px;
+        bottom: 300px;
+        width: 180px;
+        height: 180px;
+    }
+}
+
+#donation {
+    position: relative;
+    //background-color: green;
+    z-index: 1;
+    background-image: url("../../image/fond.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+
+    * {
+        margin: auto 0;
+        z-index: 10;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    h2 {
+        font-family: "Lato Bold";
+        width: 730px;
+    }
+
+    #rondDon {
+        position: absolute;
+        left: 100px;
+        bottom: 25px;
+    }
+
+    #squareDon {
+        position: absolute;
+        right: 100px;
+        top: 100px;
+        transform: rotate(70deg);
+    }
+
+    button {
+        font-size: 32px;
+    }
+}
+
+#why {
+    padding: 80px 75px;
+    position: relative;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    > div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+
+    .left, .right {
+        text-align: left;
+        margin: auto 0;
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        min-width: 400px;
+
+        .advElem {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 25px 0;
+        }
+
+        p {
+            font-size: 26px;
+            font-family: "Montserrat Bold";
+            margin: auto 0 auto 0;
+            width: 100%;
+        }
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .center {
+        width: 40%;
+        min-width: 500px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .leftDecoration {
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 115px;
+    }
+
+    .rightDecoration {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        width: 115px;
+        z-index: -10;
+    }
+
+    #squareWhy {
+        position: absolute;
+        bottom: 50px;
+        left: 40%;
+        transform: rotate(-19deg);
+    }
+}
+
+
+.decoration-title {
+    position: relative;
+}
+
+.decoration-title::after {
+    content: url("../../image/wave.svg");
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.decoration-title-center {
+    position: relative;
+}
+
+.decoration-title-center::after {
+    content: url("../../image/wave.svg");
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    right: 50%;
+}
+
+
+@media screen and (max-width: 1504px) {
+    #why {
+        .left {
+            order: 0;
+        }
+
+        .right {
+            order: 1;
+        }
+
+        .center {
+            order: 2;
+        }
+
+        .leftDecoration, .rightDecoration {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1442px) {
+    #advantages > #squareAdvantage2 {
+        display: none;
+    }
+    #donation {
+        h2 {
+            color: white;
+            width: 100%;
+            margin: 25px 0;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    section {
+        padding: 40px 75px;
+    }
+
+    .rond, .square, .rond-inv {
+        display: none;
+    }
+    #advantages > .rond, #advantages > .square, #advantages > .rond-inv {
+        display: none;
+    }
+    #advantages {
+        .left {
+            width: 80%;
+
+            p {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 966px) {
+    #why {
+        .left {
+            order: 0;
+
+        }
+
+        .right {
+            order: 2;
+            text-align: left;
+
+            p {
+                order: 2;
+            }
+
+            img {
+                order: 1;
+            }
+        }
+
+        .center {
+            order: 1;
+        }
+
+        img {
+            float: none;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .decoration-title::after {
+        content: none;
+    }
+
+    .decoration-title-center::after {
+        content: none;
+    }
+
+
+    section {
+        padding: 40px 5%;
+    }
+
+
+    .rightDecoration {
+        display: none;
+    }
+
+    #presentation {
+        h1 {
+            font-size: 44px;
+        }
+
+        .left {
+            width: auto;
+            min-width: auto;
+        }
+
+        .right {
+            width: 100%;
+            min-width: auto;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+    #advantages {
+        .left {
+            width: 100%;
+            min-width: auto;
+
+            .advElem {
+                flex-direction: column;
+            }
+        }
+
+        .right {
+            width: 100%;
+            min-width: auto;
+        }
+    }
+    #why {
+        padding: 40px 5px;
+        .left, .right, .center {
+            width: 100%;
+            min-width: auto;
+            .icon {
+                width: 100px;
+            }
+            p {
+                font-size: 20px;
+            }
+            .advElem {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        .center {
+            width: 100%;
+            img {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
