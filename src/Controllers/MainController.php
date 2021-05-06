@@ -27,4 +27,8 @@ class MainController {
         require VIEWS . ROAD.'/contact.php';
     }
 
+    public function team(){
+        require VIEWS . ROAD.'/equipe.php';
+    }
+
 }

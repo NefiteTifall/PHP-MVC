@@ -14,7 +14,7 @@ $router->get('/logout/', "UserController@logout");
 $router->get('/eolienne', "MainController@eolienne");
 //$router->get('/blog', "placeholder@placeholder");
 //$router->get('/article/:id', "placeholder@placeholder");
-//$router->get('/team', "placeholder@placeholder");
+$router->get('/team', "MainController@team");
 $router->get('/contact', "MainController@contact");
 //$router->get('/cart', "placeholder@placeholder");
 //$router->get('/checkout', "placeholder@placeholder");

@@ -1,0 +1,187 @@
+/* Imports */
+/* Variable */
+/* Fonts */
+@font-face {
+  font-family: "Lato Light";
+  src: url("/resources/style/font/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url("/resources/style/font/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url("/resources/style/font/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../font/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("/resources/style/font/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("/resources/style/font/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("/resources/style/font/Montserrat-Bold.ttf");
+}
+/* Fonts */
+/*# sourceMappingURL=fonts.css.map */
+/* Imports */
+/* Body */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Body */
+/* Forms */
+#rightDecoration {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  z-index: -10;
+  width: 70%;
+  pointer-events: none;
+}
+
+#rondInv1 {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  left: 610px;
+  bottom: 100px;
+  z-index: -10;
+  opacity: 0.45 !important;
+}
+
+#rond01 {
+  position: absolute;
+  left: 250px;
+  bottom: 10%;
+  transform: rotate(45deg);
+  z-index: -10;
+}
+
+/* Forms */
+/* equipe style */
+#presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+#presentation .left {
+  width: 50%;
+  margin: auto 0;
+}
+#presentation h1 {
+  font-size: 60px;
+  margin: 50px auto;
+  text-align: center;
+}
+#presentation .right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+#presentation .right img {
+  width: 90%;
+}
+
+#midText {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto Light";
+  margin-bottom: 60px;
+}
+#midText p {
+  width: 720px;
+}
+
+#team {
+  margin-bottom: 100px;
+}
+#team .dev-card {
+  text-align: center;
+}
+#team .dev-card h3 {
+  padding: 15px;
+  font-size: 25px;
+}
+#team .dev-card img {
+  border-radius: 100%;
+  width: 70%;
+}
+
+/* equipe style */
+/* Responsive */
+@media screen and (max-width: 1234px) {
+  #presentation .left h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 1096px) {
+  #presentation .left h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #presentation .left h1 {
+    font-size: 35px;
+  }
+
+  #team .dev-card img {
+    width: 80%;
+  }
+  #team .dev-card h3 {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 909px) {
+  #presentation .left {
+    width: 100%;
+    text-align: center;
+  }
+  #presentation .left h1 {
+    font-size: 40px;
+  }
+  #presentation .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #presentation .right img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #team .dev-card {
+    padding: 15px;
+  }
+  #team .dev-card h3 {
+    padding: 15px;
+    font-size: 25px;
+  }
+  #team .dev-card img {
+    width: 50%;
+  }
+
+  #presentation {
+    margin-bottom: 150px;
+  }
+
+  #rightDecoration, .rond, .square {
+    display: none;
+  }
+}
+/* Responsive */
+
+/*# sourceMappingURL=equipe.css.map */
