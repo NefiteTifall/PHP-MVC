@@ -18,8 +18,8 @@ ob_start();
         <!-- Forms -->
     </section>
     <section id="midText">
-        <p>Nous sommes une petites équipe de développeur passionnés.
-            Notre but est de rendre vos vies plus simple.</p>
+        <p>Nous sommes une petite équipe de développeurs passionnés.
+            Notre but est de rendre vos vies plus simples.</p>
     </section>
     <div id="team" class="container">
         <div class="row d-flex justify-content-between">

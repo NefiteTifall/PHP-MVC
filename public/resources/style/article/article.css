@@ -1,0 +1,268 @@
+/* Variable */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+p {
+  color: white;
+}
+
+#rightDecoration {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  z-index: -10;
+  width: 65%;
+}
+
+#firstSec {
+  position: relative;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+#firstSec #squareClairArticle {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  transform: rotate(45deg);
+}
+#firstSec .left {
+  width: 40%;
+  min-width: 300px;
+}
+#firstSec .left img {
+  width: 100%;
+  border-radius: 5px;
+}
+#firstSec .right {
+  min-width: 300px;
+  width: 40%;
+  margin: auto 0;
+}
+#firstSec .right * {
+  color: black;
+}
+
+.right-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  background: linear-gradient(90deg, #7d8f41 0%, #606c38 90%);
+}
+.right-image .left {
+  min-width: 280px;
+  width: 50%;
+}
+.right-image .left p {
+  padding: 25px 0;
+}
+.right-image .right {
+  min-width: 280px;
+  width: 40%;
+}
+.right-image .right img {
+  width: 100%;
+}
+
+.left-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 50px;
+  background: linear-gradient(270deg, #7d8f41 0%, #606c38 90%);
+}
+.left-image .left {
+  min-width: 280px;
+  width: 40%;
+}
+.left-image .left img {
+  width: 100%;
+}
+.left-image .right {
+  min-width: 280px;
+  width: 50%;
+}
+.left-image .right p {
+  padding: 25px 0;
+}
+
+.full-image {
+  padding: 50px;
+  background: linear-gradient(90deg, #7d8f41 0%, #606c38 90%);
+}
+.full-image div {
+  width: 100%;
+}
+.full-image div * {
+  padding: 25px;
+}
+.full-image div img {
+  width: 100%;
+}
+.full-image div p {
+  width: 100%;
+}
+
+.decoration-title {
+  position: relative;
+}
+
+.decoration-title::after {
+  content: url("../../image/wave.svg");
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+
+#comments {
+  margin-top: 25px;
+  position: relative;
+  padding: 0 50px;
+}
+#comments #rightComDeco {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#comments #comRound {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+}
+#comments form {
+  margin: 15px 0;
+}
+#comments form * {
+  display: block;
+}
+#comments form textarea {
+  width: 50%;
+  height: 150px;
+  resize: none;
+  border: solid 1px lightgray;
+  margin: 5px 0;
+}
+#comments form .button-white {
+  border: solid 1px #606C38;
+  background-color: transparent;
+  transition: 0.2s;
+  padding: 5px 15px;
+  border-radius: 50px;
+}
+#comments form .button-white:hover {
+  border: solid 1px lightgray;
+  background-color: #606C38;
+  color: white;
+}
+#comments .comment {
+  display: flex;
+  flex-wrap: wrap;
+}
+#comments .comment h3 {
+  margin: 0;
+  font-size: 27px;
+}
+#comments .comment .date {
+  margin: 0;
+  font-size: 25px;
+}
+#comments .comment p {
+  width: 100%;
+  color: gray;
+  margin: 0;
+  font-size: 22px;
+}
+#comments .separator {
+  margin: 30px 0;
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #606C38;
+}
+
+@media screen and (max-width: 1100px) {
+  #rightDecoration {
+    width: 75%;
+  }
+
+  #comments .comment p, #comments .separator {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #firstSec .right h1 {
+    font-size: 40px;
+  }
+  #firstSec .right p {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .rond, .square {
+    display: none;
+  }
+
+  .decoration-title::after {
+    content: none;
+  }
+
+  #rightDecoration {
+    display: none;
+  }
+
+  #firstSec {
+    margin: 15px 0;
+    padding: 5px;
+  }
+  #firstSec .right * {
+    color: #283618;
+  }
+  #firstSec .left, #firstSec .right {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .full-image {
+    padding: 5px;
+  }
+  .full-image img, .full-image p {
+    padding: 0;
+  }
+
+  .full-image, .right-image, .left-image {
+    padding: 5px;
+  }
+  .full-image p, .right-image p, .left-image p {
+    font-size: 20px;
+    padding: 0 5px;
+  }
+
+  #comments {
+    padding: 10px;
+  }
+  #comments #rightComDeco {
+    display: none;
+  }
+  #comments form textarea {
+    width: 100%;
+  }
+  #comments .comment p {
+    width: 100%;
+  }
+  #comments .comment h3 {
+    font-size: 24px;
+  }
+  #comments .comment .date {
+    font-size: 20px;
+  }
+  #comments .separator {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=article.css.map */

@@ -1,0 +1,248 @@
+/* Imports */
+/* Variable */
+/* Fonts */
+@font-face {
+  font-family: "Lato Light";
+  src: url("/resources/style/font/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Lato Regular";
+  src: url("/resources/style/font/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato Bold";
+  src: url("/resources/style/font/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../font/Montserrat-Light.ttf");
+}
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("/resources/style/font/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("/resources/style/font/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("/resources/style/font/Montserrat-Bold.ttf");
+}
+/* Fonts */
+/*# sourceMappingURL=fonts.css.map */
+/* Imports */
+/* Body */
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Body */
+/* Forms */
+#rightDecoration {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  z-index: -10;
+  width: 70%;
+  pointer-events: none;
+}
+
+#rondInv1 {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  left: 610px;
+  bottom: 100px;
+  z-index: -10;
+  opacity: 0.45 !important;
+}
+
+#rondInv2 {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  left: 350px;
+  bottom: -70px;
+  z-index: 1;
+  opacity: 0.45 !important;
+}
+
+#rondInv3 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  z-index: 10;
+  opacity: 0.45 !important;
+}
+
+#rond01 {
+  position: absolute;
+  left: 250px;
+  bottom: 10%;
+  transform: rotate(45deg);
+  z-index: -10;
+}
+
+/* Forms */
+/* Blog style */
+#presentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 250px;
+}
+#presentation .left {
+  width: 50%;
+  min-width: 450px;
+  margin: auto 0;
+}
+#presentation h1 {
+  font-size: 55px;
+  padding: 100px;
+}
+#presentation .right {
+  width: 50%;
+  min-width: 450px;
+}
+#presentation .right img {
+  width: 90%;
+}
+
+#articles {
+  margin-bottom: 100px;
+}
+#articles .row {
+  margin: 50px 0;
+}
+
+.articleBlock {
+  background-image: url("../../Image/ArticleForm.svg");
+  /*background-position: center;
+  background-size: cover;*/
+  background-repeat: no-repeat;
+  background-size: 70%;
+  border-radius: 17px;
+  height: 300px;
+  position: relative;
+  /*.articleBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+
+  }*/
+}
+.articleBlock h2 {
+  font-weight: bold;
+  color: white;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.articleBlock #separator {
+  margin-left: 10px;
+  border-bottom: 2px solid white;
+  width: 35%;
+}
+.articleBlock p {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  max-width: 650px;
+  font-weight: bold;
+  color: white;
+}
+.articleBlock .button {
+  color: black;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 30px;
+  border: 0px solid transparent;
+  font-family: "Montserrat Bold";
+}
+.articleBlock .postPreviewImage {
+  object-fit: cover;
+  z-index: -100;
+  width: 456px;
+  height: 100%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0px 15px 15px 0px;
+  right: 0px;
+  top: 0px;
+}
+
+.moreArticles {
+  background-color: #56622d;
+  color: White;
+  margin: 10px;
+  padding: 15px 80px;
+  border-radius: 10px;
+  font-size: 30px;
+  border: 0px solid transparent;
+  font-family: "Lato Bold";
+}
+
+/* Blog style */
+/* Responsive */
+@media screen and (max-width: 1234px) {
+  #presentation {
+    margin-bottom: 400px;
+  }
+  #presentation .left h1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .articleBlock .postPreviewImage {
+    width: 43%;
+  }
+}
+@media screen and (max-width: 1096px) {
+  #presentation {
+    margin-bottom: 400px;
+  }
+  #presentation .left h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .articleBlock .postPreviewImage {
+    display: none;
+  }
+
+  #presentation {
+    margin-bottom: 400px;
+  }
+  #presentation .left h1 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 909px) {
+  #presentation .left {
+    width: 100%;
+    text-align: center;
+  }
+  #presentation .left h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #presentation {
+    margin-bottom: 150px;
+  }
+
+  #rightDecoration, .rond, .square {
+    display: none;
+  }
+}
+/* Responsive */
+
+/*# sourceMappingURL=blog.css.map */

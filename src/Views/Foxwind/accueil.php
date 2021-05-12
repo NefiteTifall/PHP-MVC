@@ -92,7 +92,7 @@ ob_start();
                 </div>
                 <div class="advElem">
                     <img class="icon" src="resources/image/dollar.svg" alt="">
-                    <p>Réduction des couts </p>
+                    <p>Réduction des coûts </p>
                 </div>
                 <div class="advElem">
                     <img class="icon" src="resources/image/energy.svg" alt="">
