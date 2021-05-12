@@ -49,3 +49,54 @@ function frdate($date){
     // --- Met une date en français --- \\
     return date("d-m-Y", strtotime($date));
 }
+
+
+function dateTextToFr($date){
+    $monthsEn = array(
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July ',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December',
+    );
+    $daysEn = [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+    ];
+
+    $daysFR = [
+        'Lundi',
+        'Mardi',
+        'Mercredi',
+        'Jeudi',
+        'Vendredi',
+        'Samedi',
+        'Dimanche',
+    ];
+
+    $monthsFr = array('Janvier','Fevrier','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre');
+    foreach ($monthsEn as $key=>$value){
+        $date = str_replace($value,$monthsFr[$key],$date);
+
+    }
+
+    foreach ($daysEn as $key=>$value){
+        $date = str_replace($value,"<span class='underline'>$daysFR[$key]</span>",$date);
+
+    }
+
+    return $date;
+
+}

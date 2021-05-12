@@ -41,6 +41,10 @@ class UserController {
         }
     }
 
+    public function getUserById($id){
+        return $this->manager->findById($id);
+    }
+
     public function register() {
         $this->validator->validate([
             "email"=>["required", "min:3", "email"],

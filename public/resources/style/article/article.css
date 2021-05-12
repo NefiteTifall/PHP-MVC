@@ -120,7 +120,7 @@ p {
 }
 
 #comments {
-  margin-top: 25px;
+  margin: 25px 0 50px;
   position: relative;
   padding: 0 50px;
 }

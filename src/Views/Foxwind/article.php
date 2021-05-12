@@ -49,22 +49,28 @@ ob_start();
     <?php } ?>
 
     <section id="comments">
+        <?php
+
+        var_dump($article->getComments());
+        ?>
         <h2 class="decoration-title">Réagissez à l'article <img src="/resources/image/com.svg"/> </h2>
         <form action="/comment/" method="post">
             <textarea placeholder="Votre commentaire" name="content"></textarea>
             <button class="button-white">Envoyer</button>
         </form>
-        <div class="comment">
-            <img src="/resources/image/pp.svg"/>
-            <div>
-                <h3>Nom</h3>
-                <p class="date">Jeudi 25 Avril 2077</p>
+        <?php foreach ($article->getComments() as $comment):?>
+            <div class="comment">
+                <img src="/resources/image/pp.svg"/>
+                <div>
+                    <h3><?= $comment->getAuthor()->getUsername()?></h3>
+                    <p class="date"><?= dateTextToFr(strftime("%A %d %B %G", strtotime($comment->getDate()))); ?></p>
+                </div>
+                <p>
+                    <?= $comment->getContenu()?>
+                </p>
             </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cumque nobis distinctio consequatur quae perferendis commodi.
-            </p>
-        </div>
+        <?php endforeach;?>
+
         <div class="separator"></div>
         <div class="comment">
             <img src="/resources/image/pp.svg"/>

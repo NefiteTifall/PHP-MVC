@@ -1,6 +1,8 @@
 <?php
 namespace Foxwind\Models;
 
+use Foxwind\Controllers\CommentController;
+
 /** Class Article **/
 class Article {
 
@@ -10,7 +12,12 @@ class Article {
     private $titre;
     private $img;
     private $date;
-    private $section = [];
+    private $comments;
+
+    public function __construct()
+    {
+        $this->setComments();
+    }
 
     /**
      * @return mixed
@@ -55,9 +62,9 @@ class Article {
     /**
      * @return array
      */
-    public function getSection(): array
+    public function getComments(): array
     {
-        return $this->section;
+        return $this->comments;
     }
 
     /**
@@ -109,18 +116,15 @@ class Article {
     }
 
     /**
-     * @param array $section
-     */
-    public function setSection(array $section)
-    {
-        $this->section = $section;
-    }
-
-    /**
      * @param mixed $img
      */
     public function setImg($img)
     {
         $this->img = $img;
+    }
+
+    public function setComments(){
+        $ctrl = new CommentController();
+        $this->comments = $ctrl->getComments($this->getIdArticle());
     }
 }

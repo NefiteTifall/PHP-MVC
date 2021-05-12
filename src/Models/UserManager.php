@@ -39,12 +39,21 @@ class UserManager {
     }
 
     public function findId($id) {
-        //Vérifie si le nom d'utilisateur est déjà utilisé
         $stmt = $this->bdd->prepare("SELECT id_user FROM utilisateur WHERE id_user = ?");
         $stmt->execute(array(
             $id
         ));
 
+        return $stmt->fetch();
+    }
+
+    public function findById($id) {
+        $stmt = $this->bdd->prepare("SELECT id_user,username,email,id_role FROM utilisateur WHERE id_user = ?");
+        $stmt->execute(array(
+            $id
+        ));
+
+        $stmt->setFetchMode(\PDO::FETCH_CLASS,"Foxwind\Models\User");
         return $stmt->fetch();
     }
 

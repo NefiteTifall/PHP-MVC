@@ -22,8 +22,6 @@ class ArticleController {
 
     public function show($id){
         $article = $this->manager->getById($id);
-
-        /*$comments = "";*/
         $sections = $this->manager->getSection($id);
         require VIEWS . ROAD.'/article.php';
     }
