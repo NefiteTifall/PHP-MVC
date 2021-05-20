@@ -20,7 +20,8 @@ class Validator {
         "alphaNum" => "Le champ peut contenir que des lettres minuscules, majuscules et des chiffres !",
         "alphaNumDash" => "Le champ peut contenir que des lettres minuscules, majuscules, des chiffres, des slash et des tirets !",
         "numeric" => "Le champ peut contenir que des chiffres !",
-        "confirm" => "Le champs n'est pas conforme au confirm !"
+        "confirm" => "Le champs n'est pas conforme au confirm !",
+        "requiredTextarea"=>"Le champs est requis !",
     ];
     private $rules = [
         "required" => "#^.+$#",
@@ -33,11 +34,12 @@ class Validator {
         "date" => "#^(\d{4})(\/|-)(0[0-9]|1[0-2])(\/|-)([0-2][0-9]|3[0-1])$#",
         "alpha" => "#^[A-z]+$#",
         "alphaNum" => "#^[A-z0-9 ]+$#",
-        "alphaNumDash" => "#^[A-z0-9-\| ]+$#",
+        "alphaNumDash" => "#^[A-z0-9-\|\r\n ]+$#",
         "numeric" => "#^[0-9]+$#",
-        "confirm" => ""
+        "confirm" => "",
+        "requiredTextarea"=>"#^(.+[\n]{0,})*$#",
     ];
-
+    //^.{0,}+[\n]{0,}
     public function __construct($data = []) {
         $this->data = $data ?: $_POST;
     }

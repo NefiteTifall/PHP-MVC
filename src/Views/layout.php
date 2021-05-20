@@ -33,3 +33,4 @@
 unset($_SESSION['error']);
 unset($_SESSION['old']);
 unset($_SESSION['msg']);
+//unset($_SESSION['popup']);

@@ -25,6 +25,6 @@ $router->post('/login/', "UserController@login");
 $router->post('/register/', "UserController@register");
 //$router->post('/addCart', "placeholder@placeholder");
 //$router->post('/checkout', "placeholder@placeholder");
-//$router->post('/contact', "placeholder@placeholder");
+$router->post('/contact', "ContactController@store");
 
 $router->run();
