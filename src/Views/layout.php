@@ -27,10 +27,31 @@
     <!-- Contenu de la page -->
 
     <?php include "footer.php"?>
+    <?php if (isset($_SESSION["popup"])):?>
+        <div class="fond-noir"></div>
+        <div id="popup">
+            <p><?= $_SESSION["popup"]?></p>
+        </div>
+    <?php endif;?>
 </body>
+<script>
+    var popup = document.getElementById("popup");
+    var fond = document.getElementsByClassName("fond-noir")[0];
+
+    function disabledPopUp() {
+        popup.remove();
+        fond.remove();
+    }
+
+    if (popup!==null && fond!==null){
+        popup.addEventListener("click",disabledPopUp);
+        fond.addEventListener("click",disabledPopUp);
+    }
+
+</script>
 </html>
 <?php
 unset($_SESSION['error']);
 unset($_SESSION['old']);
 unset($_SESSION['msg']);
-//unset($_SESSION['popup']);
+unset($_SESSION['popup']);

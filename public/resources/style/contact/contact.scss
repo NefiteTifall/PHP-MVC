@@ -1,5 +1,8 @@
 @import "../variable.scss";
 
+body{
+    overflow-x: hidden;
+}
 #rightDecoContact{
     position: absolute;
     right: 0;
@@ -68,6 +71,10 @@
                 border-radius: 3px;
                 border: solid 1px lightgray;
                 transition: 0.2s;
+            }
+            p{
+                border: none;
+                margin: 0;
             }
             *:focus {
                 outline: none;
