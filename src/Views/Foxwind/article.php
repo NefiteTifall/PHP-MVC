@@ -49,10 +49,6 @@ ob_start();
     <?php } ?>
 
     <section id="comments">
-        <?php
-
-        var_dump($article->getComments());
-        ?>
         <h2 class="decoration-title">Réagissez à l'article <img src="/resources/image/com.svg"/> </h2>
         <form action="/comment/" method="post">
             <textarea placeholder="Votre commentaire" name="content"></textarea>
@@ -69,20 +65,8 @@ ob_start();
                     <?= $comment->getContenu()?>
                 </p>
             </div>
+            <div class="separator"></div>
         <?php endforeach;?>
-
-        <div class="separator"></div>
-        <div class="comment">
-            <img src="/resources/image/pp.svg"/>
-            <div>
-                <h3>Jacque</h3>
-                <p class="date">Jeudi 25 Avril 2077</p>
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Cumque nobis distinctio consequatur quae perferendis commodi.
-            </p>
-        </div>
         <img src="/resources/image/rightComDeco.svg" id="rightComDeco"/>
         <span class="rond-fonce rond" id="comRound"></span>
     </section>
