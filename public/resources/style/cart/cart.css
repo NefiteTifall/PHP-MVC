@@ -1,0 +1,202 @@
+/* Variable */
+body {
+  overflow-x: hidden;
+}
+
+#rightDecoration {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  z-index: -10;
+}
+
+#cart {
+  padding: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+#cart .cart-content {
+  width: 70%;
+  min-width: 310px;
+  margin-top: 15px;
+}
+#cart .cart-content h1 {
+  background-color: #EBEBEB;
+  padding: 10px 25px;
+  font-size: 45px;
+  font-family: "Lato Regular";
+}
+#cart .cart-content .cart-elements {
+  margin: 15px 0;
+  display: grid;
+  grid-template-columns: auto 9fr;
+  grid-column-gap: 10px;
+}
+#cart .cart-content .cart-elements .cart-img-container {
+  grid-row-end: span 1;
+  padding: 10px;
+  background-color: #EBEBEB;
+}
+#cart .cart-content .cart-elements .cart-img-container img {
+  padding: 5px;
+  background-color: white;
+}
+#cart .cart-content .cart-elements .cart-text-container {
+  grid-row-end: span 2;
+  margin: auto 0;
+}
+#cart .cart-content .cart-elements .cart-text-container h3 {
+  font-size: 34px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#cart .cart-content .cart-elements .cart-text-container .price {
+  color: #606C38;
+  font-family: "Montserrat Regular";
+}
+#cart .cart-content .cart-elements .cart-text-container .delete {
+  color: red;
+}
+#cart .cart-content .cart-elements .cart-text-container p {
+  font-size: 29px;
+  font-family: "Montserrat Light";
+}
+#cart .cart-content .cart-elements .cart-text-container p .bold {
+  font-family: "Montserrat Bold";
+}
+#cart .cart-content .cart-elements .cart-text-container a {
+  font-family: "Lato Regular";
+  font-size: 25px;
+}
+#cart .resume {
+  text-align: center;
+  margin-top: 15px;
+  min-width: 310px;
+  width: 25%;
+  background-color: #774418;
+  border-radius: 5px;
+  color: white;
+}
+#cart .resume h2 {
+  text-align: left;
+  margin: 0;
+  padding: 25px 15px;
+  font-size: 30px;
+  font-family: "Montserrat Regular", serif;
+}
+#cart .resume .separator {
+  width: 100%;
+  height: 1px;
+  padding: 0;
+  background-color: white;
+}
+#cart .resume div.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 15px 0;
+}
+#cart .resume div.content div.top {
+  width: 90%;
+}
+#cart .resume div.content div.price {
+  width: 95%;
+}
+#cart .resume div.content div.bottom {
+  width: 90%;
+}
+#cart .resume div.content div.bottom p {
+  margin: 15px 0;
+}
+#cart .resume p {
+  font-family: "Montserrat Regular";
+  color: white;
+  padding: 15px 15px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#cart .resume .total {
+  font-size: 30px;
+}
+#cart .resume .button {
+  display: inline-block;
+  margin: 0 auto 25px auto;
+  width: 80%;
+  background-color: white;
+  color: black;
+  padding: 11px 15px;
+  border: solid 1px white;
+  border-radius: 5px;
+  transition: 0.2s;
+  font-size: 18px;
+  font-weight: 700;
+}
+#cart .resume .button:hover {
+  border: solid 1px white;
+  background-color: transparent;
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  #rightDecoration {
+    width: 90%;
+  }
+
+  #cart {
+    padding: 100px 0;
+  }
+  #cart .cart-content {
+    width: 95%;
+  }
+  #cart .cart-content .cart-elements .cart-img-container img {
+    height: 150px;
+  }
+  #cart .cart-content .cart-elements .cart-text-container h3 {
+    font-size: 25px;
+  }
+  #cart .cart-content .cart-elements .cart-text-container p {
+    font-size: 22px;
+    margin: 0;
+  }
+  #cart .cart-content .cart-elements .cart-text-container .delete {
+    font-size: 23px;
+  }
+  #cart .resume {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #rightDecoration {
+    display: none;
+  }
+
+  #cart {
+    padding: 10px 0;
+  }
+  #cart .cart-content h1 {
+    font-size: 30px;
+  }
+  #cart .cart-content .cart-elements .cart-img-container img {
+    height: 100px;
+  }
+  #cart .cart-content .cart-elements .cart-text-container h3 {
+    font-size: 20px;
+  }
+  #cart .cart-content .cart-elements .cart-text-container p {
+    font-size: 18px;
+    margin: 0;
+  }
+  #cart .cart-content .cart-elements .cart-text-container .delete {
+    font-size: 19px;
+  }
+  #cart .resume {
+    width: 300px;
+    min-width: 0;
+  }
+}
+
+/*# sourceMappingURL=cart.css.map */

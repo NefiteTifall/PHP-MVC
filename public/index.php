@@ -16,8 +16,9 @@ $router->get('/blog', "ArticleController@index");
 $router->get('/article/:id', "ArticleController@show");
 $router->get('/team', "MainController@team");
 $router->get('/contact', "MainController@contact");
-//$router->get('/cart', "placeholder@placeholder");
+$router->get('/cart', "MainController@cart");
 //$router->get('/checkout', "placeholder@placeholder");
+$router->get('/deleteCart/:id', "MainController@deleteFromCart");
 
 
 $router->post('/valideUser/:username', "UserController@isUserNameValide");

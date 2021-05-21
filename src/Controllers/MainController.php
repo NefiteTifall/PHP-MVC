@@ -31,4 +31,19 @@ class MainController {
         require VIEWS . ROAD.'/equipe.php';
     }
 
+    public function cart(){
+        require VIEWS . ROAD.'/cart.php';
+    }
+
+    public function deleteFromCart($id){
+        /*$_SESSION["cart"]["eol"][1] = [
+            "name"=>"Éolienne",
+            "qte"=> 5,
+            "prix"=> 50,
+            "img"=> "/resources/image/cart-ex.svg"
+        ];*/
+        unset($_SESSION["cart"]["eol"][$id]);
+        header("Location: /cart");
+    }
+
 }
