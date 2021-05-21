@@ -17,7 +17,7 @@ class ContactController {
 
     public function store(){
         $this->validator->validate([
-            "mail"=>["required", "min:3", "email"],
+            "mail"=>["required", "email"],
             "who"=>["required", "min:3","alphaNumDash"],
             "content"=>["requiredTextarea","alphaNumDash"],
         ]);

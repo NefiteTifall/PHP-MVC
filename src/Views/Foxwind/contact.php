@@ -22,13 +22,13 @@ ob_start();
         <div class="content">
             <h2 class="decoration-title">Formulaire de contact<img src="./resources/image/com.svg" alt=""/> </h2>
             <form action="/contact" method="post">
-                <input required type="email" name="mail" aria-label="Insérez votre E-MAIL" placeholder="Votre E-mail"/>
+                <input value="<?= old("mail")?>" required type="email" name="mail" aria-label="Insérez votre E-MAIL" placeholder="Votre E-mail"/>
                 <p class="error"><?= error("mail")?></p>
 
-                <input required type="text" name="who" aria-label="Insérez votre correspondance (Client, Association, Partenaire etc)" placeholder="Qui êtes vous (Client,association etc.)"/>
+                <input value="<?= old("who")?>" required type="text" name="who" aria-label="Insérez votre correspondance (Client, Association, Partenaire etc)" placeholder="Qui êtes vous (Client,association etc.)"/>
                 <p class="error"><?= error("who")?></p>
 
-                <textarea required aria-label="Insérez ce que vous voulez nous faire parvenir" placeholder="Que voulez-vous nous dire ?" name="content"></textarea>
+                <textarea required aria-label="Insérez ce que vous voulez nous faire parvenir" placeholder="Que voulez-vous nous dire ?" name="content"><?= old("content")?></textarea>
                 <p class="error"><?= error("content")?></p>
 
                 <button class="button-white">Envoyer</button>
