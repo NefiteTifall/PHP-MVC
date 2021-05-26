@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 03 mai 2021 à 16:58
+-- Généré le : mer. 26 mai 2021 à 14:04
 -- Version du serveur :  8.0.24
 -- Version de PHP : 7.4.16
 
@@ -34,8 +34,16 @@ CREATE TABLE `article` (
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `intro` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
   `titre` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `img` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `article`
+--
+
+INSERT INTO `article` (`id_article`, `id_user`, `intro`, `titre`, `img`, `date`) VALUES
+('1', '60939a5c1f290', 'desc', 'Titre ', '/resources/image/article/a.jpg', '2021-05-11');
 
 -- --------------------------------------------------------
 
@@ -65,9 +73,38 @@ CREATE TABLE `commentaire` (
   `id_com` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `id_article` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `date` date NOT NULL,
   `contenu` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
   `level` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `commentaire`
+--
+
+INSERT INTO `commentaire` (`id_com`, `id_user`, `id_article`, `date`, `contenu`, `level`) VALUES
+('1', '60939a5c1f290', '1', '2021-05-06', 'Oui', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id_contact` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `mail` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `qui` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `content` varchar(250) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `contact`
+--
+
+INSERT INTO `contact` (`id_contact`, `id_user`, `mail`, `qui`, `content`) VALUES
+('60a6592f3dd6d', '60939a5c1f290', 'a@a.com', 'daz', 'a\r\na\r\na\r\n\r\na');
 
 -- --------------------------------------------------------
 
@@ -91,6 +128,15 @@ CREATE TABLE `role` (
   `libelle` varchar(150) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `role`
+--
+
+INSERT INTO `role` (`id_role`, `libelle`) VALUES
+('1', 'utilisateur'),
+('2', 'redacteur'),
+('3', 'admin');
+
 -- --------------------------------------------------------
 
 --
@@ -101,9 +147,17 @@ CREATE TABLE `section` (
   `id_section` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `id_article` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `type` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `content` varchar(250) COLLATE utf8mb4_general_ci NOT NULL,
+  `content` varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `image` varchar(150) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `section`
+--
+
+INSERT INTO `section` (`id_section`, `id_article`, `type`, `content`, `image`) VALUES
+('1', '1', 'left-img', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque elit vitae dapibus suscipit. Etiam porttitor molestie lectus eget pretium. Nulla facilisi. Curabitur venenatis nisl non eros vulputate, non consequat quam vehicula. Curabitur q', '/resources/image/article/a.jpg'),
+('2', '1', 'right-img', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque elit vitae dapibus suscipit. Etiam porttitor molestie lectus eget pretium. Nulla facilisi. Curabitur venenatis nisl non eros vulputate, non consequat quam vehicula. Curabitur q', '/resources/image/article/a.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,8 +169,16 @@ CREATE TABLE `utilisateur` (
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `username` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
   `mdp` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
-  `id_role` varchar(30) COLLATE utf8mb4_general_ci NOT NULL
+  `id_role` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(150) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id_user`, `username`, `mdp`, `id_role`, `email`) VALUES
+('60939a5c1f290', 'aaa', 'ed02457b5c41d964dbd2f2a609d63fe1bb7528dbe55e1abf5b52c249cd735797', '3', 'a@a.a');
 
 --
 -- Index pour les tables déchargées

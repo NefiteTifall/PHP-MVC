@@ -28,9 +28,9 @@ ob_start();
             <div class="resume">
                 <div class="content">
                     <?php
-                    $total ="";
+                    $total =0;
                     foreach ($_SESSION["cart"]["eol"] as $elem){
-                        $total .= $elem["prix"]*$elem["qte"];
+                        $total += intval($elem["prix"])*intval($elem["qte"]);
                     }?>
                     <div class="top">
                         <h2>RÉSUMÉ</h2>
@@ -54,7 +54,7 @@ ob_start();
                             Total : <span class="right"><?=$total?>€</span>
                         </p>
                     </div>
-                    <a href="#" class="button">Continuer</a>
+                    <a href="/checkout" class="button">Continuer</a>
                 </div>
             </div>
         <?php } ?>
