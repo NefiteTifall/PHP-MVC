@@ -10,15 +10,8 @@ body{
     top: -1px;
     z-index: -10;
 }
-.error {
-    text-align: center;
-    font-weight: 400;
-    color: black;
-}
-.editing {
-    width: 65px;
-}
-#cart{
+
+#formul{
     padding: 150px;
     display: flex;
     flex-wrap: wrap;
@@ -77,7 +70,13 @@ body{
                 }
             }
         }
-
+        .total{
+            padding: 10px 25px;
+            margin-top: 10px;
+            background-color: #EBEBEB;
+            width: 100%;
+            border-radius: 5px;
+        }
     }
     .resume{
         text-align: center;
@@ -150,12 +149,62 @@ body{
     }
 }
 
+.cart-form{
+    text-align: center;
+    padding: 0 200px;
+    width: 90%;
+    margin: 0 auto;
+    .input-contain{
+        text-align: left;
+        width: 100%;
+        label,input{
+            font-family: "Lato Regular";
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+        input{
+            border: solid 2px $VertPrincipale1;
+            border-radius: 15px;
+            padding: 10px 25px;
+        }
+        input{
+            outline: none;
+        }
+    }
+    .input-group{
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .input-contain{
+            width: 49%;
+        }
+    }
+    button{
+        margin-top: 50px;
+        margin-bottom: 75px;
+        border: solid 1px white;
+        background-color: $VertPrincipale1;
+        color: white;
+        padding: 10px 75px;
+        border-radius: 15px;
+        transition: 0.2s;
+    }
+    button:hover{
+        border: solid 1px $VertPrincipale1;
+        background-color: transparent;
+        color: $VertPrincipale1;
+
+    }
+}
+
 
 @media screen and (max-width:1300px){
     #rightDecoration{
         width: 90%;
     }
-    #cart{
+    #formul{
         padding: 100px 0;
         .cart-content{
             width: 95%;
@@ -183,17 +232,18 @@ body{
             width: 30%;
         }
     }
+    .cart-form{
+        padding: 0 10px;
+    }
 }   
 
-@media screen and (max-width:1000px){
 
-}   
 
 @media screen and (max-width:767px){
     #rightDecoration{
         display: none;
     }
-    #cart{
+    #formul{
         padding: 10px 0;
         .cart-content{
             h1{
@@ -222,6 +272,13 @@ body{
         .resume{
             width: 300px;
             min-width: 0;
+        }
+    }
+    .cart-form{
+        .input-group{
+            .input-contain{
+                flex-basis: 100%;
+            }
         }
     }
 }

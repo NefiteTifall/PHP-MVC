@@ -17,14 +17,16 @@ $router->get('/article/:id', "ArticleController@show");
 $router->get('/team', "MainController@team");
 $router->get('/contact', "MainController@contact");
 $router->get('/cart', "MainController@cart");
-//$router->get('/checkout', "placeholder@placeholder");
+$router->get('/checkout', "MainController@commande");
+$router->get('/destroy', "MainController@destroySession"); // Développement à enlever sur la prod
 $router->get('/deleteCart/:id', "MainController@deleteFromCart");
 
 
 $router->post('/valideUser/:username', "UserController@isUserNameValide");
 $router->post('/login/', "UserController@login");
 $router->post('/register/', "UserController@register");
-//$router->post('/addCart', "placeholder@placeholder");
+$router->post('/addCart', "MainController@addCart");
+$router->post('/changeCart', "MainController@changeCart");
 //$router->post('/checkout', "placeholder@placeholder");
 $router->post('/contact', "ContactController@store");
 
