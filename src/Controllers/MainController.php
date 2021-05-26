@@ -36,6 +36,11 @@ class MainController {
     }
 
     public function commande(){
+        $ctrl = new UserController();
+        if(!$ctrl::isAuth()){
+            $_SESSION['popup'] = "Veuillez vous connectez pour commander.";
+            header("Location: /login");
+        }
         require VIEWS . ROAD. '/cart-checkout.php';
     }
 
@@ -51,7 +56,6 @@ class MainController {
     }
 
     public function addCart(){
-        var_dump($_POST);
         $this->validator->validate([
             "qte"=>["numeric"]
         ]);

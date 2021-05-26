@@ -25,7 +25,7 @@ $router->post('/valideUser/:username', "UserController@isUserNameValide");
 $router->post('/login/', "UserController@login");
 $router->post('/register/', "UserController@register");
 $router->post('/addCart', "MainController@addCart");
-//$router->post('/checkout', "placeholder@placeholder");
+$router->post('/checkout', "CommandeController@store");
 $router->post('/contact', "ContactController@store");
 
 $router->run();

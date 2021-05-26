@@ -31,37 +31,43 @@ ob_start();
 
     <section class="cart-form">
         <!-- Formulaire de commande - Début -->
-        <form action="/" method="post">
+        <form action="/checkout" method="post">
             <div class="input-group">
                 <div class="input-contain">
                     <label for="nom">Nom :</label>
-                    <input name="nom" id="nom" placeholder="Nom"/>
+                    <input value="<?= old("nom")?>" name="nom" id="nom" placeholder="Nom"/>
+                    <p class="little-error"><?= error("nom")?></p>
                 </div>
                 <div class="input-contain">
                     <label for="prenom">Prénom :</label>
-                    <input name="prenom" id="prenom" placeholder="Prénom"/>
+                    <input value="<?= old("prenom")?>" name="prenom" id="prenom" placeholder="Prénom"/>
+                    <p class="little-error"><?= error("prenom")?></p>
                 </div>
             </div>
 
             <div class="input-contain">
                 <label for="rue">Rue et numéro de livraison :</label>
-                <input name="rur" id="rue" placeholder="Rue et numéro de livraison"/>
+                <input value="<?= old("rue")?>" name="rue" id="rue" placeholder="Rue et numéro de livraison"/>
+                <p class="little-error"><?= error("rue")?></p>
             </div>
 
             <div class="input-group">
                 <div class="input-contain">
                     <label for="ville">Ville :</label>
-                    <input name="ville" id="ville" placeholder="Ville"/>
+                    <input value="<?= old("ville")?>" name="ville" id="ville" placeholder="Ville"/>
+                    <p class="little-error"><?= error("ville")?></p>
                 </div>
                 <div class="input-contain">
                     <label for="code">Code Postal :</label>
-                    <input name="code" id="code" placeholder="Code Postal"/>
+                    <input value="<?= old("code")?>" name="code" id="code" placeholder="Code Postal"/>
+                    <p class="little-error"><?= error("code")?></p>
                 </div>
             </div>
 
             <div class="input-contain">
                 <label for="pays">Pays :</label>
-                <input name="pays" id="pays" placeholder="Pays"/>
+                <input value="<?= old("pays")?>" name="pays" id="pays" placeholder="Pays"/>
+                <p class="little-error"><?= error("pays")?></p>
             </div>
 
             <button>Valider et payer</button>
@@ -71,7 +77,7 @@ ob_start();
 
 <?php
 
-$description = 'Bienvenue sur votre page de commande. ';
+$description = 'Bienvenue sur votre page de commande.';
 $title = 'Commander ';
 $style = '<link href="/resources/style/formul/formul.css" rel="stylesheet">';
 

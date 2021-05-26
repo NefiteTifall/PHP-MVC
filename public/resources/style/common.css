@@ -487,6 +487,11 @@ button {
   color: red;
 }
 
+.little-error {
+  font-size: 16px;
+  color: red;
+}
+
 #popup {
   position: fixed;
   left: 50%;
