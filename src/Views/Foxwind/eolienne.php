@@ -97,7 +97,7 @@ ob_start();
                 <form action="/addCart" method="POST">
                     <p class="number">
                         <span class="left-number">-</span>
-                        <input type="number" name="qte" id="qte" min="1" value="1">
+                        <input type="number" name="qte" id="qte" min="1" max="<?=$eol?>" value="1">
                         <span class="right-number">+</span>
                     </p>
                     <button class="add-to-cart"><img src="resources/image/cart.svg"/>Ajout au panier </button>
@@ -130,9 +130,11 @@ ob_start();
         }
 
         function change(value) {
+            console.log(qte.getAttribute("min"))
             let newValue = parseInt(qte.value)+value;
-            if(newValue >= qte.getAttribute("min"))
+            if(newValue >= qte.getAttribute("min")) {
                 qte.value = newValue;
+            }
         }
     </script>
 <?php

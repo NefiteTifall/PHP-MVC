@@ -28,10 +28,8 @@ class CommandeManager {
             $_POST["code"],
             $_POST["pays"],
             $_SESSION["user"]["id"],
-            //$_SESSION["cart"][""]
+            $_SESSION["cart"]["eol"]["eolienne"]["qte"]
         ));
-
-        return $stmt->fetchAll(\PDO::FETCH_CLASS, ROAD."\Models\Comment");
     }
 
 }

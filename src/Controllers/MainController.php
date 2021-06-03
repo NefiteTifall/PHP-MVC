@@ -20,6 +20,7 @@ class MainController {
     }
 
     public function eolienne(){
+        $eol = $this->getDispoEol();
         require VIEWS . ROAD.'/eolienne.php';
     }
 
@@ -41,6 +42,7 @@ class MainController {
     }
 
     public function cart(){
+        $eol = $this->getDispoEol();
         require VIEWS . ROAD.'/cart.php';
     }
 
@@ -98,5 +100,9 @@ class MainController {
             "qte" => null
         ];
         $_SESSION["cart"]["eol"]["eolienne"]["qte"] = intval($_POST["qte"]);
+    }
+
+    public function getDispoEol(){
+        return $this->manager->getDispoEol()["eol"];
     }
 }

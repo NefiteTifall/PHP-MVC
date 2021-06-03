@@ -32,14 +32,14 @@ class CommandeController {
         ]);
 
         $_SESSION['old'] = $_POST;
-        /*if (!$this->validator->errors()) {
+        if (!$this->validator->errors()) {
             $_SESSION['popup'] = "Votre commande à bien été enregistrée.";
             $id = uniqid();
-            $this->manager->store($id);
-            header("Location: /");
+            /*$this->manager->store($id);
+            header("Location: /");*/
         } else {
             header("Location: /checkout");
-        }*/
+        }
 
     }
 
