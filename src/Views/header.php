@@ -44,7 +44,7 @@
                     <a class="nav-link" href="/cart">
                         <object data="/resources/image/shopping-cart.svg"
                                 width="40"
-                                height="40"
+                                height="44"
                                 type="image/svg+xml"></object>
                     </a>
                 </li>

@@ -18,11 +18,16 @@
     <?= isset($style)?$style:''?>
     <?= isset($script)?$script:''?>
 </head>
-<body>
+<body class="loading">
     <?php include "header.php"?>
 
     <!-- Contenu de la page -->
-    <main>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <main id="content">
         <?= $content;?>
     </main>
     <!-- Contenu de la page -->
@@ -48,6 +53,14 @@
         popup.addEventListener("click",disabledPopUp);
         fond.addEventListener("click",disabledPopUp);
     }
+    $("header").ready(function() {
+        console.log("loaded")
+        setTimeout(function(){
+            $('body').addClass('loaded');
+        }, 3000);
+
+    });
+
 
 </script>
 </html>
