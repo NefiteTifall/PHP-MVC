@@ -141,7 +141,6 @@ footer .col-md-4 {
 }
 /* Variable */
 nav {
-  height: 212px;
   padding: 16px !important;
 }
 nav a.nav-link {
@@ -153,8 +152,8 @@ nav a.nav-link {
 }
 nav a.navbar-brand {
   margin: 0;
-  color: #606C38;
-  font-family: "Montserrat Bold";
+  color: #7d8f41;
+  font-family: "Montserrat Bold", serif;
 }
 nav li.separator {
   display: none;
@@ -170,11 +169,20 @@ nav div.navbar-collapse {
   position: absolute;
   right: 50px;
 }
-nav li.nav-item {
+nav .nav-item {
+  color: white;
+  user-select: none;
   width: auto;
-  margin: auto 0;
+  margin: auto 10px;
 }
-nav li.nav-item div svg {
+nav .nav-item object {
+  margin: 8px 0 0 0;
+  color: white;
+}
+nav .nav-item object svg {
+  color: white;
+}
+nav .nav-item div svg {
   margin: auto 0;
 }
 
@@ -220,15 +228,17 @@ nav li.nav-item div svg {
   display: none;
 }
 
-.logo {
-  width: 430px;
+.containerLogo .logo {
+  width: 120px;
 }
-
-#HeaderLogo_dark {
+.containerLogo h1 {
+  margin: auto 0 auto 15px;
+  font-size: 34px;
+}
+.containerLogo #HeaderLogo_dark {
   display: block;
 }
-
-#HeaderLogo_light {
+.containerLogo #HeaderLogo_light {
   display: none;
 }
 
@@ -271,6 +281,9 @@ nav li.nav-item div svg {
   nav .containerLogo {
     display: flex;
     justify-content: center;
+  }
+  nav .containerLogo h1 {
+    vertical-align: center;
   }
   nav .navbar-collapse {
     position: relative !important;
@@ -401,7 +414,7 @@ p {
 }
 
 .rond-fonce {
-  border: #606C38 2px solid;
+  border: #7d8f41 2px solid;
 }
 
 .square {
@@ -415,7 +428,7 @@ p {
 }
 
 .square-fonce {
-  border: #606C38 2px solid;
+  border: #7d8f41 2px solid;
 }
 
 .rond-inv {
@@ -459,28 +472,35 @@ button {
 
 .full-button-white {
   background-color: white;
-  padding: 10px 15px;
+  padding: 7px 17px 7px 17px;
   border-radius: 50px;
-  border: 0;
-  color: #606C38;
-  font-family: "Lato Bold";
+  color: #7d8f41;
+  font-family: "Lato Bold", serif;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  border: solid white 3px;
+}
+
+.full-button-white:hover {
+  color: white;
+  background-color: #FAB40A;
+  border: solid #FAB40A 3px;
 }
 
 .full-button-green {
-  background-color: #606C38;
-  padding: 10px 20px;
+  background-color: #7d8f41;
+  padding: 10px 20px 10px 20px;
   border-radius: 25px;
   border: 1px solid white;
   color: white;
-  font-family: "Lato Bold";
+  font-family: "Lato Bold", serif;
   font-size: 32px;
   transition: 0.2s;
 }
 
 .full-button-green:hover {
   background-color: transparent;
-  color: #606C38;
-  border: #606C38 1px solid;
+  color: #7d8f41;
+  border: #7d8f41 1px solid;
 }
 
 .error {

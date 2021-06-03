@@ -1,6 +1,5 @@
 @import "../variable";
 nav{
-    height: 212px;
     padding: 16px !important;
     a.nav-link{
         color: white;
@@ -12,7 +11,7 @@ nav{
     a.navbar-brand{
         margin: 0;
         color: $VertPrincipale1;
-        font-family : "Montserrat Bold";
+        font-family: "Montserrat Bold", serif;
     }
 
     li.separator{
@@ -31,9 +30,18 @@ nav{
         right: 50px;
     }
 
-    li.nav-item{
+    .nav-item{
+        color: white;
+        user-select: none;
         width: auto;
-        margin: auto 0;
+        margin: auto 10px;
+        object {
+            margin: 8px 0 0 0;
+            color: white;
+            svg {
+                color: white;
+            }
+        }
         div {
             svg {
                 margin: auto 0;
@@ -86,14 +94,20 @@ nav{
     display: none;
 }
 
-.logo {
-    width: 430px;
-}
-#HeaderLogo_dark {
-    display: block;
-}
-#HeaderLogo_light {
-    display: none;
+.containerLogo {
+    .logo {
+        width: 120px;
+    }
+    h1 {
+        margin: auto 0 auto 15px;
+        font-size: 34px;
+    }
+    #HeaderLogo_dark {
+        display: block;
+    }
+    #HeaderLogo_light {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1500px) {
@@ -137,6 +151,9 @@ nav{
         .containerLogo {
             display: flex;
             justify-content: center;
+            h1 {
+                vertical-align: center;
+            }
         }
         .navbar-collapse {
             position: relative !important;
