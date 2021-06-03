@@ -53,6 +53,7 @@
         popup.addEventListener("click",disabledPopUp);
         fond.addEventListener("click",disabledPopUp);
     }
+    if (performance.getEntriesByType("navigation")[0].transferSize !== 0) $('body').addClass('loaded');
     $("header").ready(function() {
         console.log("loaded")
         setTimeout(function(){
