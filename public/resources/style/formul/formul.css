@@ -54,7 +54,7 @@ body {
   flex-wrap: wrap;
 }
 #formul .cart-content .cart-elements .cart-text-container .price {
-  color: #606C38;
+  color: #7d8f41;
   font-family: "Montserrat Regular";
 }
 #formul .cart-content .cart-elements .cart-text-container .delete {
@@ -165,7 +165,7 @@ body {
   margin: 0;
 }
 .cart-form .input-contain input {
-  border: solid 2px #606C38;
+  border: solid 2px #7d8f41;
   border-radius: 15px;
   padding: 10px 25px;
 }
@@ -185,16 +185,16 @@ body {
   margin-top: 50px;
   margin-bottom: 75px;
   border: solid 1px white;
-  background-color: #606C38;
+  background-color: #7d8f41;
   color: white;
   padding: 10px 75px;
   border-radius: 15px;
   transition: 0.2s;
 }
 .cart-form button:hover {
-  border: solid 1px #606C38;
+  border: solid 1px #7d8f41;
   background-color: transparent;
-  color: #606C38;
+  color: #7d8f41;
 }
 
 @media screen and (max-width: 1300px) {
