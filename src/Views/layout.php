@@ -19,6 +19,15 @@
     <?= isset($script)?$script:''?>
 </head>
 <body class="loading">
+    <script>
+        $("header").ready(function() {
+            console.log("loaded")
+            setTimeout(function(){
+                $('body').addClass('loaded');
+            }, 3000);
+
+        });
+    </script>
     <?php include "header.php"?>
 
     <!-- Contenu de la page -->
@@ -53,16 +62,6 @@
         popup.addEventListener("click",disabledPopUp);
         fond.addEventListener("click",disabledPopUp);
     }
-    if (performance.getEntriesByType("navigation")[0].transferSize !== 0) $('body').addClass('loaded');
-    $("header").ready(function() {
-        console.log("loaded")
-        setTimeout(function(){
-            $('body').addClass('loaded');
-        }, 3000);
-
-    });
-
-
 </script>
 </html>
 <?php
