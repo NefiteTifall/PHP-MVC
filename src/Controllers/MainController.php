@@ -23,6 +23,15 @@ class MainController {
         require VIEWS . ROAD.'/eolienne.php';
     }
 
+    public function destroySession(){
+        session_destroy();
+        echo "Session destroyed please go to /";
+    }
+    public function showSession(){
+        session_destroy();
+        echo "Session destroyed please go to /";
+    }
+
     public function contact(){
         require VIEWS . ROAD.'/contact.php';
     }
@@ -63,17 +72,31 @@ class MainController {
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
             $_SESSION['popup'] = "Cette article à bien été ajouté au panier.";
-            array_push($_SESSION["cart"]["eol"],[
+
+
+            if (!isset($_SESSION["cart"])) $_SESSION["cart"]["eol"]["eolienne"] = [
                 "name"=>"Éolienne",
-                "qte"=> $_POST["qte"],
                 "prix"=> 50,
-                "img"=> "/resources/image/cart-ex.svg"
-            ]);
+                "img"=> "/resources/image/cart-ex.svg",
+                "qte" => null
+            ];
+            if (isset($_SESSION["cart"]["eol"]["eolienne"])) $_SESSION["cart"]["eol"]["eolienne"]["qte"] = intval($_SESSION["cart"]["eol"]["eolienne"]["qte"])+intval($_POST["qte"]);
+            else $_SESSION["cart"]["eol"]["eolienne"]["qte"] = intval($_POST["qte"]);
+
             header("Location: /cart");
         } else {
             $_SESSION['popup'] = "Veuillez rentrer un nombre valide et supérieur à 0";
             header("Location: /contact");
         }
 
+    }
+    public function changeCart() {
+        if (!isset($_SESSION["cart"])) $_SESSION["cart"]["eol"]["eolienne"] = [
+            "name"=>"Éolienne",
+            "prix"=> 50,
+            "img"=> "/resources/image/cart-ex.svg",
+            "qte" => null
+        ];
+        $_SESSION["cart"]["eol"]["eolienne"]["qte"] = intval($_POST["qte"]);
     }
 }

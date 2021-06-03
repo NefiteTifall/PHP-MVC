@@ -18,6 +18,8 @@ $router->get('/team', "MainController@team");
 $router->get('/contact', "MainController@contact");
 $router->get('/cart', "MainController@cart");
 $router->get('/checkout', "MainController@commande");
+
+$router->get('/destroy', "MainController@destroySession"); // Développement à enlever sur la prod
 $router->get('/deleteCart/:id', "MainController@deleteFromCart");
 
 
@@ -26,6 +28,7 @@ $router->post('/login/', "UserController@login");
 $router->post('/register/', "UserController@register");
 $router->post('/addCart', "MainController@addCart");
 $router->post('/checkout', "CommandeController@store");
+$router->post('/changeCart', "MainController@changeCart");
 $router->post('/contact', "ContactController@store");
 
 $router->run();

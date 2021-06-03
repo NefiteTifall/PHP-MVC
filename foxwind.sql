@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 26 mai 2021 à 14:04
+-- Généré le : jeu. 03 juin 2021 à 16:18
 -- Version du serveur :  8.0.24
 -- Version de PHP : 7.4.16
 
@@ -29,6 +29,7 @@ USE `foxwind`;
 -- Structure de la table `article`
 --
 
+DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
   `id_article` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
@@ -51,6 +52,7 @@ INSERT INTO `article` (`id_article`, `id_user`, `intro`, `titre`, `img`, `date`)
 -- Structure de la table `commande`
 --
 
+DROP TABLE IF EXISTS `commande`;
 CREATE TABLE `commande` (
   `id_commande` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `nom` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
@@ -60,8 +62,16 @@ CREATE TABLE `commande` (
   `code_postal` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `pays` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `id_eolienne` varchar(30) COLLATE utf8mb4_general_ci NOT NULL
+  `id_eolienne` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `qte` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `commande`
+--
+
+INSERT INTO `commande` (`id_commande`, `nom`, `prenom`, `rue`, `ville`, `code_postal`, `pays`, `id_user`, `id_eolienne`, `qte`) VALUES
+('', '', '', '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -69,6 +79,7 @@ CREATE TABLE `commande` (
 -- Structure de la table `commentaire`
 --
 
+DROP TABLE IF EXISTS `commentaire`;
 CREATE TABLE `commentaire` (
   `id_com` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
@@ -91,6 +102,7 @@ INSERT INTO `commentaire` (`id_com`, `id_user`, `id_article`, `date`, `contenu`,
 -- Structure de la table `contact`
 --
 
+DROP TABLE IF EXISTS `contact`;
 CREATE TABLE `contact` (
   `id_contact` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
@@ -104,7 +116,8 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id_contact`, `id_user`, `mail`, `qui`, `content`) VALUES
-('60a6592f3dd6d', '60939a5c1f290', 'a@a.com', 'daz', 'a\r\na\r\na\r\n\r\na');
+('60a6592f3dd6d', '60939a5c1f290', 'a@a.com', 'daz', 'a\r\na\r\na\r\n\r\na'),
+('60ae51eb7d9ab', '60939a5c1f290', 'a@a.com', 'aaaa', 'aaaa');
 
 -- --------------------------------------------------------
 
@@ -112,6 +125,7 @@ INSERT INTO `contact` (`id_contact`, `id_user`, `mail`, `qui`, `content`) VALUES
 -- Structure de la table `eolienne`
 --
 
+DROP TABLE IF EXISTS `eolienne`;
 CREATE TABLE `eolienne` (
   `id_eolienne` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `vendu` int NOT NULL
@@ -123,6 +137,7 @@ CREATE TABLE `eolienne` (
 -- Structure de la table `role`
 --
 
+DROP TABLE IF EXISTS `role`;
 CREATE TABLE `role` (
   `id_role` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `libelle` varchar(150) COLLATE utf8mb4_general_ci NOT NULL
@@ -143,6 +158,7 @@ INSERT INTO `role` (`id_role`, `libelle`) VALUES
 -- Structure de la table `section`
 --
 
+DROP TABLE IF EXISTS `section`;
 CREATE TABLE `section` (
   `id_section` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `id_article` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
@@ -165,6 +181,7 @@ INSERT INTO `section` (`id_section`, `id_article`, `type`, `content`, `image`) V
 -- Structure de la table `utilisateur`
 --
 
+DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE `utilisateur` (
   `id_user` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
   `username` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,

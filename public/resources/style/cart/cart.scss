@@ -10,7 +10,14 @@ body{
     top: -1px;
     z-index: -10;
 }
-
+.error {
+    text-align: center;
+    font-weight: 400;
+    color: black;
+}
+.editing {
+    width: 65px;
+}
 #cart{
     padding: 150px;
     display: flex;
