@@ -4,14 +4,22 @@ body {
   overflow-x: hidden;
 }
 
-section {
+.fox-container {
   padding: 80px 150px;
+}
+
+.fox-container-fluid {
+  padding: 80px 0;
+}
+
+section {
+  padding: 80px 0;
 }
 
 #presentation {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 150px;
 }
 #presentation .left {
@@ -83,7 +91,7 @@ section {
   margin: 50px 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -193,12 +201,13 @@ section {
   transform: rotate(70deg);
 }
 #donation button {
+  margin: 50px 0 0 0;
   font-size: 32px;
   padding: 5px 25px 5px 25px;
 }
 
 #why {
-  padding: 80px 75px;
+  padding: 80px 0;
   position: relative;
 }
 #why h2 {
