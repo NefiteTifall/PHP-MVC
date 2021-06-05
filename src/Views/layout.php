@@ -18,11 +18,16 @@
     <?= isset($style)?$style:''?>
     <?= isset($script)?$script:''?>
 </head>
-<body>
+<body class="loading" onload="loading()">
     <?php include "header.php"?>
 
     <!-- Contenu de la page -->
-    <main>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+    <main id="content">
         <?= $content;?>
     </main>
     <!-- Contenu de la page -->
@@ -36,6 +41,12 @@
     <?php endif;?>
 </body>
 <script>
+    function loading() {
+        console.log("loaded")
+            $('body').addClass('loaded');
+    };
+</script>
+<script>
     var popup = document.getElementById("popup");
     var fond = document.getElementsByClassName("fond-noir")[0];
 
@@ -48,7 +59,6 @@
         popup.addEventListener("click",disabledPopUp);
         fond.addEventListener("click",disabledPopUp);
     }
-
 </script>
 </html>
 <?php

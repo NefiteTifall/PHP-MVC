@@ -97,7 +97,7 @@ body {
   margin: 0 0 25px 0;
 }
 #contact .content .button-white {
-  border: solid 1px #606C38;
+  border: solid 1px #7d8f41;
   background-color: transparent;
   transition: 0.2s;
   padding: 10px 65px;
@@ -107,7 +107,7 @@ body {
 }
 #contact .content .button-white:hover {
   border: solid 1px lightgray;
-  background-color: #606C38;
+  background-color: #7d8f41;
   color: white;
 }
 

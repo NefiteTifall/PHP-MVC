@@ -20,6 +20,7 @@ class MainController {
     }
 
     public function eolienne(){
+        $eol = $this->getDispoEol();
         require VIEWS . ROAD.'/eolienne.php';
     }
 
@@ -41,10 +42,16 @@ class MainController {
     }
 
     public function cart(){
+        $eol = $this->getDispoEol();
         require VIEWS . ROAD.'/cart.php';
     }
 
     public function commande(){
+        $ctrl = new UserController();
+        if(!$ctrl::isAuth()){
+            $_SESSION['popup'] = "Veuillez vous connectez pour commander.";
+            header("Location: /login");
+        }
         require VIEWS . ROAD. '/cart-checkout.php';
     }
 
@@ -68,6 +75,7 @@ class MainController {
         if (!$this->validator->errors()) {
             $_SESSION['popup'] = "Cette article à bien été ajouté au panier.";
             if (!isset($_SESSION["cart"]["eol"]) || count($_SESSION["cart"]["eol"]) === 0) $_SESSION["cart"]["eol"]["eolienne"] = [
+
                 "name"=>"Éolienne",
                 "prix"=> 50,
                 "img"=> "/resources/image/cart-ex.svg",
@@ -90,5 +98,9 @@ class MainController {
             "qte" => null
         ];
         $_SESSION["cart"]["eol"]["eolienne"]["qte"] = intval($_POST["qte"]);
+    }
+
+    public function getDispoEol(){
+        return $this->manager->getDispoEol()["eol"];
     }
 }

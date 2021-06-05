@@ -64,4 +64,12 @@ class MainManager {
 
         return $stmt->fetchAll(\PDO::FETCH_CLASS, ROAD."\Models\Foxwind");
     }
+
+    public function getDispoEol(){
+        $stmt = $this->bdd->prepare('SELECT COUNT(*) AS eol FROM eolienne WHERE vendu=0');
+        $stmt->execute();
+
+        return $stmt->fetch();
+
+    }
 }

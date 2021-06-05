@@ -21,7 +21,7 @@ ob_start();
     </section>
 
     <section id="steps">
-        <h2 class="decoration-title">Nous nous occupons de toutes les Étapes</h2>
+        <h2 class="text-center">Nous nous occupons de toutes les Étapes</h2>
         <div id="allCards">
             <div class="card">
                 <img src="resources/image/mind.svg" alt="">
@@ -43,7 +43,7 @@ ob_start();
     </section>
 
     <section id="advantages">
-        <h2 class="decoration-title">Découvrez les avantages</h2>
+        <h2 class="">Découvrez les avantages</h2>
 
         <div>
             <div class="left">
@@ -75,15 +75,14 @@ ob_start();
         <span class="rond-inv" id="rondInvAdvantage2"></span>
     </section>
 
-    <section id="donation">
-        <img src="resources/image/rocket.svg" alt="">
-        <h2>Décollez avec nous en nous soutenant ! </h2>
+    <section id="donation" class="d-block text-center">
+        <h2 class="text-center">Décollez avec nous en nous soutenant ! </h2>
         <button class="full-button-white">Faites un don</button>
         <span class="rond rond-clair" id="rondDon"></span>
         <span class="square square-clair" id="squareDon"></span>
     </section>
     <section id="why">
-        <h2 class="decoration-title-center">Pourquoi choisir nos éoliennes</h2>
+        <h2 class="">Pourquoi choisir nos éoliennes</h2>
         <div>
             <div class="left">
                 <div class="advElem">
