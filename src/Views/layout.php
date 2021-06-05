@@ -18,16 +18,7 @@
     <?= isset($style)?$style:''?>
     <?= isset($script)?$script:''?>
 </head>
-<body class="loading">
-    <script>
-        $("header").ready(function() {
-            console.log("loaded")
-            setTimeout(function(){
-                $('body').addClass('loaded');
-            }, 3000);
-
-        });
-    </script>
+<body class="loading" onload="loading()">
     <?php include "header.php"?>
 
     <!-- Contenu de la page -->
@@ -49,6 +40,12 @@
         </div>
     <?php endif;?>
 </body>
+<script>
+    function loading() {
+        console.log("loaded")
+            $('body').addClass('loaded');
+    };
+</script>
 <script>
     var popup = document.getElementById("popup");
     var fond = document.getElementsByClassName("fond-noir")[0];
