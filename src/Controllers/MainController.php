@@ -67,14 +67,14 @@ class MainController {
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
             $_SESSION['popup'] = "Cette article à bien été ajouté au panier.";
-            if (!isset($_SESSION["cart"])) $_SESSION["cart"]["eol"]["eolienne"] = [
+            if (!isset($_SESSION["cart"]["eol"]) || count($_SESSION["cart"]["eol"]) === 0) $_SESSION["cart"]["eol"]["eolienne"] = [
                 "name"=>"Éolienne",
                 "prix"=> 50,
                 "img"=> "/resources/image/cart-ex.svg",
                 "qte" => null
             ];
-            if (isset($_SESSION["cart"]["eol"]["eolienne"])) $_SESSION["cart"]["eol"]["eolienne"]["qte"] = intval($_SESSION["cart"]["eol"]["eolienne"]["qte"])+intval($_POST["qte"]);
-            else $_SESSION["cart"]["eol"]["eolienne"]["qte"] = intval($_POST["qte"]);
+            if (isset($_SESSION["cart"]["eol"]["eolienne"])) $_SESSION["cart"]["eol"]["eolienne"]["qte"] = (int)$_SESSION["cart"]["eol"]["eolienne"]["qte"] + (int)$_POST["qte"];
+            else $_SESSION["cart"]["eol"]["eolienne"]["qte"] = (int)$_POST["qte"];
             header("Location: /cart");
         } else {
             $_SESSION['popup'] = "Veuillez rentrer un nombre valide et supérieur à 0";

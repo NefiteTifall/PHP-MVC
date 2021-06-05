@@ -2,6 +2,7 @@
 ob_start();
 ?>
 
+<?= count($_SESSION["cart"]["eol"])?>
     <img id="rightDecoration" src="/resources/image/rightCartShape.svg" alt="">
     <section id="cart">
         <div class="cart-content">
