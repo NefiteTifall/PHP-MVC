@@ -19,91 +19,124 @@ p {
 #firstSec {
   position: relative;
   padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 200px;
 }
+
 #firstSec #squareClairArticle {
   position: absolute;
   bottom: 0;
   right: 100px;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
+
 #firstSec .left {
   width: 40%;
   min-width: 300px;
 }
+
 #firstSec .left img {
   width: 100%;
   border-radius: 5px;
 }
+
 #firstSec .right {
   min-width: 300px;
   width: 40%;
   margin: auto 0;
 }
+
 #firstSec .right * {
   color: black;
 }
 
 .right-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 50px;
+  background: -webkit-gradient(linear, left top, right top, from(#7d8f41), color-stop(90%, #606c38));
   background: linear-gradient(90deg, #7d8f41 0%, #606c38 90%);
 }
+
 .right-image .left {
   min-width: 280px;
   width: 50%;
 }
+
 .right-image .left p {
   padding: 25px 0;
 }
+
 .right-image .right {
   min-width: 280px;
   width: 40%;
 }
+
 .right-image .right img {
   width: 100%;
 }
 
 .left-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 50px;
+  background: -webkit-gradient(linear, right top, left top, from(#7d8f41), color-stop(90%, #606c38));
   background: linear-gradient(270deg, #7d8f41 0%, #606c38 90%);
 }
+
 .left-image .left {
   min-width: 280px;
   width: 40%;
 }
+
 .left-image .left img {
   width: 100%;
 }
+
 .left-image .right {
   min-width: 280px;
   width: 50%;
 }
+
 .left-image .right p {
   padding: 25px 0;
 }
 
 .full-image {
   padding: 50px;
+  background: -webkit-gradient(linear, left top, right top, from(#7d8f41), color-stop(90%, #606c38));
   background: linear-gradient(90deg, #7d8f41 0%, #606c38 90%);
 }
+
 .full-image div {
   width: 100%;
 }
+
 .full-image div * {
   padding: 25px;
 }
+
 .full-image div img {
   width: 100%;
 }
+
 .full-image div p {
   width: 100%;
 }
@@ -124,22 +157,27 @@ p {
   position: relative;
   padding: 0 50px;
 }
+
 #comments #rightComDeco {
   position: absolute;
   right: 0;
   top: 0;
 }
+
 #comments #comRound {
   position: absolute;
   right: 300px;
   top: 50px;
 }
+
 #comments form {
   margin: 15px 0;
 }
+
 #comments form * {
   display: block;
 }
+
 #comments form textarea {
   width: 50%;
   height: 150px;
@@ -147,36 +185,47 @@ p {
   border: solid 1px lightgray;
   margin: 5px 0;
 }
+
 #comments form .button-white {
   border: solid 1px #7d8f41;
   background-color: transparent;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   padding: 5px 15px;
   border-radius: 50px;
 }
+
 #comments form .button-white:hover {
   border: solid 1px lightgray;
   background-color: #7d8f41;
   color: white;
 }
+
 #comments .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 #comments .comment h3 {
   margin: 0;
   font-size: 27px;
 }
+
 #comments .comment .date {
   margin: 0;
   font-size: 25px;
 }
+
 #comments .comment p {
   width: 100%;
   color: gray;
   margin: 0;
   font-size: 22px;
 }
+
 #comments .separator {
   margin: 30px 0;
   width: 100%;
@@ -189,11 +238,11 @@ p {
   #rightDecoration {
     width: 75%;
   }
-
   #comments .comment p, #comments .separator {
     width: 80%;
   }
 }
+
 @media screen and (max-width: 1000px) {
   #firstSec .right h1 {
     font-size: 40px;
@@ -202,19 +251,17 @@ p {
     font-size: 22px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .rond, .square {
     display: none;
   }
-
   .decoration-title::after {
     content: none;
   }
-
   #rightDecoration {
     display: none;
   }
-
   #firstSec {
     margin: 15px 0;
     padding: 5px;
@@ -226,14 +273,12 @@ p {
     min-width: auto;
     width: 100%;
   }
-
   .full-image {
     padding: 5px;
   }
   .full-image img, .full-image p {
     padding: 0;
   }
-
   .full-image, .right-image, .left-image {
     padding: 5px;
   }
@@ -241,7 +286,6 @@ p {
     font-size: 20px;
     padding: 0 5px;
   }
-
   #comments {
     padding: 10px;
   }
@@ -264,5 +308,4 @@ p {
     width: 100%;
   }
 }
-
 /*# sourceMappingURL=article.css.map */

@@ -2,6 +2,7 @@
 nav {
   padding: 16px !important;
 }
+
 nav a.nav-link {
   color: white;
   font-family: "Montserrat Regular", serif;
@@ -9,11 +10,13 @@ nav a.nav-link {
   padding: 5px;
   font-size: 25px;
 }
+
 nav a.navbar-brand {
   margin: 0;
-  color: red;
+  color: #7d8f41;
   font-family: "Montserrat Bold", serif;
 }
+
 nav li.separator {
   display: none;
   width: 100px;
@@ -21,26 +24,39 @@ nav li.separator {
   background-color: white;
   margin: 0 auto;
 }
+
+nav li.clickable > * {
+  cursor: pointer;
+}
+
 nav .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
+
 nav div.navbar-collapse {
   position: absolute;
   right: 50px;
 }
+
 nav .nav-item {
   color: white;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: auto;
   margin: auto 10px;
 }
+
 nav .nav-item object {
-  margin: 8px 0 0 0;
+  margin: 10px 0 0 0;
   color: white;
 }
+
 nav .nav-item object svg {
   color: white;
 }
+
 nav .nav-item div svg {
   margin: auto 0;
 }
@@ -64,25 +80,24 @@ nav .nav-item div svg {
   .rightDecoration {
     right: -490px;
   }
-
   #rightDecorationDefault {
     display: none;
   }
-
   #rightDecoration1301 {
     display: block;
     top: 210px;
   }
-
   .navbar {
     background-color: #7D8F41;
   }
 }
+
 @media screen and (max-width: 1059px) {
   .rightDecoration {
     display: none !important;
   }
 }
+
 .HeaderWave {
   display: none;
 }
@@ -90,13 +105,16 @@ nav .nav-item div svg {
 .containerLogo .logo {
   width: 120px;
 }
+
 .containerLogo h1 {
   margin: auto 0 auto 15px;
   font-size: 34px;
 }
+
 .containerLogo #HeaderLogo_dark {
   display: block;
 }
+
 .containerLogo #HeaderLogo_light {
   display: none;
 }
@@ -105,41 +123,46 @@ nav .nav-item div svg {
   .rightDecoration {
     right: -490px;
   }
-
   #HeaderLogo_dark {
     display: none;
   }
-
   #HeaderLogo_light {
     display: block;
   }
-
   .navbar {
     background-color: #7D8F41;
   }
 }
+
 @media screen and (max-width: 1301px) {
   nav a.nav-link {
     font-size: 19px;
     padding: 0;
   }
 }
+
 @media screen and (max-width: 1301px) and (min-width: 350px) {
   nav img.logo {
     width: 350px;
   }
 }
+
 @media screen and (max-width: 1059px) {
   nav {
     background: #7d8f41;
+    background: -webkit-gradient(linear, left top, left bottom, from(#283618), color-stop(40%, #415024), to(#7d8f41));
     background: linear-gradient(180deg, #283618 0%, #415024 40%, #7d8f41 100%);
     min-height: 212px !important;
     height: auto;
     display: block !important;
   }
   nav .containerLogo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   nav .containerLogo h1 {
     vertical-align: center;
@@ -148,24 +171,31 @@ nav .nav-item div svg {
     position: relative !important;
     right: 0 !important;
     display: block;
-    justify-content: center;
-    box-sizing: content-box;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
   }
   nav .navbar-collapse ul {
     margin: 0 !important;
   }
-
   .HeaderWave {
     display: block;
-    transform: rotate(0.5turn);
+    -webkit-transform: rotate(0.5turn);
+            transform: rotate(0.5turn);
   }
 }
+
 @media screen and (max-width: 767px) {
   nav {
     background: #7d8f41;
+    background: -webkit-gradient(linear, left top, left bottom, from(#283618), color-stop(40%, #415024), to(#7d8f41));
     background: linear-gradient(180deg, #283618 0%, #415024 40%, #7d8f41 100%);
   }
   nav li.separator {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   nav div.navbar-collapse {
@@ -184,11 +214,13 @@ nav .nav-item div svg {
     display: none;
   }
 }
+
 @media screen and (max-width: 350px) {
   nav .logo {
     width: 95%;
   }
 }
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 2px;
@@ -220,5 +252,4 @@ nav .nav-item div svg {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-
 /*# sourceMappingURL=header.css.map */

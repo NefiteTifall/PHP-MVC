@@ -19,7 +19,7 @@ class CommandeController {
         $ctrl = new UserController();
         if(!$ctrl::isAuth()){
             $_SESSION['popup'] = "Veuillez vous connectez pour commander.";
-            header("Location: /");
+            header("Location: /Login");
         }
         var_dump($_POST);
         $this->validator->validate([

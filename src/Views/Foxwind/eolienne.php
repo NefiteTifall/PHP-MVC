@@ -130,9 +130,9 @@ ob_start();
         }
 
         function change(value) {
-            console.log(qte.getAttribute("min"))
+
             let newValue = parseInt(qte.value)+value;
-            if(newValue >= qte.getAttribute("min")) {
+            if(newValue >= 1 && newValue<=<?=$eol?>) {
                 qte.value = newValue;
             }
         }

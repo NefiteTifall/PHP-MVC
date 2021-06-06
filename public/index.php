@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-//Dans la page éolienne faire en sorte qu'on ne puisse pas prendre plus d'éolienne qu'il n'en a
+//Faire en sorte qu'on ne puisse pas modifier le panier en commandant trop d'éolienne
 //
 require '../src/config/config.php';
 require '../vendor/autoload.php';
@@ -20,6 +20,7 @@ $router->get('/contact', "MainController@contact");
 $router->get('/cart', "MainController@cart");
 $router->get('/checkout', "MainController@commande");
 
+$router->get('/comment/:id/delete', "CommentController@deleteCom");
 $router->get('/destroy', "MainController@destroySession"); // Développement à enlever sur la prod
 $router->get('/deleteCart/:id', "MainController@deleteFromCart");
 
@@ -31,5 +32,6 @@ $router->post('/addCart', "MainController@addCart");
 $router->post('/checkout', "CommandeController@store");
 $router->post('/changeCart', "MainController@changeCart");
 $router->post('/contact', "ContactController@store");
+$router->post('/comment/:id', "CommentController@addComment");
 
 $router->run();

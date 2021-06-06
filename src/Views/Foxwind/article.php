@@ -50,8 +50,9 @@ ob_start();
 
     <section id="comments">
         <h2 class="decoration-title">Réagissez à l'article <img src="/resources/image/com.svg"/> </h2>
-        <form action="/comment/" method="post">
+        <form action="/comment/<?=$article->getIdArticle()?>" method="post">
             <textarea placeholder="Votre commentaire" name="content"></textarea>
+            <p class="error"><?=error("content")?></p>
             <button class="button-white">Envoyer</button>
         </form>
         <?php foreach ($article->getComments() as $comment):?>
@@ -64,6 +65,9 @@ ob_start();
                 <p>
                     <?= $comment->getContenu()?>
                 </p>
+                <?php if ($comment->getAuthor()->getIdUser()==$_SESSION["user"]["id"]){?>
+                    <a href="/comment/<?=$comment->getIdCom()?>/delete" class="full-button-green">Supprimer</a>
+                <?php }?>
             </div>
             <div class="separator"></div>
         <?php endforeach;?>

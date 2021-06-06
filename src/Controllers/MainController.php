@@ -67,12 +67,19 @@ class MainController {
     }
 
     public function addCart(){
+        $eol = $this->getDispoEol();
         $this->validator->validate([
-            "qte"=>["numeric"]
+            "qte"=>["required","numeric"]
         ]);
+
 
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
+            if ($_POST["qte"]>$eol) {
+                $_SESSION["popup"] = "Vous ne pouvez pas réserver plus de $eol éoliennes";
+                header("Location:/eolienne");
+                die;
+            }
             $_SESSION['popup'] = "Cette article à bien été ajouté au panier.";
             if (!isset($_SESSION["cart"]["eol"]) || count($_SESSION["cart"]["eol"]) === 0) $_SESSION["cart"]["eol"]["eolienne"] = [
 
@@ -91,6 +98,8 @@ class MainController {
 
     }
     public function changeCart() {
+        $eol = $this->getDispoEol();
+        
         if (!isset($_SESSION["cart"])) $_SESSION["cart"]["eol"]["eolienne"] = [
             "name"=>"Éolienne",
             "prix"=> 50,

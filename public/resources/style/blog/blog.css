@@ -5,32 +5,38 @@
   font-family: "Lato Light";
   src: url("/resources/style/font/Lato-Light.ttf");
 }
+
 @font-face {
   font-family: "Lato Regular";
   src: url("/resources/style/font/Lato-Regular.ttf");
 }
+
 @font-face {
   font-family: "Lato Bold";
   src: url("/resources/style/font/Lato-Bold.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Light";
   src: url("../font/Montserrat-Light.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Medium";
   src: url("/resources/style/font/Montserrat-Medium.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Regular";
   src: url("/resources/style/font/Montserrat-Regular.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Bold";
   src: url("/resources/style/font/Montserrat-Bold.ttf");
 }
+
 /* Fonts */
-/*# sourceMappingURL=fonts.css.map */
 /* Imports */
 /* Body */
 body {
@@ -83,31 +89,40 @@ body {
   position: absolute;
   left: 250px;
   bottom: 10%;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   z-index: -10;
 }
 
 /* Forms */
 /* Blog style */
 #presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-bottom: 250px;
 }
+
 #presentation .left {
   width: 50%;
   min-width: 450px;
   margin: auto 0;
 }
+
 #presentation h1 {
   font-size: 55px;
   padding: 100px;
 }
+
 #presentation .right {
   width: 50%;
   min-width: 450px;
 }
+
 #presentation .right img {
   width: 90%;
 }
@@ -115,6 +130,7 @@ body {
 #articles {
   margin-bottom: 100px;
 }
+
 #articles .row {
   margin: 50px 0;
 }
@@ -137,17 +153,20 @@ body {
 
   }*/
 }
+
 .articleBlock h2 {
   font-weight: bold;
   color: white;
   padding-top: 20px;
   padding-left: 10px;
 }
+
 .articleBlock #separator {
   margin-left: 10px;
   border-bottom: 2px solid white;
   width: 35%;
 }
+
 .articleBlock p {
   padding-top: 25px;
   padding-bottom: 20px;
@@ -156,6 +175,7 @@ body {
   font-weight: bold;
   color: white;
 }
+
 .articleBlock .button {
   color: black;
   margin-bottom: 20px;
@@ -166,8 +186,10 @@ body {
   border: 0px solid transparent;
   font-family: "Montserrat Bold";
 }
+
 .articleBlock .postPreviewImage {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -100;
   width: 456px;
   height: 100%;
@@ -200,11 +222,13 @@ body {
     font-size: 50px;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .articleBlock .postPreviewImage {
     width: 43%;
   }
 }
+
 @media screen and (max-width: 1096px) {
   #presentation {
     margin-bottom: 400px;
@@ -213,11 +237,11 @@ body {
     font-size: 40px;
   }
 }
+
 @media screen and (max-width: 992px) {
   .articleBlock .postPreviewImage {
     display: none;
   }
-
   #presentation {
     margin-bottom: 400px;
   }
@@ -225,6 +249,7 @@ body {
     font-size: 35px;
   }
 }
+
 @media screen and (max-width: 909px) {
   #presentation .left {
     width: 100%;
@@ -234,15 +259,15 @@ body {
     font-size: 40px;
   }
 }
+
 @media screen and (max-width: 767px) {
   #presentation {
     margin-bottom: 150px;
   }
-
   #rightDecoration, .rond, .square {
     display: none;
   }
 }
-/* Responsive */
 
+/* Responsive */
 /*# sourceMappingURL=blog.css.map */

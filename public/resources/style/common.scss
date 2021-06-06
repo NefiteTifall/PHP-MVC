@@ -6,6 +6,9 @@
 img{
     user-select: none;
 }
+a{
+    text-decoration: none;
+}
 
 h1{
     font-family: "Montserrat Bold";
@@ -41,6 +44,10 @@ p{
     font-size: 27px;
     color: #434832;
     font-family: "Lato Regular";
+}
+
+*.fs-20{
+    font-size: 20px;
 }
 
 .rond{

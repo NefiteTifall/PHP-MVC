@@ -2,38 +2,48 @@
 footer {
   text-align: center;
 }
+
 footer section {
   background: #525c30;
+  background: -webkit-gradient(linear, left top, left bottom, from(#525c30), to(#10120a));
   background: linear-gradient(180deg, #525c30 0%, #10120a 100%);
   padding: 40px 0;
 }
+
 footer img {
   width: 100%;
   margin-bottom: -5px;
 }
+
 footer a, footer h2, footer p {
   color: white;
 }
+
 footer a {
   font-family: "Montserrat Medium";
 }
+
 footer p {
   padding: 15px 0 0;
   font-family: "Montserrat Bold";
   font-size: 22px;
   margin: 0;
 }
+
 footer ul {
   list-style: none;
   padding: 0;
 }
+
 footer ul li {
   padding: 5px;
 }
+
 footer .center {
   border-right: solid 1px white;
   border-left: solid 1px white;
 }
+
 footer .col-md-4 {
   border-bottom: solid 1px white;
 }
@@ -43,6 +53,7 @@ footer .col-md-4 {
     font-size: 36px;
   }
 }
+
 @media screen and (max-width: 966px) {
   footer .center {
     border-right: none;
@@ -55,8 +66,10 @@ footer .col-md-4 {
     font-size: 18px;
   }
 }
+
 .dark-footer {
   background: #774418;
+  background: -webkit-gradient(linear, left top, left bottom, from(#774418), to(#3c220c));
   background: linear-gradient(180deg, #774418 0%, #3c220c 100%);
 }
 
@@ -70,42 +83,64 @@ footer .col-md-4 {
 }
 
 .wavesEffect > use {
-  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
 .wavesEffect > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
 }
 
 .wavesEffect > use:nth-child(2) {
-  animation-delay: -6s;
-  animation-duration: 10s;
+  -webkit-animation-delay: -6s;
+          animation-delay: -6s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
 }
 
 .wavesEffect > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
 }
 
 .wavesEffect > use:nth-child(4) {
-  animation-delay: -3s;
-  animation-duration: 20s;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+}
+
+@-webkit-keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
 }
 
 @keyframes move-forever {
   0% {
-    transform: translate3d(-90px, 0, 0);
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
   }
   100% {
-    transform: translate3d(85px, 0, 0);
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
   }
 }
+
 @media (max-width: 768px) {
   .waves {
     height: 40px;
     min-height: 40px;
   }
 }
-
 /*# sourceMappingURL=footer.css.map */
