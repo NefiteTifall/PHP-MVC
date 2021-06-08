@@ -13,44 +13,33 @@ body {
 }
 
 section {
-  padding: 80px 0;
+  padding: 80px 150px;
 }
 
 #presentation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-bottom: 150px;
 }
-
 #presentation .left {
   width: 40%;
   min-width: 450px;
   margin: auto 0;
 }
-
 #presentation .left h1::after {
   content: url("../../image/handWH.svg");
 }
-
 #presentation h1 {
   font-size: 61px;
 }
-
 #presentation .right {
   width: 50%;
   min-width: 450px;
 }
-
 #presentation .right img {
   width: 100%;
 }
-
 #presentation #rondInv1 {
   width: 180px;
   height: 180px;
@@ -59,7 +48,6 @@ section {
   bottom: 210px;
   z-index: -10;
 }
-
 #presentation #rondInv2 {
   width: 250px;
   height: 250px;
@@ -67,150 +55,102 @@ section {
   left: -125px;
   bottom: 200px;
 }
-
 #presentation #rondPres {
   position: absolute;
   right: 100px;
   bottom: 400px;
 }
-
 #presentation #squarePres {
   position: absolute;
   left: 230px;
   bottom: 200px;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  transform: rotate(30deg);
 }
 
 #steps {
   background-color: #F8F8F8;
 }
-
 #steps .card {
   width: 280px;
   height: 290px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 50px 25px 25px;
   border-radius: 25px;
-  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
   background-color: white;
   text-align: center;
   margin: 15px 0;
 }
-
 #steps .card img {
   width: 75%;
 }
-
 #steps .card .stepsDesc {
   color: #7d8f41;
 }
-
 #steps #allCards {
   margin: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #advantages {
   position: relative;
 }
-
 #advantages > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
 #advantages h2 {
   margin-bottom: 50px;
 }
-
 #advantages .left {
   margin: auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 60%;
   min-width: 450px;
 }
-
 #advantages .left .advElem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 #advantages .left p {
   font-size: 24px;
   width: 85%;
 }
-
 #advantages .right {
   width: 40%;
   min-width: 450px;
 }
-
 #advantages .right img {
   width: 100%;
 }
-
 #advantages #rondAdvantage1 {
   position: absolute;
   right: 50px;
   top: 150px;
 }
-
 #advantages #rondAdvantage2 {
   position: absolute;
   left: 500px;
   bottom: 100px;
 }
-
 #advantages #squareAdvantage1 {
   position: absolute;
   top: 50px;
   left: 50px;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
+  transform: rotate(20deg);
 }
-
 #advantages #squareAdvantage2 {
   position: absolute;
   top: 375px;
   left: 55%;
-  -webkit-transform: rotate(20deg);
-          transform: rotate(20deg);
+  transform: rotate(20deg);
 }
-
 #advantages #rondInvAdvantage1 {
   position: absolute;
   right: -150px;
@@ -218,7 +158,6 @@ section {
   width: 300px;
   height: 300px;
 }
-
 #advantages #rondInvAdvantage2 {
   position: absolute;
   z-index: -10;
@@ -234,47 +173,33 @@ section {
   background-image: url("../../image/fond.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   color: white;
 }
-
 #donation * {
   margin: auto 0;
   z-index: 10;
 }
-
 #donation img {
   width: 150px;
 }
-
 #donation h2 {
   font-family: "Lato Bold", serif;
 }
-
 #donation #rondDon {
   position: absolute;
   left: 100px;
   bottom: 25px;
 }
-
 #donation #squareDon {
   position: absolute;
   right: 100px;
   top: 100px;
-  -webkit-transform: rotate(70deg);
-          transform: rotate(70deg);
+  transform: rotate(70deg);
 }
-
 #donation button {
   margin: 50px 0 0 0;
   font-size: 32px;
@@ -282,83 +207,54 @@ section {
 }
 
 #why {
-  padding: 80px 0;
   position: relative;
 }
-
 #why h2 {
   text-align: center;
   margin-bottom: 50px;
 }
-
 #why > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
 #why .left, #why .right {
   text-align: left;
   margin: auto 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 30%;
   min-width: 400px;
 }
-
 #why .left .advElem, #why .right .advElem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
   margin: 25px 0;
 }
-
 #why .left p, #why .right p {
   font-size: 26px;
   font-family: "Montserrat Bold";
   margin: auto 0 auto 0;
   width: 100%;
 }
-
 #why .right {
   text-align: right;
 }
-
 #why .center {
   width: 40%;
   min-width: 500px;
 }
-
 #why .center img {
   width: 100%;
 }
-
 #why .leftDecoration {
   position: absolute;
   top: 25%;
   left: 0;
   width: 115px;
 }
-
 #why .rightDecoration {
   position: absolute;
   top: 25%;
@@ -366,13 +262,11 @@ section {
   width: 115px;
   z-index: -10;
 }
-
 #why #squareWhy {
   position: absolute;
   bottom: 50px;
   left: 40%;
-  -webkit-transform: rotate(-19deg);
-          transform: rotate(-19deg);
+  transform: rotate(-19deg);
 }
 
 .decoration-title {
@@ -400,29 +294,23 @@ section {
 
 @media screen and (max-width: 1504px) {
   #why .left {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
   #why .right {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   #why .center {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
   #why .leftDecoration, #why .rightDecoration {
     display: none;
   }
 }
-
 @media screen and (max-width: 1442px) {
   #advantages > #squareAdvantage2 {
     display: none;
   }
+
   #donation h2 {
     color: white;
     width: 100%;
@@ -430,17 +318,19 @@ section {
     text-align: center;
   }
 }
-
 @media screen and (max-width: 1300px) {
   section {
     padding: 40px 75px;
   }
+
   .rond, .square, .rond-inv {
     display: none;
   }
+
   #advantages > .rond, #advantages > .square, #advantages > .rond-inv {
     display: none;
   }
+
   #advantages .left {
     width: 80%;
   }
@@ -448,52 +338,44 @@ section {
     width: 100%;
   }
 }
-
 @media screen and (max-width: 966px) {
   #why .left {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
+    order: 0;
   }
   #why .right {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
     text-align: left;
   }
   #why .right p {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
   #why .right img {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   #why .center {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   #why img {
     float: none;
   }
 }
-
 @media screen and (max-width: 767px) {
   .decoration-title::after {
     content: none;
   }
+
   .decoration-title-center::after {
     content: none;
   }
+
   section {
     padding: 40px 5%;
   }
+
   .rightDecoration {
     display: none;
   }
+
   #presentation h1 {
     font-size: 44px;
   }
@@ -508,20 +390,19 @@ section {
   #presentation .right img {
     width: 100%;
   }
+
   #advantages .left {
     width: 100%;
     min-width: auto;
   }
   #advantages .left .advElem {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #advantages .right {
     width: 100%;
     min-width: auto;
   }
+
   #why {
     padding: 40px 5px;
   }
@@ -547,4 +428,5 @@ section {
     margin: 0 auto;
   }
 }
+
 /*# sourceMappingURL=accueil.css.map */
