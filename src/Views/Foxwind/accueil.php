@@ -4,7 +4,7 @@ ob_start();
         <img class="rightDecoration" id="rightDecorationDefault" src="resources/image/HeaderBackground_default.svg" alt="">
         <img class="rightDecoration" id="rightDecoration1301" src="resources/image/HeaderBackground_1301.svg" alt="">
 
-        <section id="presentation" class="fox-container">
+        <section id="presentation">
             <div class="left">
                 <h1>Éclairons notre prochain </h1>
                 <p>Une éolienne construite seulement avec des matériaux recyclés, elle est la plus propre du marché !</p>
@@ -19,7 +19,7 @@ ob_start();
             <span class="rond-inv" id="rondInv2"></span>
         </section>
 
-        <section id="steps" class="fox-container">
+        <section id="steps">
             <h2 class="text-center">Nous nous occupons de toutes les Étapes</h2>
             <div id="allCards">
                 <div class="card">
@@ -41,7 +41,7 @@ ob_start();
             </div>
         </section>
 
-        <section id="advantages" class="fox-container">
+        <section id="advantages">
             <h2 class="">Découvrez les avantages</h2>
 
             <div>
@@ -68,7 +68,7 @@ ob_start();
             </div>
         </section>
 
-        <section id="donation" class="d-block text-center fox-container-fluid">
+        <section id="donation" class="d-block text-center">
             <h2 class="text-center">Décollez avec nous en nous soutenant ! </h2>
             <button class="full-button-white">Faites un don</button>
             <span class="rond rond-clair" id="rondDon"></span>
@@ -76,7 +76,7 @@ ob_start();
         </section>
         <section id="why">
             <h2 class="">Pourquoi choisir nos éoliennes</h2>
-            <div class="fox-container">
+            <div>
                 <div class="left">
                     <div class="advElem">
                         <img class="icon" src="resources/image/light.svg" alt="">

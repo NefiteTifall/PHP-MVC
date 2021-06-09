@@ -103,8 +103,8 @@ a.animation:hover::after{
     width: 100%;
 }
 a:hover{
-    color: white;
-    text-decoration: none;
+    color: white !important;
+    text-decoration: none !important;
 }
 
 button:focus {

@@ -1,7 +1,8 @@
 <?php
 ob_start();
 ?>
-
+    <img class="rightDecoration" id="rightDecorationDefault" src="resources/image/HeaderBackground_default.svg" alt="">
+    <img class="rightDecoration" id="rightDecoration1301" src="resources/image/HeaderBackground_1301.svg" alt="">
     <div>
         <img id="rightDecoration" src="../Resources/Image/RightForm.svg" alt="">
         <div class="rond rond-inv" id="rondInv1"></div>

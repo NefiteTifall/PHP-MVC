@@ -11,12 +11,12 @@ body {
     padding: 80px 0;
 }
 section {
-    padding: 80px 0;
+    padding: 80px 150px;
 }
 #presentation {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .left {
         width: 40%;
@@ -230,7 +230,6 @@ section {
 }
 
 #why {
-    padding: 80px 0;
     position: relative;
 
     h2 {

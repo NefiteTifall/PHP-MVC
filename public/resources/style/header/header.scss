@@ -80,7 +80,7 @@ nav{
     }
     #rightDecoration1301 {
         display: block;
-        top: 210px;
+        top: 161px;
     }
     .navbar {
         background-color: #7D8F41;
@@ -117,11 +117,17 @@ nav{
     .rightDecoration {
         right: -490px;
     }
-    #HeaderLogo_dark {
-        display: none;
-    }
-    #HeaderLogo_light {
-        display: block;
+    .containerLogo {
+        #HeaderLogo_dark {
+            display: none;
+        }
+        #HeaderLogo_light {
+            display: block;
+        }
+        h1 {
+            margin: auto 0;
+            color: #EDEDED;
+        }
     }
     .navbar {
         background-color: #7D8F41;
@@ -144,7 +150,7 @@ nav{
     }
 }
 
-@media screen and (max-width: 1059px){
+@media screen and (max-width: 1177px){
     nav {
         background: rgb(125,143,65);
         background: linear-gradient(180deg, rgba(40,54,24,1) 0%, rgb(65, 80, 36) 40%, rgba(125,143,65,1) 100%);
@@ -172,6 +178,9 @@ nav{
     .HeaderWave{
         display: block;
         transform: rotate(0.5turn);
+    }
+    #rightDecoration1301 {
+        display: none !important;
     }
 }
 

@@ -21,7 +21,7 @@
                 <div class="col-md-4 left">
                     <h2>Utilitaires</h2>
                     <ul>
-                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Status</a></li>
                     </ul>
