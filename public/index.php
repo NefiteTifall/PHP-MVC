@@ -14,6 +14,7 @@ $router->get('/register/', "UserController@showRegister");
 $router->get('/logout/', "UserController@logout");
 $router->get('/eolienne', "MainController@eolienne");
 $router->get('/blog', "ArticleController@index");
+$router->get('/article/create', "ArticleController@create");
 $router->get('/article/:id', "ArticleController@show");
 $router->get('/team', "MainController@team");
 $router->get('/contact', "MainController@contact");
@@ -24,6 +25,7 @@ $router->get('/comment/:id/delete', "CommentController@deleteCom");
 $router->get('/destroy', "MainController@destroySession"); // Développement à enlever sur la prod
 $router->get('/deleteCart/:id', "MainController@deleteFromCart");
 
+$router->post('/article/create', "ArticleController@store");
 
 $router->post('/valideUser/:username', "UserController@isUserNameValide");
 $router->post('/login/', "UserController@login");

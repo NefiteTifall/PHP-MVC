@@ -1,0 +1,33 @@
+#createArticle {
+  padding: 15px;
+}
+
+#createArticle button {
+  font-size: 15px;
+}
+
+#createArticle #c {
+  margin: 50px 0;
+}
+
+#createArticle #c textarea {
+  resize: none;
+  width: 300px;
+  height: 100px;
+}
+
+#createArticle #c .left, #createArticle #c .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#createArticle #c .left label, #createArticle #c .right label {
+  display: block;
+}
+/*# sourceMappingURL=create.css.map */

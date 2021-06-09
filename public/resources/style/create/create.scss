@@ -1,0 +1,22 @@
+#createArticle{
+    padding: 15px;
+        button{
+            font-size: 15px;
+        }
+    #c{
+        margin: 50px 0;
+        textarea{
+            resize: none;
+            width: 300px;
+            height: 100px;
+        }
+        .left,.right{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            label{
+                display: block;
+            }
+        }
+    }
+}
