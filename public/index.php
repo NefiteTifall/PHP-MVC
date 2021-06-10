@@ -21,6 +21,9 @@ $router->get('/contact', "MainController@contact");
 $router->get('/cart', "MainController@cart");
 $router->get('/checkout', "MainController@commande");
 
+$router->get('/dashboard', "MainController@dashboardBO"); //TEMP - Acces au backoffice
+$router->get('/compte', "MainController@user"); //TEMP - Acces au compte
+
 $router->get('/comment/:id/delete', "CommentController@deleteCom");
 $router->get('/destroy', "MainController@destroySession"); // Développement à enlever sur la prod
 $router->get('/deleteCart/:id', "MainController@deleteFromCart");
