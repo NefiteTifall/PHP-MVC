@@ -3,19 +3,19 @@ ob_start();
 ?>
     <img class="rightDecoration" id="rightDecorationDefault" src="resources/image/HeaderBackground_default.svg" alt="">
     <img class="rightDecoration" id="rightDecoration1301" src="resources/image/HeaderBackground_1301.svg" alt="">
-    <div>
-        <img id="rightDecoration" src="../Resources/Image/RightForm.svg" alt="">
-        <div class="rond rond-inv" id="rondInv1"></div>
-        <div class="square square-fonce" id="rond01"></div>
-    </div>
-
-    <section id="presentation">
+    <section id="blog-sect1">
         <div class="left">
-            <h1>Nous faisons de notre mieux pour vous fournir des infos. Notre blog est fait pour ça</h1>
+            <h1>Apprenez-en plus sur notre projet grâce à ntore blog !</h1>
         </div>
         <div class="right">
-            <img src="../Resources/Image/blog.svg" draggable="false" alt="">
+            <div>
+                <img src="../resources/image/blog.svg" draggable="false" alt="">
+            </div>
         </div>
+        <span class="square square-clair" id="squareClaire"></span>
+        <span class="square square-fonce" id="squareFonce"></span>
+        <span class="rond-inv" id="rondInv1"></span>
+        <span class="rond-inv" id="rondInv2"></span>
     </section>
 
     <div class="container">

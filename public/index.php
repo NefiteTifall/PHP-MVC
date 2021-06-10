@@ -36,4 +36,6 @@ $router->post('/changeCart', "MainController@changeCart");
 $router->post('/contact', "ContactController@store");
 $router->post('/comment/:id', "CommentController@addComment");
 
+$router->post('/destroyPopup', "MainController@destroyPopup");
+
 $router->run();

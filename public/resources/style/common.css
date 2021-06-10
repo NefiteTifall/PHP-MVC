@@ -38,7 +38,7 @@ footer {
 footer section {
   background: #525c30;
   background: linear-gradient(180deg, #525c30 0%, #10120a 100%);
-  padding: 40px 0;
+  padding: 80px 0 40px 0;
 }
 footer img {
   width: 100%;
@@ -476,7 +476,7 @@ a.animation:hover::after {
   width: 100%;
 }
 
-a:hover {
+.navbar-collapse a:hover {
   color: white !important;
   text-decoration: none !important;
 }

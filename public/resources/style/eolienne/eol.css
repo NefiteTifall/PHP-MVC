@@ -14,7 +14,7 @@ section {
 #firstSec {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   position: relative;
 }
 #firstSec .left {
@@ -24,7 +24,7 @@ section {
   color: #393939;
   margin: auto 0;
   font-family: "Montserrat Bold", serif;
-  font-size: 38px;
+  font-size: 45px;
 }
 #firstSec .right {
   width: 50%;
@@ -130,7 +130,7 @@ section {
 }
 
 #thirdSec {
-  padding: 80px;
+  padding: 50px 5% 150px 5%;
 }
 #thirdSec #buy {
   position: relative;
@@ -313,6 +313,9 @@ section {
 }
 
 @media screen and (max-width: 1245px) {
+  #thirdSec {
+    padding-bottom: 150px;
+  }
   #thirdSec #buy {
     justify-content: space-between;
   }
@@ -364,6 +367,9 @@ section {
   }
 }
 @media screen and (max-width: 888px) {
+  #thirdSec {
+    padding-bottom: 150px;
+  }
   #thirdSec #buy {
     justify-content: space-between;
   }
@@ -387,7 +393,7 @@ section {
   }
 
   #firstSec {
-    padding: 5px 5%;
+    padding: 80px 5%;
   }
   #firstSec .left .help {
     font-size: 25px;
@@ -425,7 +431,7 @@ section {
   }
 
   #thirdSec {
-    padding: 10px;
+    padding: 0 0 50px 0;
   }
   #thirdSec #buy {
     padding: 20px 10px;

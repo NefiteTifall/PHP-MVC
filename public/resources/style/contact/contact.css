@@ -30,105 +30,93 @@ body {
 }
 
 #squareContact1 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   right: 300px;
   bottom: 150px;
 }
 
 #squareContact2 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   left: 150px;
   bottom: 100px;
 }
 
 #contactFirstSec {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding: 80px 150px;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 13vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
-
-#contactFirstSec .left, #contactFirstSec .right {
+#contactFirstSec .left {
   width: 40%;
-  margin: auto 0;
-  min-width: 320px;
 }
-
-#contactFirstSec img {
+#contactFirstSec .left h1 {
+  color: #393939;
+  margin: auto 0;
+  font-family: "Montserrat Bold", serif;
+  font-size: 45px;
+}
+#contactFirstSec .right {
+  width: 50%;
+}
+#contactFirstSec .right div {
+  width: 100%;
+}
+#contactFirstSec .right div img {
   width: 100%;
 }
 
 #contact {
-  padding: 0 50px;
-  margin: 0 0 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
-#contact .content {
+.content {
   width: 90%;
 }
-
-#contact .content img {
+.content img {
   vertical-align: middle;
   margin-left: 25px;
 }
-
-#contact .content form * {
+.content form * {
   display: block;
   margin: 10px 0;
   padding: 5px 15px;
   border-radius: 3px;
   border: solid 1px lightgray;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
-#contact .content form p {
+.content form p {
   border: none;
   margin: 0;
 }
-
-#contact .content form *:focus {
+.content form *:focus {
   outline: none;
 }
-
-#contact .content form input {
+.content form input {
   width: 30%;
-  margin: 25px 0;
+  margin: 15px 0;
   min-width: 280px;
 }
-
-#contact .content form textarea {
+.content form textarea {
+  margin: 15px 0;
   padding: 5px;
   width: 100%;
   min-height: 150px;
   resize: none;
-  margin: 0 0 25px 0;
 }
-
-#contact .content .button-white {
+.content .button-white {
   border: solid 1px #7d8f41;
   background-color: transparent;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   padding: 10px 65px;
   border-radius: 50px;
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 80px;
 }
-
-#contact .content .button-white:hover {
+.content .button-white:hover {
   border: solid 1px lightgray;
   background-color: #7d8f41;
   color: white;
@@ -149,12 +137,15 @@ body {
   #rondInvContact1, #rondInvContact2, #squareContact1, #squareContact2 {
     display: none;
   }
+
   .decoration-title::after {
     content: none;
   }
+
   #rightDecoContact {
     display: none;
   }
+
   #contactFirstSec {
     margin-bottom: 50px;
   }
@@ -166,6 +157,7 @@ body {
   #contactFirstSec h1 {
     font-size: 35px;
   }
+
   #contact {
     padding: 5px;
   }
@@ -176,4 +168,5 @@ body {
     width: 100%;
   }
 }
+
 /*# sourceMappingURL=contact.css.map */

@@ -102,9 +102,11 @@ a.animation:after{
 a.animation:hover::after{
     width: 100%;
 }
-a:hover{
-    color: white !important;
-    text-decoration: none !important;
+.navbar-collapse {
+    a:hover {
+        color: white !important;
+        text-decoration: none !important;
+    }
 }
 
 button:focus {

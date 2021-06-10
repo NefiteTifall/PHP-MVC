@@ -20,7 +20,7 @@ ob_start();
 
     <section id="contact">
         <div class="content">
-            <h2 class="decoration-title">Formulaire de contact<img src="./resources/image/com.svg" alt=""/> </h2>
+            <h2 class="title">Formulaire de contact</h2>
             <form action="/contact" method="post">
                 <input value="<?= old("mail")?>" required type="email" name="mail" aria-label="Insérez votre E-MAIL" placeholder="Votre E-mail"/>
                 <p class="error"><?= error("mail")?></p>

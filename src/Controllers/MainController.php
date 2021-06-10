@@ -79,7 +79,7 @@ class MainController {
         if (!$this->validator->errors()) {
             if ($_POST["qte"]>$eol) {
                 $_SESSION["popup"]["title"] = "ERREUR 🤖";
-                $_SESSION["popup"]["text"] = "Vous ne pouvez pas réserver plus de $eol éoliennes";
+                $_SESSION["popup"]["text"] = "Nous avons seulement $eol éoliennes en stocks, désolé.";
                 $_SESSION["popup"]["type"] = "error";
                 echo "refresh";
                 die;

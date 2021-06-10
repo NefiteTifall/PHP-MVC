@@ -54,7 +54,8 @@
     display: flex;
     justify-content: center;
     box-shadow: 10px 10px 0px 0px rgba(119, 68, 24, 0.4);
-    width: 100px;
+    width: 60%;
+    margin: 80px 0 180px 0;
 
     /* Titre du formulaire */
     h1{
@@ -131,7 +132,7 @@
 /* Responsive */
 @media screen and (max-width: 1500px){
     .Form{
-        margin: 50px 0 0 0;
+        margin: 80px 0 180px 0;
     }
 
 }
@@ -156,7 +157,7 @@
         display: none;
     }
     .Form{
-        margin: 0 0 0 0;
+        margin: 80px 0 150px 0;
         box-shadow: 0px 0px 0px 0px;
         border-radius: 00px;
         h1{

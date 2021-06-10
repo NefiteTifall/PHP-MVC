@@ -15,7 +15,7 @@ section{
 #firstSec{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
     .left{
         width: 40%;
@@ -23,7 +23,7 @@ section{
             color: #393939;
             margin: auto 0;
             font-family: "Montserrat Bold", serif;
-            font-size: 38px;
+            font-size: 45px;
         }
     }
     .right{
@@ -136,7 +136,7 @@ section{
 }
 
 #thirdSec{
-    padding: 80px;
+    padding: 50px 5% 150px 5%;
     #buy{
         position: relative;
         box-shadow: 20px 20px 0 0 #bdaa99;
@@ -325,6 +325,7 @@ section{
 
 @media screen and (max-width:1245px){
     #thirdSec{
+        padding-bottom: 150px;
         #buy{
             justify-content: space-between;
             #bigEolImage{
@@ -378,6 +379,7 @@ section{
 
 @media screen and (max-width: 888px){
     #thirdSec{
+        padding-bottom: 150px;
         #buy{
             justify-content: space-between;
             #eolImages{
@@ -404,7 +406,7 @@ section{
     }
 
     #firstSec{
-        padding: 5px 5%;
+        padding: 80px 5%;
         .left{
             .help{
                 font-size: 25px;
@@ -449,7 +451,7 @@ section{
 
     }
     #thirdSec{
-        padding: 10px;
+        padding: 0 0 50px 0;
         #buy{
             padding: 20px 10px;
             width: 100%;
