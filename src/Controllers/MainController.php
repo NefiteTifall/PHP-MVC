@@ -49,7 +49,9 @@ class MainController {
     public function commande(){
         $ctrl = new UserController();
         if(!$ctrl::isAuth()){
-            $_SESSION['popup'] = "Veuillez vous connectez pour commander.";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous devez être connecter pour commander";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /login");
         }
         require VIEWS . ROAD. '/cart-checkout.php';
@@ -68,19 +70,23 @@ class MainController {
 
     public function addCart(){
         $eol = $this->getDispoEol();
+        $_POST["qte"] = intval($_POST["qte"]);
         $this->validator->validate([
             "qte"=>["required","numeric"]
         ]);
 
-
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
             if ($_POST["qte"]>$eol) {
-                $_SESSION["popup"] = "Vous ne pouvez pas réserver plus de $eol éoliennes";
-                header("Location:/eolienne");
+                $_SESSION["popup"]["title"] = "ERREUR 🤖";
+                $_SESSION["popup"]["text"] = "Vous ne pouvez pas réserver plus de $eol éoliennes";
+                $_SESSION["popup"]["type"] = "error";
+                echo "refresh";
                 die;
             }
-            $_SESSION['popup'] = "Cette article à bien été ajouté au panier.";
+            $_SESSION["popup"]["title"] = "Succès";
+            $_SESSION["popup"]["text"] = "L'article vient d'être ajouter a vôtre panier";
+            $_SESSION["popup"]["type"] = "success";
             if (!isset($_SESSION["cart"]["eol"]) || count($_SESSION["cart"]["eol"]) === 0) $_SESSION["cart"]["eol"]["eolienne"] = [
 
                 "name"=>"Éolienne",
@@ -90,10 +96,12 @@ class MainController {
             ];
             if (isset($_SESSION["cart"]["eol"]["eolienne"])) $_SESSION["cart"]["eol"]["eolienne"]["qte"] = (int)$_SESSION["cart"]["eol"]["eolienne"]["qte"] + (int)$_POST["qte"];
             else $_SESSION["cart"]["eol"]["eolienne"]["qte"] = (int)$_POST["qte"];
-            header("Location: /cart");
+            echo "/cart";
         } else {
-            $_SESSION['popup'] = "Veuillez rentrer un nombre valide et supérieur à 0";
-            header("Location: /contact");
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Merci d'entrer un nombre supérieur à 1";
+            $_SESSION["popup"]["type"] = "error";
+            echo "refresh";
         }
 
     }
@@ -111,5 +119,8 @@ class MainController {
 
     public function getDispoEol(){
         return $this->manager->getDispoEol()["eol"];
+    }
+    public function destroyPopup() {
+        unset($_SESSION['popup']);
     }
 }

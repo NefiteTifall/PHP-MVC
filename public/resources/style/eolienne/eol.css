@@ -12,40 +12,29 @@ section {
 }
 
 #firstSec {
-  padding: 200px 80px 150px 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
   position: relative;
 }
-
 #firstSec .left {
   width: 40%;
 }
-
 #firstSec .left .help {
+  color: #393939;
   margin: auto 0;
-  font-family: "Montserrat Bold";
+  font-family: "Montserrat Bold", serif;
   font-size: 38px;
-  color: black;
 }
-
 #firstSec .right {
   width: 50%;
 }
-
 #firstSec .right div {
   width: 100%;
 }
-
 #firstSec .right div img {
   width: 100%;
 }
-
 #firstSec #rondInv1 {
   width: 300px;
   height: 300px;
@@ -53,7 +42,6 @@ section {
   left: -150px;
   bottom: -50px;
 }
-
 #firstSec #rondInv2 {
   width: 180px;
   height: 180px;
@@ -61,37 +49,27 @@ section {
   bottom: 90px;
   left: 570px;
 }
-
 #firstSec .square {
   position: absolute;
 }
-
 #firstSec #squareFonce {
   left: 350px;
   bottom: 50px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 #firstSec #squareClaire {
   right: 50px;
   bottom: 25px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 #secondSec {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
   position: relative;
-  padding: 150px 0;
+  padding: 35px 50px 0 0;
 }
-
 #secondSec .left {
   background-image: url("../../image/leftMiddle.svg");
   background-repeat: no-repeat;
@@ -100,11 +78,9 @@ section {
   min-width: 432px;
   padding: 150px 10px 150px 50px;
 }
-
 #secondSec .left img {
   width: 80%;
 }
-
 #secondSec .left #rondInvSecondSec1 {
   width: 180px;
   height: 180px;
@@ -113,7 +89,6 @@ section {
   top: 240px;
   z-index: 10;
 }
-
 #secondSec .left #rondInvSecondSec2 {
   width: 180px;
   height: 180px;
@@ -122,28 +97,19 @@ section {
   bottom: 200px;
   z-index: 10;
 }
-
 #secondSec .right {
   min-width: 540px;
   width: 50%;
   margin: auto 0;
   position: relative;
 }
-
 #secondSec .right .advElem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 #secondSec .right p {
   color: rgba(0, 0, 0, 0.5);
 }
-
 #secondSec .right #rondInvSecondSec3 {
   width: 180px;
   height: 180px;
@@ -151,14 +117,12 @@ section {
   bottom: 20%;
   right: 0;
 }
-
 #secondSec #rondClaire {
   position: absolute;
   left: 50px;
   top: 50%;
   z-index: 10;
 }
-
 #secondSec #rondFonce {
   position: absolute;
   right: 300px;
@@ -168,43 +132,25 @@ section {
 #thirdSec {
   padding: 80px;
 }
-
 #thirdSec #buy {
   position: relative;
-  -webkit-box-shadow: 20px 20px 0 0 #bdaa99;
-          box-shadow: 20px 20px 0 0 #bdaa99;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 20px 20px 0 0 #bdaa99;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   padding: 25px;
   background: #774418;
-  background: -webkit-gradient(linear, left top, right top, from(#774418), to(#3c220c));
   background: linear-gradient(90deg, #774418 0%, #3c220c 100%);
   width: 100%;
   border-radius: 50px;
 }
-
 #thirdSec #buy #eolImages {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
-
 #thirdSec #buy #eolImages .eolContainer {
   cursor: pointer;
   border-radius: 25px;
@@ -212,12 +158,10 @@ section {
   padding: 20px;
   background: #d9b799;
   background: linear-gradient(311deg, rgba(217, 183, 153, 0.36) 36%, rgba(60, 34, 12, 0.36) 100%);
-  width: 180px;
   width: 187px;
   height: 187px;
   margin: 12px;
 }
-
 #thirdSec #buy #eolImages .eolContainer img {
   position: absolute;
   top: 0;
@@ -226,205 +170,143 @@ section {
   right: 0;
   margin: auto;
 }
-
 #thirdSec #buy #bigEolImage {
   position: relative;
   margin: auto 0;
 }
-
 #thirdSec #buy #bigEolImage img {
   width: 450px;
   height: 450px;
 }
-
 #thirdSec #buy #eolDescription {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: auto 0;
+  flex: 1;
   color: white;
+  margin: auto 0;
 }
-
 #thirdSec #buy #eolDescription * {
-  font-family: "Montserrat Bold";
+  font-family: "Montserrat Bold", serif;
 }
-
 #thirdSec #buy #eolDescription h2 {
-  color: #7D8F41;
-  margin-left: 25px;
+  color: white;
   font-size: 40px;
 }
-
 #thirdSec #buy #eolDescription h2 .price {
   color: white;
   padding: 10px;
   background-color: #7D8F41;
   border-radius: 25px;
 }
-
-#thirdSec #buy #eolDescription .star-container {
-  margin-top: 10px;
-  margin-left: 25px;
-  position: relative;
-  border-radius: 50px;
-  background-color: #774418;
-  padding: 5px 5px 5px 25px;
-  vertical-align: middle;
-  display: inline-block;
-  height: 30px;
-}
-
-#thirdSec #buy #eolDescription .star-container .star {
-  position: relative;
-  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-          clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  background-color: white;
-}
-
-#thirdSec #buy #eolDescription .star-container .fill {
-  background-color: #FAB40A;
-}
-
-#thirdSec #buy #eolDescription .star-container .star:nth-child(2) {
-  margin-left: 5px;
-}
-
-#thirdSec #buy #eolDescription .star-container .note {
-  position: absolute;
-  background-color: #FAB40A;
-  border-radius: 50%;
-  color: #272626;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  display: inline-block;
-  text-align: center;
-  left: -25px;
-  top: 50%;
-  bottom: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-}
-
 #thirdSec #buy #eolDescription .advice {
   display: inline-block;
   margin: 10px 0 0;
   vertical-align: middle;
-  font-family: "Montserrat Regular";
+  font-family: "Montserrat Regular", serif;
 }
-
 #thirdSec #buy #eolDescription .desc {
-  margin: 25px 0 45px 0;
+  margin: 75px 0 75px 0;
 }
-
 #thirdSec #buy #eolDescription p {
   color: white;
   font-size: 24px;
 }
-
+#thirdSec #buy #eolDescription form {
+  display: flex;
+  justify-content: space-between;
+  height: 67px;
+  width: 70%;
+}
 #thirdSec #buy #eolDescription .number {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
 }
-
 #thirdSec #buy #eolDescription .number .left-number {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   cursor: pointer;
-  font-size: 33px;
+  font-size: 44px;
   background-color: #7D8F41;
   width: 40px;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
+  margin: auto 0;
 }
-
 #thirdSec #buy #eolDescription .number .right-number {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   cursor: pointer;
-  font-size: 33px;
+  font-size: 44px;
   background-color: #7D8F41;
   width: 40px;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
-
 #thirdSec #buy #eolDescription .number input {
   border: none;
   width: 65px;
   padding: 5px;
+  font-size: 30px;
   color: #7D8F41;
   text-align: center;
 }
-
 #thirdSec #buy #eolDescription .number input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-
 #thirdSec #buy #eolDescription .number input:focus {
   outline: none;
 }
-
 #thirdSec #buy #eolDescription .add-to-cart {
   border: none;
   background-color: #7D8F41;
   color: white;
-  padding: 10px 15px;
   border-radius: 30px;
   font-size: 25px;
+  transition: background-color 0.6s;
 }
-
 #thirdSec #buy #eolDescription .add-to-cart img {
   padding: 5px;
   height: 45px;
   vertical-align: middle;
 }
-
+#thirdSec #buy #eolDescription .add-to-cart:hover {
+  border: none;
+  background-color: #FAB40A;
+  color: white;
+  border-radius: 30px;
+  font-size: 25px;
+}
+#thirdSec #buy #eolDescription .add-to-cart:hover img {
+  padding: 5px;
+  height: 45px;
+  vertical-align: middle;
+}
 #thirdSec #buy #rondClaireBuy {
   position: absolute;
   z-index: 10;
   top: 50px;
   right: -50px;
 }
-
 #thirdSec #buy #squareClaireBuy {
   position: absolute;
   z-index: 10;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  transform: rotate(30deg);
   bottom: -50px;
   left: -15px;
 }
-
 #thirdSec #buy .rond-inv {
   position: absolute;
   height: 180px;
   width: 180px;
   z-index: 10;
 }
-
 #thirdSec #buy #rondInvThirdSec1 {
   bottom: -130px;
   left: 250px;
 }
-
 #thirdSec #buy #rondInvThirdSec2 {
   bottom: -80px;
   right: 150px;
 }
-
 #thirdSec #buy #rondInvThirdSec3 {
   top: -90px;
   left: 50%;
@@ -432,29 +314,23 @@ section {
 
 @media screen and (max-width: 1245px) {
   #thirdSec #buy {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   #thirdSec #buy #bigEolImage {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   #thirdSec #buy #bigEolImage img {
     width: 100%;
   }
   #thirdSec #buy #eolDescription {
     margin-top: 15px;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
   }
   #thirdSec #buy #eolDescription h2 {
     font-size: 35px;
     margin: 0;
   }
 }
-
 @media screen and (max-width: 1100px) {
   #firstSec {
     padding: 100px 40px 100px;
@@ -470,11 +346,9 @@ section {
     right: 0;
     margin: auto;
   }
+
   #secondSec {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   #secondSec .left {
     background-image: none;
@@ -484,47 +358,40 @@ section {
   #secondSec .left img {
     width: 100%;
   }
+
   .rond, .rond-inv, .square {
     display: none;
   }
 }
-
 @media screen and (max-width: 888px) {
   #thirdSec #buy {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   #thirdSec #buy #eolImages {
     width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-around;
   }
   #thirdSec #buy #eolImages .break {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     height: 0;
   }
   #thirdSec #buy #bigEolImage {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
     margin: 15px 0;
   }
 }
-
 @media screen and (max-width: 767px) {
   #rightDecoration {
     display: none;
   }
+
   #firstSec {
     padding: 5px 5%;
   }
   #firstSec .left .help {
     font-size: 25px;
+    color: rgba(0, 0, 0, 0.5);
   }
   #firstSec .left, #firstSec .right {
     width: 90%;
@@ -535,6 +402,7 @@ section {
   #firstSec .right img {
     position: relative;
   }
+
   #secondSec .right, #secondSec .left {
     width: 100%;
     min-width: 0;
@@ -544,10 +412,7 @@ section {
   }
   #secondSec .right .advElem {
     padding: 5px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #secondSec .right .advElem p {
     font-size: 20px;
@@ -558,14 +423,15 @@ section {
   #secondSec .right .advElem img {
     width: 100px;
   }
+
   #thirdSec {
     padding: 10px;
   }
   #thirdSec #buy {
     padding: 20px 10px;
     width: 100%;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
   }
 }
+
 /*# sourceMappingURL=eol.css.map */

@@ -13,8 +13,6 @@ section{
 }
 
 #firstSec{
-    //padding-top: 250px;
-    padding :200px 80px 150px 80px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -22,10 +20,10 @@ section{
     .left{
         width: 40%;
         .help{
+            color: #393939;
             margin: auto 0;
-            font-family: "Montserrat Bold";
+            font-family: "Montserrat Bold", serif;
             font-size: 38px;
-            color: black;
         }
     }
     .right{
@@ -73,7 +71,7 @@ section{
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
-    padding: 150px 0;
+    padding: 35px 50px 0 0 ;
     .left{
         background-image: url("../../image/leftMiddle.svg");
         background-repeat: no-repeat;
@@ -163,7 +161,6 @@ section{
                 padding: 20px;
                 background: rgb(217,183,153);
                 background: linear-gradient(311deg, rgba(217,183,153,0.36) 36%, rgba(60,34,12,0.36) 100%);
-                width: 180px;
                 width: 187px;
                 height: 187px;
                 margin: 12px;
@@ -185,16 +182,15 @@ section{
             }
         }
         #eolDescription{
+            *{
+                font-family: "Montserrat Bold", serif;
+            }
             position: relative;
             flex: 1;
-            *{
-                font-family: "Montserrat Bold";
-            }
-            margin: auto 0;
             color: white;
+            margin: auto 0;
             h2{
-                color: $VertPrincipale3;
-                margin-left: 25px;
+                color: white;
                 font-size: 40px;
                 .price{
                     color: white;
@@ -203,80 +199,44 @@ section{
                     border-radius: 25px;
                 }
             }
-            .star-container{
-                margin-top: 10px;
-                margin-left: 25px;
-                position: relative;
-                border-radius: 50px;
-                background-color : $MarronSecondaire1;
-                padding : 5px 5px 5px 25px ;
-                vertical-align: middle;
-                display: inline-block;
-                height: 30px;
-                
-                .star{
-                    position: relative;
-                    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-                    display: inline-block;
-                    height: 15px;
-                    width: 15px;
-                    background-color: white;
-                }
-
-                .fill{
-                    background-color: $jaune;
-                }
-                .star:nth-child(2){
-                    margin-left: 5px;
-                }
-                .note{
-                    position: absolute;
-                    background-color:$jaune;
-                    border-radius: 50%;
-                    color: #272626;
-                    height: 50px;
-                    width: 50px;
-                    line-height:50px;
-                    display: inline-block;
-                    text-align: center;
-                    left: -25px;
-                    top: 50%;
-                    bottom: 50%;
-                    transform: translate(0,-50%);
-                }
-            }
             .advice{
                 display: inline-block;
                 margin: 10px 0 0;
                 vertical-align: middle;
-                font-family: "Montserrat Regular";
+                font-family: "Montserrat Regular", serif;
             }
             .desc{
-                margin: 25px 0 45px 0;
-                
+                margin: 75px 0 75px 0;
             }
             p{
                 color: white;
                 font-size: 24px;
             }
+            form {
+                display: flex;
+                justify-content: space-between;
+                height: 67px;
+                width: 70%;
+            }
             .number{
                 text-align: center;
                 display: flex;
                 flex-wrap: nowrap;
+                height: 100%;
                 .left-number{
                     user-select: none;
                     cursor: pointer;
-                    font-size: 33px;
+                    font-size: 44px;
                     background-color: $VertPrincipale3;
                     width: 40px;
                     border-top-left-radius: 50px;
                     border-bottom-left-radius: 50px;
+                    margin: auto 0;
                 }
                 .right-number{
                     user-select: none;
                     cursor: pointer;
-                    font-size: 33px;
-                    //height: 50px;
+                    font-size: 44px;
                     background-color: $VertPrincipale3;
                     width: 40px;
                     border-top-right-radius: 50px;
@@ -286,6 +246,7 @@ section{
                     border: none;
                     width: 65px;
                     padding: 5px;
+                    font-size: 30px;
                     color: $VertPrincipale3;
                     text-align: center;
                 }
@@ -300,7 +261,19 @@ section{
                 border: none;
                 background-color: $VertPrincipale3;
                 color: white;
-                padding: 10px 15px;
+                border-radius: 30px;
+                font-size: 25px;
+                img{
+                    padding: 5px;
+                    height: 45px;
+                    vertical-align: middle;
+                }
+                transition: background-color 0.6s;
+            }
+            .add-to-cart:hover{
+                border: none;
+                background-color: $jaune;
+                color: white;
                 border-radius: 30px;
                 font-size: 25px;
                 img{
@@ -435,6 +408,7 @@ section{
         .left{
             .help{
                 font-size: 25px;
+                color: rgba(0,0,0,0.5);
             }
         }
         .left, .right{

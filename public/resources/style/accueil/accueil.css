@@ -19,16 +19,13 @@ section {
 #presentation {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 150px;
 }
 #presentation .left {
   width: 40%;
   min-width: 450px;
   margin: auto 0;
-}
-#presentation .left h1::after {
-  content: url("../../image/handWH.svg");
 }
 #presentation h1 {
   font-size: 61px;
@@ -62,8 +59,8 @@ section {
 }
 #presentation #squarePres {
   position: absolute;
-  left: 230px;
-  bottom: 200px;
+  left: 530px;
+  bottom: 133px;
   transform: rotate(30deg);
 }
 
@@ -208,6 +205,7 @@ section {
 
 #why {
   position: relative;
+  padding: 80px 100px;
 }
 #why h2 {
   text-align: center;
