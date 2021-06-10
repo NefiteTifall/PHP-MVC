@@ -28,7 +28,7 @@ ob_start();
                 <button onclick="newSection(event)" class="full-button-green">Ajouter une section</button>
             </div>
             
-            <button class="full-button-green">Créer l'article </button>
+            <button class="full-button-green">Créer l'article</button>
         </form>
     </section>
     <script>
@@ -68,7 +68,7 @@ ob_start();
                     let img = document.createElement("input");
                     let limg = document.createElement("label")
                     img.setAttribute("type","file");
-                    img.setAttribute("name","img[]");
+                    img.setAttribute("name","img"+cpt);
                     img.setAttribute("id","img"+cpt);
                     limg.setAttribute('for','img'+cpt);
                     limg.innerHTML = "Image de la section : "
@@ -79,7 +79,7 @@ ob_start();
                     let t = document.createElement("textarea");
                     let lt = document.createElement("label")
                     t.setAttribute("id","t"+cpt);
-                    t.setAttribute("name","t[]");
+                    t.setAttribute("name","t"+cpt);
                     lt.setAttribute('for','t'+cpt);
                     lt.innerHTML = "Texte de la section :";
 
@@ -117,7 +117,7 @@ ob_start();
                     let img = document.createElement("input");
                     let limg = document.createElement("label")
                     img.setAttribute("type","file");
-                    img.setAttribute("name","img[]");
+                    img.setAttribute("name","img"+cpt);
                     img.setAttribute("id","img"+cpt);
                     limg.setAttribute('for','img'+cpt);
                     limg.innerHTML = "Image de la section :"
@@ -128,7 +128,7 @@ ob_start();
                     let t = document.createElement("textarea");
                     let lt = document.createElement("label")
                     t.setAttribute("id","t"+cpt);
-                    t.setAttribute("name","t[]");
+                    t.setAttribute("name","t"+cpt);
                     lt.setAttribute('for','t'+cpt);
                     lt.innerHTML = "Texte de la section :";
 
@@ -165,7 +165,7 @@ ob_start();
                     let t = document.createElement("textarea");
                     let lt = document.createElement("label")
                     t.setAttribute("id","t"+cpt);
-                    t.setAttribute("name","tu[]");
+                    t.setAttribute("name","t"+cpt);
                     lt.setAttribute('for','t'+cpt);
                     lt.innerHTML = "Texte de la section :";
 

@@ -1,6 +1,5 @@
 <?php
 ob_start();
-$eol = 50;
 ?>
     <img class="rightDecoration" id="rightDecorationDefault" src="resources/image/HeaderBackground_default.svg" alt="">
     <img class="rightDecoration" id="rightDecoration1301" src="resources/image/HeaderBackground_1301.svg" alt="">
@@ -8,7 +7,7 @@ $eol = 50;
     <section id="firstSec">
         <div class="left">
             <p class="help">
-                Grâce à notre service de livraison, ne vous déplacez plus !
+                En cette période nous faisons notre maximum pour faciliter votre achat
             </p>
         </div>
         <div class="right">
@@ -77,6 +76,17 @@ $eol = 50;
             </div>
             <div id="eolDescription">
                 <h2>Éolienne <span class="price">666€</span></h2>
+                <div class="star-container">
+                    <div class="note">5.0</div>
+                    <div class="star fill"></div>
+                    <div class="star fill"></div>
+                    <div class="star fill"></div>
+                    <div class="star fill"></div>
+                    <div class="star"></div>
+                </div>
+                <p class="advice">
+                    10 Avis | Ajouter votre avis
+                </p>
                 <p class="desc">
                     This is Photoshop's version of Lorem Ipsum.
                     Proin kdagravida nibh vel velit auctor aliquet.
@@ -102,15 +112,15 @@ $eol = 50;
     <script>
         let eolContainer = document.getElementsByClassName("eolContainer");
         let bigEol = document.getElementById("bigEolImage").getElementsByTagName("img")[0];
-        let less = $(`.left-number`);
-        let more = $(`.right-number`);;
+        let less = document.getElementsByClassName("left-number")[0];
+        let more = document.getElementsByClassName("right-number")[0];
         let qte = document.getElementById("qte");
-        less.on("click", (e) => {
+        less.addEventListener("click",function() {
             change(-1)
-        })
-        more.on("click", (e) => {
+        });
+        more.addEventListener("click",function() {
             change(1)
-        })
+        });
 
         for (let i = 0; i < eolContainer.length; i++) {
             const container = eolContainer[i];
@@ -120,19 +130,12 @@ $eol = 50;
         }
 
         function change(value) {
+
             let newValue = parseInt(qte.value)+value;
             if(newValue >= 1 && newValue<=<?=$eol?>) {
                 qte.value = newValue;
             }
         }
-        $(`form`).on("submit", (e) => {
-            e.preventDefault();
-            $.post("/addCart", {qte: $(e.target).serializeArray()[0]["value"]})
-            .done(data => {
-                if(data !== "refresh") window.location.href = data;
-                else document.location.reload();
-            })
-        })
     </script>
 <?php
 

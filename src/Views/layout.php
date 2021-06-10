@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="<?= "temp"//$description  ?>">
-    <title><?php if(isset($title)) echo $title; ?> | FoxWind</title>
+    <title><?= $title ?> | FoxWind</title>
     <!-- Bootstrap, jQuerry, Fontawesomelinks -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
@@ -33,19 +33,16 @@
 
 <?php include "footer.php" ?>
 <?php if (isset($_SESSION["popup"])): ?>
-    <?php include "popup.php" ?>
+    <div class="fond-noir"></div>
+    <div id="popup">
+        <p><?= $_SESSION["popup"] ?></p>
+    </div>
 <?php endif; ?>
 </body>
 <script>
     function loading() {
         console.log("loaded")
         $('body').addClass('loaded');
-        $('.toast__close').on("click", function(e){
-            e.preventDefault();
-            let parent = $(this).parent('.toast');
-            parent.fadeOut("slow", function() { $(this).remove(); } );
-            $.post("/destroyPopup")
-        });
     };
 </script>
 <script>
@@ -67,3 +64,4 @@
 unset($_SESSION['error']);
 unset($_SESSION['old']);
 unset($_SESSION['msg']);
+unset($_SESSION['popup']);

@@ -5,32 +5,38 @@
   font-family: "Lato Light";
   src: url("/resources/style/font/Lato-Light.ttf");
 }
+
 @font-face {
   font-family: "Lato Regular";
   src: url("/resources/style/font/Lato-Regular.ttf");
 }
+
 @font-face {
   font-family: "Lato Bold";
   src: url("/resources/style/font/Lato-Bold.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Light";
   src: url("../font/Montserrat-Light.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Medium";
   src: url("/resources/style/font/Montserrat-Medium.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Regular";
   src: url("/resources/style/font/Montserrat-Regular.ttf");
 }
+
 @font-face {
   font-family: "Montserrat Bold";
   src: url("/resources/style/font/Montserrat-Bold.ttf");
 }
+
 /* Fonts */
-/*# sourceMappingURL=fonts.css.map */
 /* Imports */
 /* Body */
 body {
@@ -83,74 +89,54 @@ body {
   position: absolute;
   left: 250px;
   bottom: 10%;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   z-index: -10;
 }
 
 /* Forms */
 /* Blog style */
-#blog-sect1 {
+#presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-  padding: 80px 150px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 250px;
 }
-#blog-sect1 .left {
-  width: 40%;
-}
-#blog-sect1 .left h1 {
-  color: #393939;
+
+#presentation .left {
+  width: 50%;
+  min-width: 450px;
   margin: auto 0;
-  font-family: "Montserrat Bold", serif;
-  font-size: 45px;
 }
-#blog-sect1 .right {
-  width: 40%;
+
+#presentation h1 {
+  font-size: 55px;
+  padding: 100px;
 }
-#blog-sect1 .right div {
-  width: 100%;
+
+#presentation .right {
+  width: 50%;
+  min-width: 450px;
 }
-#blog-sect1 .right div img {
-  width: 100%;
-}
-#blog-sect1 #rondInv1 {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: -150px;
-  bottom: -50px;
-}
-#blog-sect1 #rondInv2 {
-  width: 180px;
-  height: 180px;
-  position: absolute;
-  bottom: 90px;
-  left: 570px;
-}
-#blog-sect1 .square {
-  position: absolute;
-}
-#blog-sect1 #squareFonce {
-  left: 350px;
-  bottom: 50px;
-  transform: rotate(45deg);
-}
-#blog-sect1 #squareClaire {
-  right: 50px;
-  bottom: 25px;
-  transform: rotate(45deg);
+
+#presentation .right img {
+  width: 90%;
 }
 
 #articles {
   margin-bottom: 100px;
 }
+
 #articles .row {
   margin: 50px 0;
 }
 
 .articleBlock {
-  background-image: url("../../image/ArticleForm.svg");
+  background-image: url("../../Image/ArticleForm.svg");
   /*background-position: center;
   background-size: cover;*/
   background-repeat: no-repeat;
@@ -167,17 +153,20 @@ body {
 
   }*/
 }
+
 .articleBlock h2 {
   font-weight: bold;
   color: white;
   padding-top: 20px;
   padding-left: 10px;
 }
+
 .articleBlock #separator {
   margin-left: 10px;
   border-bottom: 2px solid white;
   width: 35%;
 }
+
 .articleBlock p {
   padding-top: 25px;
   padding-bottom: 20px;
@@ -186,6 +175,7 @@ body {
   font-weight: bold;
   color: white;
 }
+
 .articleBlock .button {
   color: black;
   margin-bottom: 20px;
@@ -196,8 +186,10 @@ body {
   border: 0px solid transparent;
   font-family: "Montserrat Bold";
 }
+
 .articleBlock .postPreviewImage {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   z-index: -100;
   width: 456px;
   height: 100%;
@@ -230,11 +222,13 @@ body {
     font-size: 50px;
   }
 }
+
 @media screen and (max-width: 1200px) {
   .articleBlock .postPreviewImage {
     width: 43%;
   }
 }
+
 @media screen and (max-width: 1096px) {
   #presentation {
     margin-bottom: 400px;
@@ -243,11 +237,11 @@ body {
     font-size: 40px;
   }
 }
+
 @media screen and (max-width: 992px) {
   .articleBlock .postPreviewImage {
     display: none;
   }
-
   #presentation {
     margin-bottom: 400px;
   }
@@ -255,6 +249,7 @@ body {
     font-size: 35px;
   }
 }
+
 @media screen and (max-width: 909px) {
   #presentation .left {
     width: 100%;
@@ -264,15 +259,15 @@ body {
     font-size: 40px;
   }
 }
+
 @media screen and (max-width: 767px) {
   #presentation {
     margin-bottom: 150px;
   }
-
   #rightDecoration, .rond, .square {
     display: none;
   }
 }
-/* Responsive */
 
+/* Responsive */
 /*# sourceMappingURL=blog.css.map */

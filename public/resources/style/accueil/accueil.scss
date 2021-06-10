@@ -16,12 +16,16 @@ section {
 #presentation {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 
     .left {
         width: 40%;
         min-width: 450px;
         margin: auto 0;
+
+        h1::after {
+            content: url("../../image/handWH.svg");
+        }
     }
     h1 {
         font-size: 61px;
@@ -63,8 +67,8 @@ section {
 
     #squarePres {
         position: absolute;
-        left: 530px;
-        bottom: 133px;
+        left: 230px;
+        bottom: 200px;
         transform: rotate(30deg);
     }
 }
@@ -227,7 +231,7 @@ section {
 
 #why {
     position: relative;
-    padding: 80px 100px;
+
     h2 {
         text-align: center;
         margin-bottom: 50px;
@@ -491,3 +495,4 @@ section {
         }
     }
 }
+

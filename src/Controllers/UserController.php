@@ -128,5 +128,19 @@ class UserController {
                 }
             }
         }
+        return false;
+    }
+
+    public static function hasRole($r){
+        if(UserController::isAuth()){
+            $manager = new UserManager();
+            $roles = $manager->getRoles($_SESSION["user"]["id"]);
+            foreach ($roles as $key => $role) {
+                if ($role["id_role"] == $r) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

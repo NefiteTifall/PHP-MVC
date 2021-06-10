@@ -23,18 +23,99 @@ class ArticleController {
     public function show($id){
         $article = $this->manager->getById($id);
         $sections = $this->manager->getSection($id);
+        if (!$article){
+            $_SESSION["popup"] = "Cette article n'existe pas";
+            header("Location: /blog");
+            die;
+
+        }
         require VIEWS . ROAD.'/article.php';
     }
 
     public function create(){
-        
+        if(!UserController::isAdmin() && !UserController::hasRole(2)){
+            $_SESSION["popup"] = "Vous n'avez pas le droit de créer un article";
+            header("Location: /");
+            die;
+        }
         require VIEWS . ROAD.'/create.php';
     }
 
     public function store(){
-        var_dump($_POST);
-        var_dump($_FILES);
+        if(!UserController::isAdmin() && !UserController::hasRole(2)){
+            $_SESSION["popup"] = "Vous n'avez pas le droit de créer un article";
+            header("Location: /");
+            die;
+        }
+        $sec = 0;
+        $toTest = [
+            "title"=>["required", "alphaNumDash","max:250"],
+            "intro"=> ["requiredTextarea","alphaNumDash"],
+            "img"=>["requiredFile", "img"]
+        ];
+        if (isset($_POST["type1"])){
+            $img = $this->type($_POST["type1"],"");
+            if ($img){
+                $toTest["img1"] = ["requiredFile", "img"];
+                $toTest["t1"] = ["required", "alphaNumDash","max:250"];
+            }else{
+                $toTest["t1"] = ["required", "alphaNumDash","max:250"];
+            }
+            $sec++;
+            for ($i=2;$i<4;$i++){
+                if (isset($_POST["type".$i])) {
+                    $img = $this->type($_POST["type".$i], "");
+                    if ($img) {
+                        $toTest["img".$i] = ["requiredFile", "img"];
+                        $toTest["t".$i] = ["required", "alphaNumDash", "max:250"];
+                    } else {
+                        $toTest["t".$i] = ["required", "alphaNumDash", "max:250"];
+                    }
+                    $sec++;
+                }
+            }
+
+            $this->validator->validate(
+                $toTest
+            );
+            if (!$this->validator->errors()){
+                $id = uniqid();
+                $img = "/resources/image/article/".rand(0,1000).rand(0,1000);
+                move_uploaded_file($_FILES["img"]["tmp_name"],".".$img);
+                $this->manager->addArticle($id,$img);
+                for($i=1;$i<$sec+1;$i++){
+                    $img = $this->type($_POST["type".$i], "");
+
+                    if ($img){
+                        $imgName = "/resources/image/article/".rand(0,1000).rand(0,1000);
+                        move_uploaded_file($_FILES["img".$i]["tmp_name"],".".$imgName);
+                    }else{
+                        $imgName = "";
+                    }
+                    $this->manager->addSection($id,$imgName,$i);
+                    header("Location: /article/".$id);
+                }
+
+            }else{
+                $_SESSION["popup"] = "Une erreur est survenu";
+                header("Location: /article/create");
+            }
+
+
+        }else{
+
+            $_SESSION["popup"] = "Il faut au moins une section dans l'article";
+            header("Location: /article/create");
+        }
+
     }
 
+    public function type($var,$type){
+        if ($var=="center"){
+            return false;
+        }else{
+            return true;
+        }
+    }
 
 }

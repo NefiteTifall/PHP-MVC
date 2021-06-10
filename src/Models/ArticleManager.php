@@ -40,4 +40,41 @@ class ArticleManager {
         return $stmt->fetchAll();
 
     }
+
+    public function addArticle($id,$img){
+        $stmt = $this->bdd->prepare('INSERT INTO article(id_article,id_user,intro,titre,img,date) VALUES(?,?,?,?,?,?)');
+        $stmt->execute(array(
+            $id,
+            $_SESSION["user"]["id"],
+            $_POST["intro"],
+            $_POST["title"],
+            $img,
+            date("Y-m-d")
+
+        ));
+
+        return $stmt->fetchAll();
+
+    }
+
+    public function addSection($id,$img,$ind){
+        if ($_POST["type".$ind]=="left"){
+            $type = "left-img";
+        }else if ($_POST["type".$ind]=="right"){
+            $type = "right-img";
+        }else{
+            $type = "full-img";
+        }
+        $stmt = $this->bdd->prepare('INSERT INTO section(id_section,id_article,type,content,image) VALUES(?,?,?,?,?)');
+        $stmt->execute(array(
+            uniqid(),
+            $id,
+            $type,
+            $_POST["t".$ind],
+            $img,
+        ));
+
+        return $stmt->fetchAll();
+
+    }
 }

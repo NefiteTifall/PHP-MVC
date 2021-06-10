@@ -1,10 +1,9 @@
 @import "../variable.scss";
 
-body {
+body{
     overflow-x: hidden;
 }
-
-#rightDecoContact {
+#rightDecoContact{
     position: absolute;
     right: 0;
     top: 0;
@@ -12,175 +11,143 @@ body {
     z-index: -10;
 }
 
-#rondInvContact1, #rondInvContact2, #squareContact1, #squareContact2 {
+#rondInvContact1,#rondInvContact2,#squareContact1,#squareContact2{
     position: absolute;
 }
-
-#rondInvContact1 {
+#rondInvContact1{
     width: 300px;
     height: 300px;
     left: -150px;
-    top: 40%;
+    top: 40% ;
 }
 
-#rondInvContact2 {
+#rondInvContact2{
     width: 180px;
     height: 180px;
     top: 40%;
     left: 40%;
 }
-
-#squareContact1 {
+#squareContact1{
     transform: rotate(45deg);
     right: 300px;
     bottom: 150px;
 }
-
-#squareContact2 {
+#squareContact2{
     transform: rotate(45deg);
     left: 150px;
     bottom: 100px;
 }
-
-#contactFirstSec {
-    padding: 80px 150px;
+#contactFirstSec{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
-
-    .left {
+    justify-content: space-around;
+    margin-bottom: 13vw;
+    .left, .right{
         width: 40%;
-
-        h1 {
-            color: #393939;
-            margin: auto 0;
-            font-family: "Montserrat Bold", serif;
-            font-size: 45px;
-        }
+        margin: auto 0;
+        min-width: 320px;
     }
-
-    .right {
-        width: 50%;
-
-        div {
-            width: 100%;
-
-            img {
-                width: 100%;
-            }
-        }
+    img{
+        width: 100%;
     }
 }
 
-#contact {
+#contact{
+    padding: 0 50px;
+    margin: 0 0 50px 0;
     display: flex;
     justify-content: center;
-}
+    .content {
+        width: 90%;
+        img {
+            vertical-align: middle;
+            margin-left: 25px;
+        }
+        form {
+            * {
+                display: block;
+                margin: 10px 0;
+                padding: 5px 15px;
+                border-radius: 3px;
+                border: solid 1px lightgray;
+                transition: 0.2s;
+            }
+            p{
+                border: none;
+                margin: 0;
+            }
+            *:focus {
+                outline: none;
+            }
+            input {
+                width: 30%;
+                margin: 25px 0;
+                min-width: 280px;
+            }
+            textarea {
+                padding: 5px;
+                width: 100%;
+                min-height: 150px;
+                resize: none;
+                margin: 0 0 25px 0;
+            }
+        }
 
-.content {
-    width: 90%;
-
-    img {
-        vertical-align: middle;
-        margin-left: 25px;
-    }
-
-    form {
-        * {
-            display: block;
-            margin: 10px 0;
-            padding: 5px 15px;
-            border-radius: 3px;
-            border: solid 1px lightgray;
+        .button-white {
+            border: solid 1px $VertPrincipale1;
+            background-color: transparent;
             transition: 0.2s;
+            padding: 10px 65px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
         }
 
-        p {
-            border: none;
-            margin: 0;
+        .button-white:hover {
+            border: solid 1px lightgray;
+            background-color: $VertPrincipale1;
+            color: white;
         }
-
-        *:focus {
-            outline: none;
-        }
-
-        input {
-            width: 30%;
-            margin: 15px 0;
-            min-width: 280px;
-        }
-
-        textarea {
-            margin: 15px 0;
-            padding: 5px;
-            width: 100%;
-            min-height: 150px;
-            resize: none;
-        }
-    }
-
-    .button-white {
-        border: solid 1px $VertPrincipale1;
-        background-color: transparent;
-        transition: 0.2s;
-        padding: 10px 65px;
-        border-radius: 50px;
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 80px;
-    }
-
-    .button-white:hover {
-        border: solid 1px lightgray;
-        background-color: $VertPrincipale1;
-        color: white;
     }
 }
-
-.decoration-title {
+.decoration-title{
     position: relative;
 }
-
-.decoration-title::after {
+.decoration-title::after{
     content: url("../../image/wave.svg");
     position: absolute;
     top: 25px;
     left: 0;
 }
 
-@media screen and (max-width: 767px) {
-    #rondInvContact1, #rondInvContact2, #squareContact1, #squareContact2 {
+@media screen and (max-width:767px) {
+    #rondInvContact1,#rondInvContact2,#squareContact1,#squareContact2{
         display: none;
     }
-    .decoration-title::after {
+    .decoration-title::after{
         content: none;
     }
-    #rightDecoContact {
+    #rightDecoContact{
         display: none;
     }
-    #contactFirstSec {
+    #contactFirstSec{
         margin-bottom: 50px;
-
-        .left, .right {
+        .left,.right{
             width: 90%;
             text-align: center;
             min-width: 0;
         }
-
-        h1 {
+        h1{
             font-size: 35px;
         }
     }
-    #contact {
+    #contact{
         padding: 5px;
-
-        h2 {
+        h2{
             font-size: 25px;
         }
-
-        form {
-            textarea {
+        form{
+            textarea{
                 width: 100%;
             }
         }

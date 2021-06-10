@@ -22,6 +22,10 @@ class Validator {
         "numeric" => "Le champ peut contenir que des chiffres !",
         "confirm" => "Le champs n'est pas conforme au confirm !",
         "requiredTextarea"=>"Le champs est requis !",
+        "requiredFile"=>"Le fichier est requis !",
+        "img"=>"Le fichier requis doit être une image",
+        "hour"=>"Le champ doit être une heure"
+
     ];
     private $rules = [
         "required" => "#^.+$#",
@@ -38,6 +42,9 @@ class Validator {
         "numeric" => "#^[0-9]+$#",
         "confirm" => "",
         "requiredTextarea"=>"#^(.+[\n]{0,})*$#",
+        "requiredFile"=>"",
+        "img"=>"",
+        "hour"=>"#^([0-1]?[0-9]|2[0-3]):[0-5][0-9]:?([0-5][0-9])?$#",
     ];
     //^.{0,}+[\n]{0,}
     public function __construct($data = []) {
@@ -83,6 +90,49 @@ class Validator {
                     $this->errors = [$this->messages[$rule]];
                     $this->storeSession($field, $this->messages[$rule]);
                 }
+            }
+            elseif ($rule=="requiredFile"){
+                $skip = true;
+                if (!isset($_FILES[$field]) && !isset($_FILES[$field]["name"])){
+                    $this->errors = [$this->messages[$rule]];
+                    $this->storeSession($field, $this->messages[$rule]);
+                }
+
+            }
+            elseif ($rule=="img"){
+                $skip = true;
+                $error = false;
+                if (isset($_FILES[$field]) && isset($_FILES[$field]["name"])) {
+                    if (strpos($_FILES[$field]["type"],"image/")!==false) {
+                        switch ($_FILES[$field]['error']) {
+                            case 1: // UPLOAD_ERR_INI_SIZE
+                                $error = "La taille du fichier est plus grande que la limite autorisée par le serveur(paramètre upload_max_filesize du fichier path.ini).";
+                                break;
+                            case 2: // UPLOAD_ERR_FORM_SIZE
+                                $error = "La taille du fichier est plus grande que la limite autorisée par leformulaire (paramètre post_max_size du fichier path.ini).";
+                                break;
+                            case 3: // UPLOAD_ERR_PARTIAL
+                                $error = "L'envoi du fichier a été interrompu pendant le transfert.";
+                                break;
+                            case 4: // UPLOAD_ERR_NO_FILE
+                                $error = "La taille du fichier que vous avez envoyé est nulle.";
+                                break;
+
+                        }
+
+                    }else{
+                        $error = "Le fichier doit être une image";
+                    }
+                    if ($error!=false){
+                        $this->errors = [$error];
+                        $this->storeSession($field, $error);
+                    }
+                }else{
+                    $this->errors = [$this->messages[$rule]];
+                    $this->storeSession($field, "L'image est requise");
+
+                }
+
             }
             elseif (!preg_match($this->rules[$rule], $this->data[$field])) {
                 $this->errors = [$this->messages[$rule]];
