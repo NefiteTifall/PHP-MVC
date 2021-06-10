@@ -36,7 +36,7 @@ ob_start();
                     <div class="g-recaptcha" data-sitekey="6Ldvq28aAAAAANm9OPFQ6ntihii70-A2cJ6uGIvJ"></div>
                     <input class="submitInput" type="submit" value="Inscription">
 
-                    <a href="/login">Vous avez déjà un compte ?</a>
+                    <a href="">Vous avez déjà un compte ?</a>
                 </form>
             </div>
         </div>
@@ -48,8 +48,9 @@ ob_start();
         <div id="carre02" class="square square-fonce"></div>
         <div id="carre03" class="square square-clair"></div>
     </div>
+    <img class="bottomLeftFormSVG" src="./resources/image/BottomLeft_Form.svg" alt="">
 
-    <div id="rond01" class="rond rond-fonce"></div>
+    <div id="rond01" class="rond rond-clair"></div>
     <div id="carre01" class="square square-fonce"></div>
     <div id="rond02" class="rond rond-fonce"></div>
     <!-- style Forms -->

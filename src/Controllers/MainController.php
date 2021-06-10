@@ -68,6 +68,24 @@ class MainController {
         header("Location: /cart");
     }
 
+    public function dashboardBO(){ //Acces au back-office
+        if(!UserController::isAuth()) {
+            $_SESSION["popup"] = "Veuillez vous identifier!";
+            header("Location:/login");
+            die;
+        }
+        require VIEWS . ROAD.'/Back/dashboard.php';
+    }
+
+    public function user(){ //Acces au comptez
+        if(!UserController::isAuth()) {
+            $_SESSION["popup"] = "Veuillez vous identifier!";
+            header("Location:/login");
+            die;
+        }
+        require VIEWS . ROAD . '/Back/compte.php';
+    }
+
     public function addCart(){
         $eol = $this->getDispoEol();
         $_POST["qte"] = intval($_POST["qte"]);
@@ -79,7 +97,7 @@ class MainController {
         if (!$this->validator->errors()) {
             if ($_POST["qte"]>$eol) {
                 $_SESSION["popup"]["title"] = "ERREUR 🤖";
-                $_SESSION["popup"]["text"] = "Nous avons seulement $eol éoliennes en stocks, désolé.";
+                $_SESSION["popup"]["text"] = "Vous ne pouvez pas réserver plus de $eol éoliennes";
                 $_SESSION["popup"]["type"] = "error";
                 echo "refresh";
                 die;
