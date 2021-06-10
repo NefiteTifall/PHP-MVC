@@ -9,12 +9,12 @@ ob_start();
         <div class="square square-fonce" id="rond01"></div>
     </div>
 
-    <section id="presentation">
+    <section id="blog-sect1">
         <div class="left">
-            <h1>Nous faisons de notre mieux pour vous fournir des infos. Notre blog est fait pour ça</h1>
+            <h1>Apprenez-en plus sur notre projet grâce à ntore blog !</h1>
         </div>
-        <div class="right">
-            <img src="../Resources/Image/blog.svg" draggable="false" alt="">
+        <div>
+            <img src="../resources/image/blog.svg" draggable="false" alt="">
         </div>
     </section>
 
