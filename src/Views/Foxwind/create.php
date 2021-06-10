@@ -13,9 +13,9 @@ ob_start();
 
             <textarea required aria-label="Introduction de l'article" placeholder="Introduction de l'article" name="intro"><?= old("intro")?></textarea>
             <p class="error"><?= error("intro")?></p>
-            
+
             <div id="c">
-                    
+
             </div>
 
             <div id="add">
@@ -27,7 +27,7 @@ ob_start();
                 </select>
                 <button onclick="newSection(event)" class="full-button-green">Ajouter une section</button>
             </div>
-            
+
             <button class="full-button-green">Créer l'article</button>
         </form>
     </section>
@@ -39,13 +39,13 @@ ob_start();
             e.preventDefault();
             let type = document.getElementById("new").value;
             console.log(type);
-            
+
             if (cpt<3) {
                 if (type!="") {
                     cpt++;
                 }
                 if (type=="left") {
-                
+
                     let hid = document.createElement("input");
                     hid.setAttribute("type","hidden")
                     hid.setAttribute("name","type"+cpt)
@@ -59,7 +59,7 @@ ob_start();
                         event.target.parentElement.remove()
                         cpt--;
                     });
-                    
+
                     let dimg = document.createElement("div");
                     let dt = document.createElement("div");
                     let sec = document.createElement("div");
@@ -94,7 +94,7 @@ ob_start();
 
                     main.appendChild(sec);
                 }else if(type=="right"){
-                    
+
                     let hid = document.createElement("input");
                     hid.setAttribute("type","hidden")
                     hid.setAttribute("name","type"+cpt)
@@ -134,7 +134,7 @@ ob_start();
 
                     dt.appendChild(lt);
                     dt.appendChild(t);
-                    
+
 
                     sec.appendChild(dt);
                     sec.appendChild(dimg);
