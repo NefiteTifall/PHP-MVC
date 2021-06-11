@@ -32,8 +32,6 @@ ob_start();
                         <input class="input <?= !empty(error("passwordConfirm"))? "bt-red": ""?>" type="password" name="passwordConfirm" placeholder="Confirmation mot de passe" />
                         <p class="error"><?= error("passwordConfirm")?></p>
                     </div>
-
-                    <div class="g-recaptcha" data-sitekey="6Ldvq28aAAAAANm9OPFQ6ntihii70-A2cJ6uGIvJ"></div>
                     <input class="submitInput" type="submit" value="Inscription">
 
                     <a href="">Vous avez déjà un compte ?</a>
@@ -61,4 +59,6 @@ $description = 'Créer vous un compte FoxWind ici ! ';
 $title = 'Créer un compte';
 $style = '<link rel="stylesheet" href="/resources/style/register/register.css">';
 $script = "<script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>";
+
+
 require VIEWS . '/layout.php';

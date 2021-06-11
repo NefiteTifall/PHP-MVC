@@ -25,10 +25,9 @@ ob_start();
                         <input class="input" type="password" name="password" placeholder="Mot de passe" value=""/>
                         <p class="error"><?= error("password")?></p>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6Ldvq28aAAAAANm9OPFQ6ntihii70-A2cJ6uGIvJ"></div>
                     <input class="submitInput" type="submit" value="Connexion">
 
-                    <a href="">Inscrivez-vous ici !</a>
+                    <a href="/register">Inscrivez-vous ici !</a>
                 </form>
             </div>
         </div>

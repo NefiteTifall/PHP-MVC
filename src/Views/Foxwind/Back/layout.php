@@ -29,7 +29,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <!-- FOX WIND LOGO -->
                 </div>
-                <div class="sidebar-brand-text mx-3">FOX WIND <sup>BACKOFFICE</sup></div>
+                <div class="sidebar-brand-text mx-3">FoxWind <sup>BACKOFFICE</sup></div>
             </a>
 
             <!-- Divider -->
@@ -117,18 +117,18 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION["user"] ?></span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $_SESSION["user"]["name"] ?></span>
+                                <i class="fas fa-user" aria-hidden="true"></i>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                  aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <a class="dropdown-item" href="/compte">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-500"></i>
                                     Profil
                                 </a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Deconnexion
                                 </a>
                             </div>

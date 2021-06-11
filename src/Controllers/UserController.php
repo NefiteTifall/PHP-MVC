@@ -64,7 +64,9 @@ class UserController {
 
                     $_SESSION["user"] = [
                         "id" => $this->manager->getBdd()->lastInsertId(),
-                        "role" => 1
+                        "role" => 1,
+                        "name" => $_POST["username"],
+                        "email" => $_POST["email"],
                     ];
                     header("Location: /");
                 }else{
@@ -93,7 +95,9 @@ class UserController {
             if ($res &&  (hash("sha256",$_POST["password"]) == $res->getMdp())) {
                 $_SESSION["user"] = [
                     "id" => $res->getIdUser(),
-                    "role" => $res->getIdRole()
+                    "role" => $res->getIdRole(),
+                    "name" => $res->getUsername(),
+                    "email" => $res->getEmail(),
                 ];
                 header("Location: /");
             } else {
