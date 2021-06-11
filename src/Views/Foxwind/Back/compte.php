@@ -11,12 +11,8 @@ ob_start();
     <div class="row">
         <div class="col-md-4">
             <div class="card">
-                <div class=" d-flex justify-content-center">
-                    <img class="user-img-card" src="/resources/image/user.jpg" alt="Image de l'utilisateur">
-                </div>
-
                 <div class="card-body">
-                    <h5 class="card-title text-center">NOM D'UTILISATEUR</h5>
+                    <h5 class="card-title text-center"><?= $_SESSION["user"]["name"] ?></h5>
                     <hr class="sidebar-divider my-0" style="padding-bottom: 15px;">
                         <a href="#" class="btn btn-primary btn-lg btn-block">Mes commandes</a>
                         <a href="#" class="btn btn-primary btn-lg btn-block">Mes articles</a>
@@ -36,7 +32,7 @@ ob_start();
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Nom d'utilisateur</span>
                         </div>
-                        <input type="text" value="NOM D'UTILISATEUR" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                        <input type="text" value="<?=$_SESSION["user"]["name"]?>" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                     </div>
 
                     <!-- Input : Email -->
@@ -44,7 +40,7 @@ ob_start();
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
                         </div>
-                        <input type="email" value="EMAIL@DOMAINE.CH" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                        <input type="email" value="<?=$_SESSION["user"]["email"]?>" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
                     </div>
                 </div>
             </div>
@@ -52,27 +48,8 @@ ob_start();
             <div class="card shadow" style="margin-top: 15px">
                 <div class="card-body">
                     <div class="row">
-                        <!-- Carte de commandes -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Commandes</div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">00 Commandes</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto"> <i class="fas fa-clipboard-list fa-2x text-gray-300"></i> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Carte nombre d'articles écrits -->
-                        <div class="col-md-6 mb-4">
+                        <div class="col-md-12 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">

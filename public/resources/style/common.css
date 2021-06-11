@@ -743,7 +743,7 @@ button {
   left: 50px;
   display: table-cell;
   vertical-align: middle;
-  z-index: 50;
+  z-index: 250;
 }
 
 .toast__cell {
