@@ -34,7 +34,7 @@ ob_start();
                     </div>
                     <input class="submitInput" type="submit" value="Inscription">
 
-                    <a href="">Vous avez déjà un compte ?</a>
+                    <a href="/login">Vous avez déjà un compte ?</a>
                 </form>
             </div>
         </div>
@@ -55,7 +55,7 @@ ob_start();
 
 $content = ob_get_clean();
 
-$description = 'Créer vous un compte FoxWind ici ! ';
+$description = 'Créez vous un compte FoxWind ici ! ';
 $title = 'Créer un compte';
 $style = '<link rel="stylesheet" href="/resources/style/register/register.css">';
 $script = "<script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>";

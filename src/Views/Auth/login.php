@@ -47,8 +47,8 @@ ob_start();
 
 <?php
 
-$description = 'Connectez vous ici ';
-$title = 'Connecter vous ! ';
+$description = 'Connectez-vous ici ';
+$title = 'Connectez-vous ! ';
 $style = '<link rel="stylesheet" href="/resources/style/login/login.css">';
 $script = "<script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>";
 
