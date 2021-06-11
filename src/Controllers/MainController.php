@@ -70,7 +70,9 @@ class MainController {
 
     public function dashboardBO(){ //Acces au back-office
         if(!UserController::isAuth()) {
-            $_SESSION["popup"] = "Veuillez vous identifier!";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Veuillez vous identifier!";
+            $_SESSION["popup"]["type"] = "error";
             header("Location:/login");
             die;
         }
@@ -79,7 +81,9 @@ class MainController {
 
     public function user(){ //Acces au comptez
         if(!UserController::isAuth()) {
-            $_SESSION["popup"] = "Veuillez vous identifier!";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Veuillez vous identifier!";
+            $_SESSION["popup"]["type"] = "error";
             header("Location:/login");
             die;
         }
