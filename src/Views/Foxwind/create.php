@@ -190,4 +190,4 @@ $title = 'Article';
 $style = '<link rel="stylesheet" href="/resources/style/create/create.css">';
 $content = ob_get_clean();
 
-require VIEWS . '/layout.php';
+require VIEWS . '/FoxWind/Back/layout.php';

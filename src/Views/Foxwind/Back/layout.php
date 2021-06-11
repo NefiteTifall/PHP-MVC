@@ -1,3 +1,8 @@
+<?php
+
+use Foxwind\Controllers\UserController;
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,6 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c1d0ab37d6.js" crossorigin="anonymous"></script>
+    <?= $style ?? '' ?>
+    <?= $script ?? '' ?>
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="/resources/style/back/backoffice-style.css">
 
@@ -49,28 +56,30 @@
                     <span>Mon compte</span></a>
             </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
+            <?php if(UserController::isAdmin() && !UserController::hasRole(1)){ ?>
+                <!-- Divider -->
+                <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading"> Contenu du site </div>
+                <!-- Heading -->
+                <div class="sidebar-heading"> Contenu du site </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                   aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Articles</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Gérer les articles:</h6>
-                        <a class="collapse-item" href="">Créer un article</a>
-                        <a class="collapse-item" href="">Voir les articles</a>
-                        <a class="collapse-item" href="">Voir mes articles</a>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                       aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Articles</span>
+                    </a>
+                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Gérer les articles:</h6>
+                            <a class="collapse-item" href="/article/create">Créer un article</a>
+                            <a class="collapse-item" href="">Voir les articles</a>
+                            <a class="collapse-item" href="">Voir mes articles</a>
+                        </div>
                     </div>
-                </div>
-            </li>
+                </li>
+
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -83,6 +92,7 @@
                     <i class="fas fa-inbox"></i>
                     <span>Messages / Contacts</span></a>
             </li>
+            <?php } ?>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
