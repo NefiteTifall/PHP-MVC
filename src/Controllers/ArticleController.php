@@ -45,6 +45,29 @@ class ArticleController {
         require VIEWS . ROAD.'/create.php';
     }
 
+
+    public function update($id){
+        if(!UserController::isAdmin() && !UserController::hasRole(2)){
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous n'avez pas la permission de modifier cet article !";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location: /");
+            die;
+        }
+        $article = $this->manager->getById($id);
+        $sections = $this->manager->getSection($id);
+        if (!$article){
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Cette article n'existe pas !";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location: /blog");
+            die;
+
+        }
+
+        require VIEWS . ROAD.'/update.php';
+    }
+
     public function store(){
         /*var_dump($_POST);
         var_dump($_FILES);*/

@@ -16,6 +16,7 @@ $router->get('/eolienne', "MainController@eolienne");
 $router->get('/blog', "ArticleController@index");
 $router->get('/article/create', "ArticleController@create");
 $router->get('/article/:id', "ArticleController@show");
+$router->get('/article/:id/update', "ArticleController@update");
 $router->get('/team', "MainController@team");
 $router->get('/contact', "MainController@contact");
 $router->get('/cart', "MainController@cart");
