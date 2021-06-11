@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="<?= "temp"//$description  ?>">
+    <meta name="description" content="<?= $description  ?>">
     <title><?php if(isset($title)) echo $title; ?> | FoxWind</title>
     <!-- Bootstrap, jQuerry, Fontawesomelinks -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://kit.fontawesome.com/c1d0ab37d6.js"></script>
     <script defer src="/resources/js/app.js"></script>
+    <link rel="icon" href="/resources/image/HeaderLogo_dark.png">
     <!-- End of Bootstrap, jQuerry, Fontawesomelinks -->
     <link rel="stylesheet" href="/resources/style/common.css">
     <?= $style ?? '' ?>

@@ -48,7 +48,6 @@ ob_start();
         <div id="carre02" class="square square-fonce"></div>
         <div id="carre03" class="square square-clair"></div>
     </div>
-    <img class="bottomLeftFormSVG" src="./resources/image/BottomLeft_Form.svg" alt="">
 
     <div id="rond01" class="rond rond-clair"></div>
     <div id="carre01" class="square square-fonce"></div>

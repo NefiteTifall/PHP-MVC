@@ -24,7 +24,9 @@ class ArticleController {
         $article = $this->manager->getById($id);
         $sections = $this->manager->getSection($id);
         if (!$article){
-            $_SESSION["popup"] = "Cette article n'existe pas";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Cette article n'existe pas !";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /blog");
             die;
 
@@ -34,7 +36,9 @@ class ArticleController {
 
     public function create(){
         if(!UserController::isAdmin() && !UserController::hasRole(2)){
-            $_SESSION["popup"] = "Vous n'avez pas le droit de créer un article";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous n'avez pas la permission de créer un article !";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /");
             die;
         }
@@ -45,7 +49,9 @@ class ArticleController {
         /*var_dump($_POST);
         var_dump($_FILES);*/
         if(!UserController::isAdmin() && !UserController::hasRole(2)){
-            $_SESSION["popup"] = "Vous n'avez pas le droit de créer un article";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous n'avez pas la permission de créer un article !";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /");
             die;
         }
@@ -99,14 +105,18 @@ class ArticleController {
 
                 header("Location: /article/".$id);
             }else{
-                $_SESSION["popup"] = "Une erreur est survenu";
+                $_SESSION["popup"]["title"] = "ERREUR 🤖";
+                $_SESSION["popup"]["text"] = "Une erreur inconu s'est produite !";
+                $_SESSION["popup"]["type"] = "error";
                 header("Location: /article/create");
             }
 
 
         }else{
 
-            $_SESSION["popup"] = "Il faut au moins une section dans l'article";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous devez au moins avoir une section !";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /article/create");
         }
 

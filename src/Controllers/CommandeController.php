@@ -18,7 +18,9 @@ class CommandeController {
     public function store(){
         $ctrl = new UserController();
         if(!$ctrl::isAuth()){
-            $_SESSION['popup'] = "Veuillez vous connectez pour commander.";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Merci de vous connecter pour commander";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /Login");
         }
         var_dump($_POST);
@@ -33,7 +35,9 @@ class CommandeController {
 
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
-            $_SESSION['popup'] = "Votre commande à bien été enregistrée.";
+            $_SESSION["popup"]["title"] = "Commande";
+            $_SESSION["popup"]["text"] = "Votre commande à bien été enregistrée.";
+            $_SESSION["popup"]["type"] = "info";
             $id = uniqid();
             /*$this->manager->store($id);
             header("Location: /");*/

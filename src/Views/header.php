@@ -2,7 +2,7 @@
 <header>
     <nav class="navbar navbar-expand-md">
         <div class="containerLogo">
-            <a class="navbar-brand d-flex" href="#">
+            <a class="navbar-brand d-flex" href="/">
                 <img class="logo" id="HeaderLogo_dark" src="/resources/image/HeaderLogo_dark.png" alt="Logo de Foxwind">
                 <img class="logo" id="HeaderLogo_light" src="/resources/image/HeaderLogo_light.png"
                      alt="Logo de Foxwind">
