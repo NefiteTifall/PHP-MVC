@@ -1,3 +1,7 @@
+/* Imports */
+@import "../variable";
+@import "../fonts";
+/* Imports */
 #createArticle{
     padding: 15px;
         button{
@@ -18,5 +22,44 @@
                 display: block;
             }
         }
+    }
+    input[type="text"], input[type="password"], input[type="button"], input[type="email"], input[type="file"], select{
+        margin: 10px;
+        padding: 10px;
+        border-width: 0 0 3px;
+        height: 40px;
+        width: 40%;
+        border-color: $VertPrincipale1;
+        font-family: "Lato Bold", serif;
+        color: black;
+        background-color: transparent;
+        outline: 0;
+    }
+    input[type="submit"]{
+        margin: 15px;
+        border-radius: 100px;
+        font-size: 38px;
+        padding-right: 15px;
+        padding-left: 15px;
+        color: grey;
+        border: 3px solid $VertPrincipale1;
+        font-family: "Lato Bold", serif;
+        background-color: transparent;
+        outline: 0;
+    }
+    textarea{
+        margin: 10px;
+        padding: 10px;
+        border-width: 3px;
+        min-height: 150px;
+        width: 40%;
+        border-color: $VertPrincipale1;
+        font-family: "Lato Bold", serif;
+        color: black;
+        background-color: transparent;
+        outline: 0;
+    }
+    input::placeholder {
+        color: grey;
     }
 }

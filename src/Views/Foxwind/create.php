@@ -2,17 +2,26 @@
 ob_start();
 ?>
     <section id="createArticle">
-        <h1>Créer un article</h1>
+        <!-- Titre de la section -->
+        <h1 class="h3 mb-0 text-gray-800">Créer un article</h1>
+        <hr>
+
+
         <form action="/article/create" method="POST" enctype="multipart/form-data">
+            <label for="title" class="h3 mb-0 text-gray-800">Titre de votre article</label><br>
             <input value="<?= old("title")?>" required type="text" name="title" aria-label="Titre de l'article" placeholder="Titre de l'article"/>
             <p class="error"><?= error("title")?></p>
+            <hr>
 
+            <label for="img" class="h3 mb-0 text-gray-800">Image d'illustration</label><br>
             <input value="<?= old("img")?>" required type="file" name="img" aria-label="Image principal de l'article" placeholder="Image principal de l'article"/>
             <p class="error"><?= error("img")?></p>
+            <hr>
 
-
+            <label for="intro" class="h3 mb-0 text-gray-800">introduction de votre article</label><br>
             <textarea required aria-label="Introduction de l'article" placeholder="Introduction de l'article" name="intro"><?= old("intro")?></textarea>
             <p class="error"><?= error("intro")?></p>
+            <hr>
 
             <div id="c">
 
