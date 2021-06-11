@@ -52,9 +52,6 @@ class ArticleManager {
             date("Y-m-d")
 
         ));
-
-        return $stmt->fetchAll();
-
     }
 
     public function addSection($id,$img,$ind){
@@ -73,8 +70,5 @@ class ArticleManager {
             $_POST["t".$ind],
             $img,
         ));
-
-        return $stmt->fetchAll();
-
     }
 }

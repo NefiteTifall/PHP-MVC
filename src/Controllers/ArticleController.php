@@ -42,6 +42,8 @@ class ArticleController {
     }
 
     public function store(){
+        /*var_dump($_POST);
+        var_dump($_FILES);*/
         if(!UserController::isAdmin() && !UserController::hasRole(2)){
             $_SESSION["popup"] = "Vous n'avez pas le droit de créer un article";
             header("Location: /");
@@ -93,9 +95,9 @@ class ArticleController {
                         $imgName = "";
                     }
                     $this->manager->addSection($id,$imgName,$i);
-                    header("Location: /article/".$id);
                 }
 
+                header("Location: /article/".$id);
             }else{
                 $_SESSION["popup"] = "Une erreur est survenu";
                 header("Location: /article/create");
