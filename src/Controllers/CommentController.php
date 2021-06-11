@@ -21,7 +21,9 @@ class CommentController {
     public function addComment($idArticle){
         $ctrl = new UserController();
         if(!$ctrl::isAuth()){
-            $_SESSION['popup'] = "Veuillez vous connectez pour commenter.";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Merci de vous connecter pour commenter !";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /login");
             die;
         }
@@ -33,10 +35,14 @@ class CommentController {
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
             $this->manager->addComment($idArticle);
-            $_SESSION["popup"] = "Le commentaire à bien été ajouté";
+            $_SESSION["popup"]["title"] = "Commentaire";
+            $_SESSION["popup"]["text"] = "Vous venez de poster un commantaire !";
+            $_SESSION["popup"]["type"] = "info";
             header("Location: /article/".$idArticle);
         }else{
-            $_SESSION["popup"] = "Une erreur est survenue lors de l'envoie";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Une erreur est survenu pendant l'envoie";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /article/".$idArticle);
         }
         

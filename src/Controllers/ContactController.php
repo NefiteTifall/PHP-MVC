@@ -23,7 +23,9 @@ class ContactController {
         ]);
         $_SESSION['old'] = $_POST;
         if (!$this->validator->errors()) {
-            $_SESSION['popup'] = "Votre demande de contact à bien été enregistrée. Vous recevrez une réponse par mail.";
+            $_SESSION["popup"]["title"] = "CONTACT 📣";
+            $_SESSION["popup"]["text"] = "Votre demande de contact à bien été enregistrée. Vous recevrez une réponse par mail.";
+            $_SESSION["popup"]["type"] = "info";
             $this->manager->store();
             header("Location: /contact");
         } else {
