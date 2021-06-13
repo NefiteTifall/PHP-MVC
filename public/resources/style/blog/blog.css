@@ -178,6 +178,12 @@ body {
   border-bottom: 2px solid white;
   width: 35%;
 }
+.articleBlock .background-picture {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 25%;
+}
 .articleBlock p {
   padding-top: 25px;
   padding-bottom: 20px;

@@ -41,15 +41,16 @@ class ArticleManager {
 
     }
 
-    public function addArticle($id,$img){
-        $stmt = $this->bdd->prepare('INSERT INTO article(id_article,id_user,intro,titre,img,date) VALUES(?,?,?,?,?,?)');
+    public function addArticle($data){
+        $stmt = $this->bdd->prepare('INSERT INTO article(id_article,id_user,intro,title,img,date,content) VALUES(?,?,?,?,?,?, ?)');
         $stmt->execute(array(
-            $id,
+            $data['id'],
             $_SESSION["user"]["id"],
-            $_POST["intro"],
-            $_POST["title"],
-            $img,
-            date("Y-m-d")
+            $data['into'],
+            $data['title'],
+            $data['img'],
+            date("Y-m-d"),
+            $data['content']
 
         ));
     }

@@ -31,6 +31,8 @@ $router->get('/deleteCart/:id', "MainController@deleteFromCart");
 
 $router->post('/article/create', "ArticleController@store");
 
+
+$router->post('/api/article/create', "ArticleController@store");
 $router->post('/valideUser/:username', "UserController@isUserNameValide");
 $router->post('/login/', "UserController@login");
 $router->post('/register/', "UserController@register");
