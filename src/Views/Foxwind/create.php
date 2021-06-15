@@ -290,4 +290,4 @@ $style = '
 <link rel="stylesheet" href="/resources/style/blog/blog.css">';
 $content = ob_get_clean();
 
-require VIEWS . '/FoxWind/Back/layout.php';
+require VIEWS . '/Foxwind/Back/layout.php';
