@@ -134,7 +134,7 @@ class Validator {
                 }
 
             }
-            elseif (!$skip && !preg_match($this->rules[$rule], $this->data[$field])) {
+            elseif (!isset($skip) && !preg_match($this->rules[$rule], $this->data[$field])) {
                 $this->errors = [$this->messages[$rule]];
                 $this->storeSession($field, $this->messages[$rule]);
             }

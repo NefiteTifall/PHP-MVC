@@ -5,7 +5,7 @@ body {
 }
 
 p {
-  color: white;
+  color: black;
 }
 
 #rightDecoration {
@@ -18,11 +18,11 @@ p {
 
 #firstSec {
   position: relative;
-  padding: 25px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 200px;
+  padding: 50px 150px;
 }
 #firstSec #squareClairArticle {
   position: absolute;
@@ -35,6 +35,9 @@ p {
   min-width: 300px;
 }
 #firstSec .left img {
+  object-fit: cover;
+  object-position: center;
+  max-height: 350px;
   width: 100%;
   border-radius: 5px;
 }
@@ -129,10 +132,14 @@ input {
   width: 100%;
 }
 
+#contenu {
+  padding: 50px 150px;
+}
+
 #comments {
   margin: 25px 0 50px;
   position: relative;
-  padding: 0 50px;
+  padding: 50px 150px;
 }
 #comments #rightComDeco {
   position: absolute;
@@ -273,6 +280,10 @@ input {
   #comments .separator {
     width: 100%;
   }
+}
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: attr(data-value) !important;
 }
 
 /*# sourceMappingURL=article.css.map */

@@ -80,23 +80,18 @@ class ArticleController {
             echo "not permitted";
         }
         $toTest = [
-            "title"=>["required", "alphaNumDash","max:250"],
-            "intro"=> ["requiredTextarea","alphaNumDash"],
-            "content"=> ["requiredTextarea","alphaNumDash"],
-            "img"=>["requiredFile", "img"]
+            "title"=>["required","max:250"],
+            "intro"=> ["requiredTextarea"],
+            "content"=> ["requiredTextarea"],
+            "file"=>["requiredFile", "img"]
         ];
-        $img = $this->type($_POST["type1"],"");
-        if ($img){
-            $toTest["img1"] = ["requiredFile", "img"];
-        }
-        $toTest["t1"] = ["required", "alphaNumDash","max:250"];
         $this->validator->validate(
             $toTest
         );
         if (!$this->validator->errors()){
-            $id = uniqid('', true);
+            $id = uniqid('', false);
             $img = "/resources/image/article/".uniqid('', true).".jpg";
-            move_uploaded_file($_FILES["img"]["tmp_name"],".".$img);
+            move_uploaded_file($_FILES["file"]["tmp_name"],".".$img);
             $data = [
                 "id" => $id,
                 "title" => $_POST["title"],
@@ -111,6 +106,7 @@ class ArticleController {
             $_SESSION["popup"]["text"] = "Une erreur inconu s'est produite !";
             $_SESSION["popup"]["type"] = "error";
             echo "error";
+            print_r($this->validator->errors());
         }
     }
 

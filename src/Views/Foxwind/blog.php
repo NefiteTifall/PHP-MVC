@@ -18,32 +18,32 @@ ob_start();
         </div>
     </section>
 
-    <div class="container">
-        <section id="articles">
+    <section id="articles">
+        <div class="d-flex justify-content-center">
             <?php if (count($articles)>0){?>
                 <?php foreach ($articles as $article):?>
-                    <div class="row">
-                        <!-- Article block -->
-                        <div class="col-md-12 articleBlock">
-                            <h2><?= $article->getTitre()?></h2>
+                    <!-- Article block -->
+                    <div class="articleBlock">
+                        <div class="background-left">
+                            <h2 id="card-title"><?= $article->getTitle()?></h2>
                             <div id="separator"></div>
-                            <img class="postPreviewImage" src="<?= $article->getImg()?>" alt=""/>
-                            <p><?= $article->getIntro()?></p>
-                            <a href="/article/<?= $article->getIdArticle()?>" class="button">En savoir plus</a>
-                            <div class="rond rond-inv" id="rondInv2"></div>
-                            <div class="rond rond-inv" id="rondInv3"></div>
+                            <p id="card-intro"><?= $article->getIntro()?></p>
+                            <a href="/article/<?= $article->getIdArticle()?>" class="button zindex25">En savoir plus</a>
                         </div>
-                        <!-- Article block -->
+                        <img id="background-cards" class="background-picture background-right" alt="" src="<?= $article->getImg()?>">
+                        <div class="rond rond-inv" id="rondInv2"></div>
+                        <div class="rond rond-inv" id="rondInv3"></div>
                     </div>
+                    <!-- Article block -->
                 <?php endforeach;?>
             <?php }else{?>
                 <p>Il n'y aucun article </p>
             <?php }?>
-        </section>
-
-        <div class="col-md-12 d-flex justify-content-center" style="margin-bottom: 100px">
-            <button onclick="" class="moreArticles">Plus d'articles...</button>
         </div>
+    </section>
+
+    <div class="col-md-12 d-flex justify-content-center" style="margin-bottom: 100px">
+        <button onclick="" class="moreArticles">Plus d'articles...</button>
     </div>
 
 

@@ -10,43 +10,15 @@ ob_start();
             <img src="<?= $article->getImg()?>"/>
         </div>
         <div class="right">
-            <h1><?= $article->getTitre()?></h1>
+            <h1><?= $article->getTitle()?></h1>
             <p><?= $article->getIntro()?></p>
         </div>
         <div class="square square-clair" id="squareClairArticle"></div>
     </section>
 
-    <?php foreach ($sections as $section){?>
-        <?php if ($section["type"]==="left-img"){?>
-            <section class="left-image">
-                <div class="left">
-                    <img src="<?= $section["image"] ?>"/>
-                </div>
-                <div class="right">
-                    <p><?= $section["content"] ?></p>
-                </div>
-            </section>
-        <?php }elseif ($section["type"]==="right-img"){?>
-            <section class="right-image">
-                <div class="left">
-                    <p><?= $section["content"] ?></p>
-                </div>
-                <div class="right">
-                    <img src="<?= $section["image"] ?>"/>
-                </div>
-            </section>
-        <?php }elseif ($section["type"]==="full-img"){?>
-            <section class="full-image">
-                <div>
-                    <img src="<?= $section["image"] ?>"/>
-                </div>
-                <div>
-                    <p><?= $section["content"] ?></p>
-                </div>
-            </section>
-        <?php } ?>
-
-    <?php } ?>
+    <section id="contenu">
+        <?= $article->getContent() ?>
+    </section>
 
     <section id="comments">
         <h2 class="decoration-title">Réagissez à l'article <img src="/resources/image/com.svg"/> </h2>

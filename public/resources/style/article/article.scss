@@ -5,7 +5,7 @@ body{
 }
 
 p{
-    color: white;
+    color: black;
 }
 
 #rightDecoration{
@@ -18,11 +18,11 @@ p{
 
 #firstSec{
     position: relative;
-    padding: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 200px;
+    padding: 50px 150px;
     #squareClairArticle{
         position: absolute;
         bottom: 0;
@@ -33,6 +33,9 @@ p{
         width: 40%;
         min-width: 300px;
         img{
+            object-fit: cover;
+            object-position: center;
+            max-height: 350px;
             width: 100%;
             border-radius: 5px;
         }
@@ -126,11 +129,14 @@ p{
 input{
     width: 100%;
 }
+#contenu {
+    padding: 50px 150px;
+}
 
 #comments{
     margin : 25px 0 50px;
     position: relative;
-    padding: 0 50px;
+    padding: 50px 150px;
     #rightComDeco{
         position: absolute;
         right: 0;
@@ -279,6 +285,18 @@ input{
         }
         .separator{
             width: 100%;
+        }
+    }
+}
+.ql-snow{
+    .ql-picker{
+        &.ql-size{
+            .ql-picker-label,
+            .ql-picker-item{
+                &::before{
+                    content: attr(data-value) !important;
+                }
+            }
         }
     }
 }

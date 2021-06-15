@@ -8,29 +8,30 @@ ob_start();
 
 
         <form action="/article/create" method="POST" enctype="multipart/form-data">
-            <label for="title" class="h3 mb-0 text-gray-800">Titre de votre article</label><br>
-            <input id="title" value="<?= old("title")?>" required type="text" name="title" aria-label="Titre de l'article" placeholder="Titre de l'article"/>
-            <p class="error"><?= error("title")?></p>
-            <hr>
+            <div>
+                <label for="title" class="h3 mb-0 text-gray-800">Titre de votre article</label><br>
+                <input id="title" value="<?= old("title")?>" required type="text" name="title" aria-label="Titre de l'article" placeholder="Titre de l'article"/>
+                <p class="error"><?= error("title")?></p>
+                <label for="intro" class="h3 mb-0 text-gray-800">Introduction de votre article</label><br>
+                <textarea id="intro" required aria-label="Introduction de l'article" placeholder="Introduction de l'article" name="intro"><?= old("intro")?></textarea>
+                <p class="error"><?= error("intro")?></p>
+            </div>
 
             <label for="img" class="h3 mb-0 text-gray-800">Image d'illustration</label><br>
             <input id="file" required type="file" aria-label="Image principal de l'article"/>
             <div class="articleBlock">
-                <div class="background-picture"></div>
-                <h2>/////////////////</h2>
-                <div id="separator"></div>
-                <p>/////////////////</p>
-                <a href="/article/1" class="button">En savoir plus</a>
-                <div class="rond rond-inv" id="rondInv2"></div>
-                <div class="rond rond-inv" id="rondInv3"></div>
+                <div class="background-left">
+                    <h2 id="card-title">/////////////////</h2>
+                    <div id="separator"></div>
+                    <p id="card-intro">/////////////////</p>
+                    <a href="/article/1" class="button zindex25">En savoir plus</a>
+                </div>
+                <img id="background-cards" class="background-picture background-right" alt="" src="">
+                <div class="rond rond-inv zindex25" id="rondInv2"></div>
+                <div class="rond rond-inv zindex25" id="rondInv3"></div>
             </div>
             <p class="error"><?= error("img")?></p>
             <hr>
-            <img id="blah" src="#" alt="your image" />
-
-            <label for="intro" class="h3 mb-0 text-gray-800">introduction de votre article</label><br>
-            <textarea id="intro" required aria-label="Introduction de l'article" placeholder="Introduction de l'article" name="intro"><?= old("intro")?></textarea>
-            <p class="error"><?= error("intro")?></p>
             <hr>
             <div class="editor" style="min-height: 250px">
             </div>
@@ -43,11 +44,20 @@ ob_start();
             if (fileElem.files && fileElem.files[0]) {
                 const reader = new FileReader();
                 reader.onload = function (e) {
-                    $('#blah').attr('src', e.target.result).width(150).height(200);
+                    //$('#background-cards').attr('style', `background-image: url(${e.target.result})`);
+                    $('#background-cards').attr('src', e.target.result);
                 };
                 reader.readAsDataURL(fileElem.files[0]);
             }
         })
+        $(`#title`).on("input", () => {
+            $(`#card-title`).text($(`#title`).val())
+        })
+        $(`#intro`).on("input", () => {
+            $(`#card-intro`).text($(`#intro`).val())
+        })
+        Size = Quill.import('attributors/style/size');
+        Size.whitelist = ['12px', '14px', '16px', '18px','20px'];
         let quill = new Quill('.editor', {
             theme: 'snow',
             modules: {
@@ -55,23 +65,49 @@ ob_start();
                     displaySize: true
                 },
                 toolbar: [
-                    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                    ['bold', 'italic', 'underline', 'strike'],
-                    [{ 'color': [] }, { 'background': [] }],
-                    [{ 'align': [] }],
-                    ['link', 'image'],
+                    ["bold", "italic", "underline", "strike"], // toggled buttons
+                    ["blockquote", "code-block"],
 
-                    ['clean']
-                ]
+                    [{ header: 1 }, { header: 2 }], // custom button values
+                    [{ list: "ordered" }, { list: "bullet" }],
+                    [{ script: "sub" }, { script: "super" }], // superscript/subscript
+                    [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+                    [{ direction: "rtl" }], // text direction
+                    [{ size: [
+                            "9px",
+                            "10px",
+                            "11px",
+                            "12px",
+                            "14px",
+                            "16px",
+                            "18px",
+                            "20px",
+                            "22px",
+                            "24px",
+                            "26px",
+                            "28px",
+                        ],
+                    },
+                    ], // custom dropdown
+                    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                    [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+                    [{ font: [] }],
+                    [{ align: [] }],
+                    ["clean"], // remove formatting button
+                    ["link", "image", "video"], // link and image, video
+                ],
             }
         });
         $('form').on("submit", (e) => {
             e.preventDefault();
-            let content = $(`.ql-editor`).html();
             let file_data = $('#file').prop('files')[0];
             let fd = new FormData();
             fd.append('file', file_data);
-            fd.append('content', content);
+            fd.append('title', $(`#title`).val());
+            fd.append('intro', $(`#intro`).val());
+            fd.append('content', $(`.ql-editor`).html());
+            let d = ["15","16"];
+            let t = parseInt(d[0]*60)+parseInt(d[1])
             $.ajax({
                 url: '/api/article/create', // <-- point to server-side PHP script
                 dataType: 'text',  // <-- what to expect back from the PHP script, if anything
@@ -80,8 +116,13 @@ ob_start();
                 processData: false,
                 data: fd,
                 type: 'post',
-                success: function(php_script_response){
-                    console.log(php_script_response)
+                success: function(data){
+                    if(data.includes("redirect:")) {
+                        console.log(data)
+                        data = data.split("redirect: ").join("");
+                        console.log(data)
+                        window.location.href = data;
+                    }
                 }
             });
         })

@@ -124,14 +124,32 @@ body {
 
 #articles {
     margin-bottom: 100px;
-
+    padding: 50px 150px;
     .row {
         margin: 50px 0;
     }
 }
 
 .articleBlock {
-    background-image: url("../../image/ArticleForm.svg");
+    width: 75%;
+    .background-left {
+        z-index: 6;
+        position: absolute;
+        border-top-left-radius: 17px;
+        border-bottom-left-radius: 17px;
+        height: 100%;
+        width: 70%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../../image/ArticleForm.svg");
+    }
+    .background-left * {
+        margin-left: 25px;
+        padding: 0;
+    }
+    .background-left:nth-child(0n+1) {
+        padding-top: 15px;
+    }
     /*background-position: center;
     background-size: cover;*/
     background-repeat: no-repeat;
@@ -149,10 +167,12 @@ body {
 
     }*/
     h2 {
+        word-break: break-word;
         font-weight: bold;
         color: white;
         padding-top: 20px;
         padding-left: 10px;
+        width: 75%;
 
     }
 
@@ -165,19 +185,25 @@ body {
         position: absolute;
         right: 0;
         height: 100%;
-        width: 25%;
+        width: 40%;
     }
 
     p {
-        padding-top: 25px;
+        word-break: break-word;
+        width: 75%;
+        margin-top: 10px;
         padding-bottom: 20px;
         padding-left: 10px;
         max-width: 650px;
+        font-size: 20px;
         font-weight: bold;
         color: white;
     }
 
     .button {
+        position: absolute;
+        bottom: 0px;
+        left: 5px;
         color: black;
         margin-bottom: 20px;
         margin-left: 10px;
@@ -185,7 +211,7 @@ body {
         background-color: white;
         border-radius: 30px;
         border: 0px solid transparent;
-        font-family: "Montserrat Bold";
+        font-family: "Montserrat Bold", serif;
     }
 
     .postPreviewImage {
@@ -199,6 +225,16 @@ body {
         border-radius: 0px 15px 15px 0px;
         right: 0px;
         top: 0px;
+    }
+    #background-cards {
+        z-index: 5;
+        object-fit: cover;
+        object-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-top-right-radius: 17px;
+        border-bottom-right-radius: 17px;
     }
 }
 

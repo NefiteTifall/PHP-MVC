@@ -46,7 +46,7 @@ class ArticleManager {
         $stmt->execute(array(
             $data['id'],
             $_SESSION["user"]["id"],
-            $data['into'],
+            $data['intro'],
             $data['title'],
             $data['img'],
             date("Y-m-d"),

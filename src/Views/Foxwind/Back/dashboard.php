@@ -87,5 +87,6 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-
+$description = '';
+$title = 'Dashboard ';
 require VIEWS . ROAD . '/Back/layout.php';

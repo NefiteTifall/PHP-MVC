@@ -73,5 +73,6 @@ ob_start();
 
 <?php
 $content = ob_get_clean();
-
+$description = '';
+$title = 'Compte ';
 require VIEWS . ROAD . '/Back/layout.php';

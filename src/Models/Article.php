@@ -9,7 +9,8 @@ class Article {
     private $id_article;
     private $id_user;
     private $intro;
-    private $titre;
+    private $title;
+    private $content;
     private $img;
     private $date;
     private $comments;
@@ -30,9 +31,9 @@ class Article {
     /**
      * @return mixed
      */
-    public function getTitre()
+    public function getTitle()
     {
-        return $this->titre;
+        return $this->title;
     }
 
     /**
@@ -126,5 +127,21 @@ class Article {
     public function setComments(){
         $ctrl = new CommentController();
         $this->comments = $ctrl->getComments($this->getIdArticle());
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param mixed $content
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
     }
 }
