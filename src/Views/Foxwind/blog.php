@@ -19,7 +19,7 @@ ob_start();
     </section>
 
     <section id="articles">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center flex-wrap">
             <?php if (count($articles)>0){?>
                 <?php foreach ($articles as $article):?>
                     <!-- Article block -->
