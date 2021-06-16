@@ -26,6 +26,7 @@ class MainController {
 
     public function destroySession(){
         session_destroy();
+        phpinfo();
         echo "Session destroyed please go to /";
     }
     public function showSession(){
@@ -109,6 +110,7 @@ class MainController {
             else $_SESSION["cart"]["eol"]["eolienne"]["qte"] = (int)$_POST["qte"];
             echo "/cart";
         } else {
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
             $_SESSION["popup"]["title"] = "ERREUR 🤖";
             $_SESSION["popup"]["text"] = "Merci d'entrer un nombre supérieur à 1";
             $_SESSION["popup"]["type"] = "error";
