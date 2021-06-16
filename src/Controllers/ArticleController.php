@@ -34,6 +34,48 @@ class ArticleController {
         require VIEWS . ROAD . '/Back/myArticle.php';
     }
 
+    public function delete($id){
+        if(!UserController::isAdmin() && !UserController::hasRole(2)){
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous n'avez pas la permission de modifier cet article !";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location: /");
+            die;
+        }
+
+        $article = $this->manager->getById($id);
+        if (!$article){
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Cette article n'existe pas !";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location: /blog");
+            die;
+        }
+
+        $this->manager->removeArticleByID($id);
+
+        header("Location: /article/show");
+    }
+
+    public function manageArticles(){
+        if(!UserController::isAuth()) {
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Veuillez vous identifier!";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location:/login");
+            die;
+        }
+        if(!UserController::isAdmin() && UserController::hasRole(2)) {
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous ne possédez pas les droits nécessaires!";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location:/compte");
+            die;
+        }
+        $articles = $this->manager->getAll();
+        require VIEWS . ROAD . '/Back/articles.php';
+    }
+
     public function show($id){
         $article = $this->manager->getById($id);
         $sections = $this->manager->getSection($id);

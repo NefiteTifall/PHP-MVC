@@ -14,9 +14,11 @@ $router->get('/register/', "UserController@showRegister");
 $router->get('/logout/', "UserController@logout");
 $router->get('/eolienne', "MainController@eolienne");
 $router->get('/blog', "ArticleController@index");
+$router->get('/article/show', "ArticleController@manageArticles"); //Back-office -> Articles du site
 $router->get('/article/create', "ArticleController@create");
 $router->get('/article/:id', "ArticleController@show");
 $router->get('/article/:id/update', "ArticleController@update");
+$router->get('/article/:id/delete', "ArticleController@delete");
 $router->get('/team', "MainController@team");
 $router->get('/contact', "MainController@contact");
 $router->get('/cart', "MainController@cart");

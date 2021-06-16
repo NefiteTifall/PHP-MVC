@@ -29,6 +29,14 @@ class ArticleManager {
 
     }
 
+    public function removeArticleByID($id){
+        $articleReq = $this->bdd->prepare('DELETE FROM article WHERE id_article = ?');
+        $articleReq->execute(array( $id ));
+
+        $sectionReq = $this->bdd->prepare('DELETE FROM section WHERE id_article = ?');
+        $sectionReq->execute(array( $id ));
+    }
+
     public function getById($id){
         $stmt = $this->bdd->prepare('SELECT * FROM article WHERE id_article=?');
         $stmt->execute(array(
@@ -46,7 +54,6 @@ class ArticleManager {
         ));
 
         return $stmt->fetchAll();
-
     }
 
     public function addArticle($data){
