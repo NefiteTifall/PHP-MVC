@@ -33,9 +33,9 @@ body {
     width: 140px;
     height: 140px;
     position: absolute;
-    left: 350px;
+    left: 380px;
     bottom: -70px;
-    z-index: 1;
+    z-index: 25;
     opacity: 0.45 !important;
 }
 
@@ -59,33 +59,29 @@ body {
 
 /* Forms */
 /* Blog style */
+section {
+    padding: 80px 150px;
+}
 #blog-sect1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    padding: 80px 150px;
 
     .left {
         width: 40%;
-
-        h1 {
-            color: #393939;
-            margin: auto 0;
-            font-family: "Montserrat Bold", serif;
-            font-size: 45px;
-        }
+        min-width: 450px;
+        margin: auto 0;
     }
-
+    h1 {
+        font-size: 61px;
+    }
     .right {
-        width: 40%;
+        width: 50%;
+        min-width: 450px;
 
-        div {
+        img {
             width: 100%;
-
-            img {
-                width: 100%;
-            }
         }
     }
 
@@ -123,16 +119,34 @@ body {
 }
 
 #articles {
-    margin-bottom: 100px;
     padding: 50px 150px;
     .row {
         margin: 50px 0;
     }
 }
-
 .articleBlock {
     width: 75%;
     margin: 50px 0;
+    border-radius: 17px;
+    height: 300px;
+    position: relative;
+    * {
+        color: white;
+    }
+    .background-right {
+        z-index: 5;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 40%;
+        object-fit: cover;
+        object-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-top-right-radius: 17px;
+        border-bottom-right-radius: 17px;
+    }
     .background-left {
         z-index: 6;
         position: absolute;
@@ -151,54 +165,25 @@ body {
     .background-left:nth-child(0n+1) {
         padding-top: 15px;
     }
-    /*background-position: center;
-    background-size: cover;*/
-    background-repeat: no-repeat;
-    background-size: 70%;
-
-    border-radius: 17px;
-    height: 300px;
-    position: relative;
-    /*.articleBackground{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 90%;
-      height: 100%;
-
-    }*/
     h2 {
         word-break: break-word;
         font-weight: bold;
         color: white;
-        padding-top: 20px;
-        padding-left: 10px;
         width: 75%;
-
     }
 
-    #separator {
+    .separator {
         margin-left: 10px;
         border-bottom: 2px solid white;
-        width: 35%;
-    }
-    .background-picture {
-        position: absolute;
-        right: 0;
-        height: 100%;
-        width: 40%;
+        width: 78%;
     }
 
     p {
         word-break: break-word;
         width: 75%;
         margin-top: 10px;
-        padding-bottom: 20px;
-        padding-left: 10px;
-        max-width: 650px;
         font-size: 20px;
         font-weight: bold;
-        color: white;
     }
 
     .button {
@@ -211,7 +196,6 @@ body {
         padding: 15px;
         background-color: white;
         border-radius: 30px;
-        border: 0px solid transparent;
         font-family: "Montserrat Bold", serif;
     }
 
@@ -227,18 +211,34 @@ body {
         right: 0px;
         top: 0px;
     }
-    #background-cards {
-        z-index: 5;
-        object-fit: cover;
-        object-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        border-top-right-radius: 17px;
-        border-bottom-right-radius: 17px;
+}
+@media screen and (max-width: 1544px) {
+    .articleBlock {
+        width: 100%;
     }
 }
-
+@media screen and (max-width: 1200px) {
+    #articles {
+        padding: 80px 10px;
+    }
+}
+@media screen and (max-width: 957px) {
+    .articleBlock {
+        .background-left {
+            width: 100%;
+            border-radius: 17px;
+            background: rgb(125,143,65);
+            background: -moz-linear-gradient(72deg, rgba(125,143,65,1) 0%, rgba(125,143,65,1) 0%, rgba(63,72,33,1) 100%);
+            background: -webkit-linear-gradient(72deg, rgba(125,143,65,1) 0%, rgba(125,143,65,1) 0%, rgba(63,72,33,1) 100%);
+            background: linear-gradient(72deg, rgba(125,143,65,1) 0%, rgba(125,143,65,1) 0%, rgba(63,72,33,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7d8f41",endColorstr="#3f4821",GradientType=1);
+        }
+        .separator {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
 .moreArticles {
     background-color: rgb(86, 98, 45);
     color: White;
@@ -253,7 +253,7 @@ body {
 /* Blog style */
 /* Responsive */
 @media screen and (max-width: 1234px) {
-    #presentation {
+    #blog-sect1 {
         margin-bottom: 400px;
 
         .left {
@@ -272,14 +272,41 @@ body {
     }
 }
 
-@media screen and (max-width: 1096px) {
-    #presentation {
-        margin-bottom: 400px;
-
-        .left {
-            h1 {
+@media screen and (max-width:1000px) {
+    #firstSec{
+        .right{
+            h1{
                 font-size: 40px;
             }
+            p{
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .rond, .square {
+        display: none;
+    }
+    .decoration-title::after {
+        content: none;
+    }
+    #rightDecoration {
+        display: none;
+    }
+    #firstSec {
+        margin: 15px 0;
+        padding: 5px;
+
+        .right {
+            * {
+                color: $VertPrincipale2;
+            }
+        }
+
+        .left, .right {
+            min-width: auto;
+            width: 100%;
         }
     }
 }
@@ -291,7 +318,7 @@ body {
         }
     }
 
-    #presentation {
+    #blog-sect1 {
         margin-bottom: 400px;
 
         .left {
@@ -321,6 +348,17 @@ body {
     }
     #rightDecoration, .rond, .square {
         display: none;
+    }
+}
+@media screen and (max-width: 1300px) {
+
+    section {
+        padding: 40px 75px;
+    }
+}
+@media screen and (max-width: 767px) {
+    section {
+        padding: 40px 5%;
     }
 }
 

@@ -22,7 +22,7 @@ p{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 200px;
-    padding: 50px 150px;
+    padding: 50px 150px 75px 150px;
     #squareClairArticle{
         position: absolute;
         bottom: 0;
@@ -140,7 +140,7 @@ input{
     #rightComDeco{
         position: absolute;
         right: 0;
-        top: 0;
+        top: -150px;
     }
     #comRound{
         position: absolute;
@@ -298,5 +298,17 @@ input{
                 }
             }
         }
+    }
+}
+.mainSeparator {
+    margin: 0 0 0 150px;
+    border-bottom: 2px solid rgba(0,0,0,0.9);
+    width: 78%;
+}
+@media screen and (max-width:1000px) {
+    .mainSeparator {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+        width: 100%;
+        margin: 0;
     }
 }
