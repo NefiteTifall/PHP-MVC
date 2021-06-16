@@ -37,7 +37,7 @@ ob_start();
                 <p>
                     <?= $comment->getContenu()?>
                 </p>
-                <?php if ($comment->getAuthor()->getIdUser()==$_SESSION["user"]["id"]){?>
+                <?php if(\Foxwind\Controllers\UserController::isAuth() &&  $comment->getAuthor()->getIdUser()==$_SESSION["user"]["id"]){?>
                     <a href="/comment/<?=$comment->getIdCom()?>/delete" class="full-button-green">Supprimer</a>
                 <?php }?>
             </div>

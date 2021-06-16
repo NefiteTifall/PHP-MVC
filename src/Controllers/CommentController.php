@@ -52,19 +52,25 @@ class CommentController {
     {
         $ctrl = new UserController();
         if(!$ctrl::isAuth()){
-            $_SESSION['popup'] = "Veuillez vous connectez pour supprimer vos commentaires.";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Veuillez vous connectez pour supprimer vos commentaires";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /login");
             die;
         }
         $com = $this->manager->find($id);
         if ($com->getIdUser() !== $_SESSION["user"]["id"]) {
-            $_SESSION['popup'] = "Vous n'êtes pas l'auteur du commentaire que vous essayer de supprimer.";
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous n'êtes pas l'auteur du commentaire que vous essayer de supprimer";
+            $_SESSION["popup"]["type"] = "error";
             header("Location: /login");
             die;
         }
 
         $this->manager->delete($id);
-        $_SESSION['popup'] = "Le commentaire à bien été supprimé.";
+        $_SESSION["popup"]["title"] = "Succès";
+        $_SESSION["popup"]["text"] = "Le commentaire à bien été supprimé.";
+        $_SESSION["popup"]["type"] = "success";
         header("Location: /article/".$com->getIdArticle());
 
     }
