@@ -42,13 +42,6 @@ use Foxwind\Controllers\UserController;
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item dashboard">
-                <a class="nav-link" href="/dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Tableau de bord</span></a>
-            </li>
-
             <!-- Nav Item - User Settings -->
             <li class="nav-item compte">
                 <a class="nav-link" href="/compte">
@@ -75,7 +68,7 @@ use Foxwind\Controllers\UserController;
                             <h6 class="collapse-header">Gérer les articles:</h6>
                             <a class="collapse-item" href="/article/create">Créer un article</a>
                             <a class="collapse-item" href="">Voir les articles</a>
-                            <a class="collapse-item" href="">Voir mes articles</a>
+                            <a class="collapse-item" href="/compte/article">Voir mes articles</a>
                         </div>
                     </div>
                 </li>

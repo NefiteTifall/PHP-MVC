@@ -21,6 +21,19 @@ class ArticleController {
         require VIEWS . ROAD.'/blog.php';
     }
 
+
+    public function userArticles(){
+        if(!UserController::isAuth()) {
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Veuillez vous identifier!";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location:/login");
+            die;
+        }
+        $userArticles = $this->manager->getByUserID($_SESSION["user"]["id"]);
+        require VIEWS . ROAD . '/Back/myArticle.php';
+    }
+
     public function show($id){
         $article = $this->manager->getById($id);
         $sections = $this->manager->getSection($id);

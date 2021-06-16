@@ -68,18 +68,7 @@ class MainController {
         header("Location: /cart");
     }
 
-    public function dashboardBO(){ //Acces au back-office
-        if(!UserController::isAuth()) {
-            $_SESSION["popup"]["title"] = "ERREUR 🤖";
-            $_SESSION["popup"]["text"] = "Veuillez vous identifier!";
-            $_SESSION["popup"]["type"] = "error";
-            header("Location:/login");
-            die;
-        }
-        require VIEWS . ROAD.'/Back/dashboard.php';
-    }
-
-    public function user(){ //Acces au comptez
+    public function user(){
         if(!UserController::isAuth()) {
             $_SESSION["popup"]["title"] = "ERREUR 🤖";
             $_SESSION["popup"]["text"] = "Veuillez vous identifier!";
