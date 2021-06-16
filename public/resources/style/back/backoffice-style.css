@@ -12054,6 +12054,7 @@ body.sidebar-toggled footer.sticky-footer {
   object-fit: cover;
   object-position: center;
   max-height: 150px;
+  max-height: 350px;
   width: 100%;
   border-radius: 5px;
 }
