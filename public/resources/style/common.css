@@ -323,9 +323,6 @@ nav .nav-item div svg {
   nav div.navbar-collapse {
     position: relative;
   }
-  nav div.collapse {
-    display: none;
-  }
   nav li.nav-item {
     margin: 10px;
   }
