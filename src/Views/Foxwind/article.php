@@ -16,7 +16,7 @@ ob_start();
         <div class="square square-clair" id="squareClairArticle"></div>
     </section>
     <div class="mainSeparator"></div>
-    <section id="contenu">
+    <section id="contenu" class="ql-editor">
         <?= $article->getContent() ?>
     </section>
     <div class="mainSeparator"></div>
