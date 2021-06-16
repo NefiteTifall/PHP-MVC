@@ -9,7 +9,7 @@ class Article {
     private $id_article;
     private $id_user;
     private $intro;
-    private $titre;
+    private $title;
     private $content;
     private $img;
     private $date;
@@ -33,7 +33,7 @@ class Article {
      */
     public function getTitle()
     {
-        return $this->titre;
+        return $this->title;
     }
 
     /**
@@ -89,7 +89,7 @@ class Article {
      */
     public function setTitre($titre)
     {
-        $this->titre = $titre;
+        $this->title = $titre;
     }
 
     /**
