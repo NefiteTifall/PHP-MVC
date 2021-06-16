@@ -11291,3 +11291,14 @@ body.sidebar-toggled footer.sticky-footer {
 .editor {
   color: black;
 }
+
+.img-preview{
+  z-index: 5;
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 17px;
+
+}

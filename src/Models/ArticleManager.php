@@ -21,6 +21,14 @@ class ArticleManager {
         return $stmt->fetchAll(\PDO::FETCH_CLASS, ROAD."\Models\Article");
     }
 
+    public function getByUserID($userID){
+        $stmt = $this->bdd->prepare('SELECT * FROM article WHERE id_user = ?');
+        $stmt->execute(array($userID));
+        $stmt->setFetchMode(\PDO::FETCH_CLASS, ROAD."\Models\Article");
+        return $stmt->fetchAll();
+
+    }
+
     public function getById($id){
         $stmt = $this->bdd->prepare('SELECT * FROM article WHERE id_article=?');
         $stmt->execute(array(
