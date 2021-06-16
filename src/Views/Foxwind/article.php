@@ -50,7 +50,7 @@ ob_start();
 <?php
 
 $description = 'Bienvenue sur notre blog';
-$title = '';
+$title = $article->getTitle().' ';
 $style = '<link rel="stylesheet" href="/resources/style/article/article.css">';
 
 
