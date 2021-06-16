@@ -52,7 +52,9 @@ ob_start();
 
 $description = $article->getTitle();
 $title = 'Article ';
-$style = '<link rel="stylesheet" href="/resources/style/article/article.css">';
+$style = '<link rel="stylesheet" href="/resources/style/article/article.css">
+<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">';
 
 
 $content = ob_get_clean();
