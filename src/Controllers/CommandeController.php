@@ -23,7 +23,6 @@ class CommandeController {
             $_SESSION["popup"]["type"] = "error";
             header("Location: /Login");
         }
-        var_dump($_POST);
         $this->validator->validate([
             "nom"=>["required", "alphaNumDash"],
             "prenom"=>["required","alphaNumDash"],
@@ -39,8 +38,8 @@ class CommandeController {
             $_SESSION["popup"]["text"] = "Votre commande à bien été enregistrée.";
             $_SESSION["popup"]["type"] = "info";
             $id = uniqid();
-            /*$this->manager->store($id);
-            header("Location: /");*/
+            $this->manager->store($id);
+            header("Location: /");
         } else {
             header("Location: /checkout");
         }
