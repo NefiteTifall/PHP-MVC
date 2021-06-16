@@ -16,8 +16,8 @@ class CommandeManager {
     public function store($id)
     {
         $stmt = $this->bdd->prepare(
-            'INSERT INTO commande(id_commande,nom,prenom,rue,ville,code_postal,pays,id_user,id_eolienne,qte) 
-            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+            'INSERT INTO commande(id_commande,nom,prenom,rue,ville,code_postal,pays,id_user,qte) 
+            VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)'
         );
         $stmt->execute(array(
             $id,
