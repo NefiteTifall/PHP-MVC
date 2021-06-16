@@ -322,6 +322,9 @@ button{
 .rond {
     animation: updown 5s ease-in-out infinite;
 }
+.rond2 {
+    animation: downup 5s ease-in-out infinite;
+}
 @keyframes rotating {
     from {
         -ms-transform: rotate(0deg);
@@ -344,6 +347,14 @@ button{
     }
     50% {
         transform: translateY(-25px);
+    }
+}
+@keyframes downup {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25);
     }
 }
 //

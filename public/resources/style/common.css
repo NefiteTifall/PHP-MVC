@@ -317,9 +317,6 @@ nav .nav-item div svg {
     background: #7d8f41;
     background: linear-gradient(180deg, #283618 0%, #415024 40%, #7d8f41 100%);
   }
-  nav li.separator {
-    display: flex;
-  }
   nav div.navbar-collapse {
     position: relative;
   }
@@ -710,6 +707,10 @@ button {
   animation: updown 5s ease-in-out infinite;
 }
 
+.rond2 {
+  animation: downup 5s ease-in-out infinite;
+}
+
 @keyframes rotating {
   from {
     -ms-transform: rotate(0deg);
@@ -732,6 +733,14 @@ button {
   }
   50% {
     transform: translateY(-25px);
+  }
+}
+@keyframes downup {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(25);
   }
 }
 .toast__container {

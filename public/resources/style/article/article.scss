@@ -22,7 +22,7 @@ p{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 200px;
-    padding: 50px 150px;
+    padding: 50px 150px 75px 150px;
     #squareClairArticle{
         position: absolute;
         bottom: 0;
@@ -140,7 +140,7 @@ input{
     #rightComDeco{
         position: absolute;
         right: 0;
-        top: 0;
+        top: -150px;
     }
     #comRound{
         position: absolute;
@@ -288,15 +288,18 @@ input{
         }
     }
 }
-.ql-snow{
-    .ql-picker{
-        &.ql-size{
-            .ql-picker-label,
-            .ql-picker-item{
-                &::before{
-                    content: attr(data-value) !important;
-                }
-            }
-        }
+.ql-editor > *{
+    cursor: default !important;
+}
+.mainSeparator {
+    margin: 15px 0;
+    border-bottom: 2px solid rgba(0,0,0,0.9);
+    width: 100%;
+}
+@media screen and (max-width:1000px) {
+    .mainSeparator {
+        border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+        width: 100%;
+        margin: 0;
     }
 }

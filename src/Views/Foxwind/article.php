@@ -15,13 +15,14 @@ ob_start();
         </div>
         <div class="square square-clair" id="squareClairArticle"></div>
     </section>
-
-    <section id="contenu">
+    <section id="contenu" class="ql-editor ql-container">
+        <div class="mainSeparator"></div>
         <?= $article->getContent() ?>
+        <div class="mainSeparator"></div>
     </section>
 
     <section id="comments">
-        <h2 class="decoration-title">Réagissez à l'article <img src="/resources/image/com.svg"/> </h2>
+        <h2 class="title">Réagissez à l'article </h2>
         <form action="/comment/<?=$article->getIdArticle()?>" method="post">
             <textarea placeholder="Votre commentaire" name="content"></textarea>
             <p class="error"><?=error("content")?></p>
@@ -49,9 +50,11 @@ ob_start();
 
 <?php
 
-$description = 'Bienvenue sur notre blog';
-$title = $article->getTitle().' ';
-$style = '<link rel="stylesheet" href="/resources/style/article/article.css">';
+$description = $article->getTitle();
+$title = 'Article ';
+$style = '<link rel="stylesheet" href="/resources/style/article/article.css">
+<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet">';
 
 
 $content = ob_get_clean();

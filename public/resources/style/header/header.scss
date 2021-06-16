@@ -188,12 +188,10 @@ nav{
     nav {
         background: rgb(125,143,65);
         background: linear-gradient(180deg, rgba(40,54,24,1) 0%, rgb(65, 80, 36) 40%, rgba(125,143,65,1) 100%);
-        li.separator{
-            display: flex;
-        }
         div.navbar-collapse{
             position: relative;
-        } li.nav-item {
+        }
+        li.nav-item {
             margin: 10px;
         }
         a.nav-link.animation:hover::after{
