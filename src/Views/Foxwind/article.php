@@ -15,11 +15,11 @@ ob_start();
         </div>
         <div class="square square-clair" id="squareClairArticle"></div>
     </section>
-    <div class="mainSeparator"></div>
-    <section id="contenu" class="ql-editor">
+    <section id="contenu" class="ql-editor ql-container">
+        <div class="mainSeparator"></div>
         <?= $article->getContent() ?>
+        <div class="mainSeparator"></div>
     </section>
-    <div class="mainSeparator"></div>
 
     <section id="comments">
         <h2 class="title">Réagissez à l'article </h2>

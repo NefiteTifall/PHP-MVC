@@ -281,15 +281,14 @@ input {
     width: 100%;
   }
 }
-.ql-snow .ql-picker.ql-size .ql-picker-label::before,
-.ql-snow .ql-picker.ql-size .ql-picker-item::before {
-  content: attr(data-value) !important;
+.ql-editor > * {
+  cursor: default !important;
 }
 
 .mainSeparator {
-  margin: 0 0 0 150px;
+  margin: 15px 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.9);
-  width: 78%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1000px) {
