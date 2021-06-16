@@ -49,7 +49,7 @@ use Foxwind\Controllers\UserController;
                     <span>Mon compte</span></a>
             </li>
 
-            <?php if(UserController::isAdmin() && !UserController::hasRole(1)){ ?>
+            <?php if(UserController::isAdmin() && !UserController::hasRole(2)){ ?>
                 <!-- Divider -->
                 <hr class="sidebar-divider">
 
@@ -65,9 +65,9 @@ use Foxwind\Controllers\UserController;
                     </a>
                     <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
-                            <h6 class="collapse-header">Gérer les articles:</h6>
+                            <h6 class="collapse-header">Gérer les articles :</h6>
                             <a class="collapse-item" href="/article/create">Créer un article</a>
-                            <a class="collapse-item" href="">Voir les articles</a>
+                            <a class="collapse-item" href="/article/show">Voir les articles</a>
                             <a class="collapse-item" href="/compte/article">Voir mes articles</a>
                         </div>
                     </div>

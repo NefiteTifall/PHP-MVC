@@ -12,93 +12,65 @@ body {
 
 #formul {
   padding: 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-
 #formul .cart-content {
   width: 70%;
   min-width: 310px;
   margin-top: 15px;
 }
-
 #formul .cart-content h1 {
   background-color: #EBEBEB;
   padding: 10px 25px;
   font-size: 45px;
   font-family: "Lato Regular";
 }
-
 #formul .cart-content .cart-elements {
   margin: 15px 0;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 9fr;
-      grid-template-columns: auto 9fr;
+  grid-template-columns: auto 9fr;
   grid-column-gap: 10px;
 }
-
 #formul .cart-content .cart-elements .cart-img-container {
-  -ms-grid-row-span: 1;
-      grid-row-end: span 1;
+  grid-row-end: span 1;
   padding: 10px;
   background-color: #EBEBEB;
 }
-
 #formul .cart-content .cart-elements .cart-img-container img {
   padding: 5px;
   background-color: white;
 }
-
 #formul .cart-content .cart-elements .cart-text-container {
-  -ms-grid-row-span: 2;
-      grid-row-end: span 2;
+  grid-row-end: span 2;
   margin: auto 0;
 }
-
 #formul .cart-content .cart-elements .cart-text-container h3 {
   font-size: 34px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-
 #formul .cart-content .cart-elements .cart-text-container .price {
   color: #7d8f41;
   font-family: "Montserrat Regular";
 }
-
 #formul .cart-content .cart-elements .cart-text-container .delete {
   color: red;
 }
-
 #formul .cart-content .cart-elements .cart-text-container p {
   font-size: 29px;
   font-family: "Montserrat Light";
 }
-
 #formul .cart-content .cart-elements .cart-text-container p .bold {
   font-family: "Montserrat Bold";
 }
-
 #formul .cart-content .cart-elements .cart-text-container a {
   font-family: "Lato Regular";
   font-size: 25px;
 }
-
 #formul .cart-content .total {
   padding: 10px 25px;
   margin-top: 10px;
@@ -106,7 +78,6 @@ body {
   width: 100%;
   border-radius: 5px;
 }
-
 #formul .resume {
   text-align: center;
   margin-top: 15px;
@@ -116,7 +87,6 @@ body {
   border-radius: 5px;
   color: white;
 }
-
 #formul .resume h2 {
   text-align: left;
   margin: 0;
@@ -124,59 +94,41 @@ body {
   font-size: 30px;
   font-family: "Montserrat Regular", serif;
 }
-
 #formul .resume .separator {
   width: 100%;
   height: 1px;
   padding: 0;
   background-color: white;
 }
-
 #formul .resume div.content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 15px 0;
 }
-
 #formul .resume div.content div.top {
   width: 90%;
 }
-
 #formul .resume div.content div.price {
   width: 95%;
 }
-
 #formul .resume div.content div.bottom {
   width: 90%;
 }
-
 #formul .resume div.content div.bottom p {
   margin: 15px 0;
 }
-
 #formul .resume p {
   font-family: "Montserrat Regular";
   color: white;
   padding: 15px 15px;
   margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #formul .resume .total {
   font-size: 30px;
 }
-
 #formul .resume .button {
   display: inline-block;
   margin: 0 auto 25px auto;
@@ -186,12 +138,10 @@ body {
   padding: 11px 15px;
   border: solid 1px white;
   border-radius: 5px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   font-size: 18px;
   font-weight: 700;
 }
-
 #formul .resume .button:hover {
   border: solid 1px white;
   background-color: transparent;
@@ -204,45 +154,33 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-
 .cart-form .input-contain {
   text-align: left;
   width: 100%;
 }
-
 .cart-form .input-contain label, .cart-form .input-contain input {
   font-family: "Lato Regular";
   display: block;
   width: 100%;
   margin: 0;
 }
-
 .cart-form .input-contain input {
   border: solid 2px #7d8f41;
   border-radius: 15px;
   padding: 10px 25px;
 }
-
 .cart-form .input-contain input {
   outline: none;
 }
-
 .cart-form .input-group {
   margin: 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
 .cart-form .input-group .input-contain {
   width: 49%;
 }
-
 .cart-form button {
   margin-top: 50px;
   margin-bottom: 75px;
@@ -251,10 +189,8 @@ body {
   color: white;
   padding: 10px 75px;
   border-radius: 15px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
 .cart-form button:hover {
   border: solid 1px #7d8f41;
   background-color: transparent;
@@ -265,6 +201,7 @@ body {
   #rightDecoration {
     width: 90%;
   }
+
   #formul {
     padding: 100px 0;
   }
@@ -287,15 +224,16 @@ body {
   #formul .resume {
     width: 30%;
   }
+
   .cart-form {
     padding: 0 10px;
   }
 }
-
 @media screen and (max-width: 767px) {
   #rightDecoration {
     display: none;
   }
+
   #formul {
     padding: 10px 0;
   }
@@ -319,9 +257,10 @@ body {
     width: 300px;
     min-width: 0;
   }
+
   .cart-form .input-group .input-contain {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
   }
 }
+
 /*# sourceMappingURL=formul.css.map */

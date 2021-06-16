@@ -11300,5 +11300,10 @@ body.sidebar-toggled footer.sticky-footer {
   background-size: cover;
   background-position: center;
   border-radius: 17px;
+}
 
+.tableElement:hover{
+  background-color: #c1c1c1;
+  color: #3e3e3e;
+  cursor: pointer;
 }

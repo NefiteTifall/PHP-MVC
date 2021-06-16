@@ -12060,4 +12060,10 @@ body.sidebar-toggled footer.sticky-footer {
   border-radius: 17px;
 }
 
+.tableElement:hover {
+  background-color: #c1c1c1;
+  color: #3e3e3e;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=backoffice-style.css.map */
