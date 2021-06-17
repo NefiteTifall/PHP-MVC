@@ -3,7 +3,7 @@ ob_start();
 ?>
     <!-- Titre de la section -->
     <div class="d-sm-flex align-items-center mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Articles du site</h1>
+        <h1 class="h3 mb-0 text-gray-800">Utilisateurs du site</h1>
     </div>
 
     <table class="table">
@@ -33,5 +33,5 @@ ob_start();
 <?php
 $content = ob_get_clean();
 $description = '';
-$title = 'Gerer les articles ';
+$title = 'Gerer les utlisateurs ';
 require VIEWS . ROAD . '/Back/layout.php';
