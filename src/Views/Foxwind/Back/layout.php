@@ -11,7 +11,7 @@ use Foxwind\Controllers\UserController;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?= $description  ?>">
-    <title><?= "Tableau de bord" ?> | Fox Wind</title>
+    <title><?php if(isset($title)) echo $title; ?> | FoxWind</title>
     <!-- Bootstrap link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -33,9 +33,9 @@ use Foxwind\Controllers\UserController;
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <!-- FOX WIND LOGO -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <div class="sidebar-brand-icon">
+
                 </div>
                 <div class="sidebar-brand-text mx-3">FoxWind <sup>BACKOFFICE</sup></div>
             </a>
@@ -77,7 +77,7 @@ use Foxwind\Controllers\UserController;
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="/user/show">
                     <i class="fas fa-users-cog"></i>
                     <span>Utilisateurs</span></a>
             </li>

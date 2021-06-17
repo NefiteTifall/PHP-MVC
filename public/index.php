@@ -26,6 +26,8 @@ $router->get('/checkout', "MainController@commande");
 
 $router->get('/compte', "MainController@user"); //Back-office -> Compte
 $router->get('/compte/article', "ArticleController@userArticles"); //Back-office -> Articles du compte
+$router->get('/user/:id/delete', "UserController@delete"); //Back-office -> Suppression d'un user
+$router->get('/user/show', "UserController@manageUsers"); //Back-office -> Users du site
 
 $router->get('/comment/:id/delete', "CommentController@deleteCom");
 $router->get('/destroy', "MainController@destroySession"); // Développement à enlever sur la prod

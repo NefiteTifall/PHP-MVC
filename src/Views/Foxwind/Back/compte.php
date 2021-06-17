@@ -14,8 +14,8 @@ ob_start();
                 <div class="card-body">
                     <h5 class="card-title text-center"><?= $_SESSION["user"]["name"] ?></h5>
                     <hr class="sidebar-divider my-0" style="padding-bottom: 15px;">
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Mes commandes</a>
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Mes articles</a>
+                        <a href="/cart" class="btn btn-primary btn-lg btn-block">Mes commandes</a>
+                        <a href="/compte/article" class="btn btn-primary btn-lg btn-block">Mes articles</a>
                 </div>
             </div>
         </div>

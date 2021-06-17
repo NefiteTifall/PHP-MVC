@@ -75,6 +75,11 @@ class UserManager {
         ));
     }
 
+    public function removeUserByID($ID){
+        $userReq = $this->bdd->prepare('DELETE FROM utilisateur WHERE id_user = ?');
+        $userReq->execute(array( $ID ));
+    }
+
     public function getRoles($id){
         $stmt = $this->bdd->prepare('SELECT * FROM utilisateur WHERE id_user=?');
         $stmt->execute(array(

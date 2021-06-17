@@ -23,13 +23,52 @@ class UserController {
         require VIEWS . 'Auth/register.php';
     }
 
-    public function logout()
-    {
+    public function manageUsers(){
+        if(!UserController::isAuth()) {
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Veuillez vous identifier!";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location:/login");
+            die;
+        }
+        if(!UserController::isAdmin() && UserController::hasRole(2)) {
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous ne possédez pas les droits nécessaires!";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location:/compte");
+            die;
+        }
+        $users = $this->manager->all();
+        require VIEWS . ROAD . '/Back/users.php';
+    }
 
-
+    public function logout() {
         //Déconnecte l'utilisateur
         session_destroy();
         header("Location: /");
+    }
+
+    public function delete($id){
+        if(!UserController::isAdmin() && !UserController::hasRole(2)){
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Vous n'avez pas la permission de modifier cet utilisateur !";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location: /");
+            die;
+        }
+
+        $user = $this->manager->findId($id);
+        if (!$user){
+            $_SESSION["popup"]["title"] = "ERREUR 🤖";
+            $_SESSION["popup"]["text"] = "Cette utilisateur n'existe pas !";
+            $_SESSION["popup"]["type"] = "error";
+            header("Location: /");
+            die;
+        }
+
+        $this->manager->removeUserByID($id);
+
+        header("Location: /user/show");
     }
 
     public function isUserNameValide($name){
