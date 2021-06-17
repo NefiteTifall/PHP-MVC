@@ -23,7 +23,6 @@ ob_start();
                 <td><?= $user->getUsername(); ?></td>
                 <td><?= $user->getEmail(); ?></td>
                 <td><?= $user->getIdRole(); ?></td>
-                <td></td>
                 <td><a href="/user/<?=$user->getIdUser();?>/delete"><i class="fas fa-trash-alt"></i></a></td>
             </tr>
         <?php } ?>
