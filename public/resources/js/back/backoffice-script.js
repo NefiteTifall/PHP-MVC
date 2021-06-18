@@ -57,13 +57,15 @@
 
 //Fonction qui verifie se qui a activer sur le style ou non (Sidebar)
 function sidebarActivation(){
-  const currentLocation = window.location.pathname.replace("/", "");
+  const currentLocation = window.location.pathname.split("/");
   const navItemSidebar = document.getElementsByClassName("nav-item");
+
+  console.log(currentLocation);
 
   //Boucle tout les elements trouvés a partir de la class "nav-item"
   for(let i=0; i<navItemSidebar.length; i++){
     let item = $(navItemSidebar[i]);
-    if(item.attr("class").includes(currentLocation)){
+    if(item.attr("class").includes(currentLocation[1])){
       item.addClass("active");
     }
   }

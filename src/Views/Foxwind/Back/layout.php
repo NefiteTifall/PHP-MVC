@@ -58,7 +58,7 @@ use Foxwind\Controllers\UserController;
                 <div class="sidebar-heading"> Contenu du site </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
+                <li class="nav-item article">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                        aria-expanded="true" aria-controls="collapsePages">
                         <i class="fas fa-fw fa-folder"></i>
@@ -76,13 +76,13 @@ use Foxwind\Controllers\UserController;
 
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item user">
                 <a class="nav-link" href="/user/show">
                     <i class="fas fa-users-cog"></i>
                     <span>Utilisateurs</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">
+            <li class="nav-item contact">
+                <a class="nav-link" href="/contact/show">
                     <i class="fas fa-inbox"></i>
                     <span>Messages / Contacts</span></a>
             </li>

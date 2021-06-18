@@ -24,6 +24,9 @@ $router->get('/contact', "MainController@contact");
 $router->get('/cart', "MainController@cart");
 $router->get('/checkout', "MainController@commande");
 
+$router->get('/contact/show', "ContactController@show"); //Back-office -> Messages du site via page de contact
+$router->get('/contact/show/:id', "ContactController@showByID"); //Back-office -> Contenu du message
+$router->get('/contact/show/:id/delete', "ContactController@delete"); //Back-office -> Supprime un message
 $router->get('/compte', "MainController@user"); //Back-office -> Compte
 $router->get('/compte/article', "ArticleController@userArticles"); //Back-office -> Articles du compte
 $router->get('/user/:id/delete', "UserController@delete"); //Back-office -> Suppression d'un user
