@@ -57,32 +57,29 @@ $eol = 50;
         <div id="buy">
             <div id="eolImages">
                 <div class="eolContainer">
-                    <img src="resources/image/eol1.svg">
+                    <img src="resources/image/eol-1.jpg">
                 </div>
                 <div class="eolContainer">
-                    <img src="resources/image/eol1.svg">
+                    <img src="resources/image/eol-2.jpg">
                 </div>
                 <div class="break"></div>
                 <div class="eolContainer">
-                    <img src="resources/image/eol1.svg">
+                    <img src="resources/image/eol-3.jpg">
                 </div>
                 <div class="eolContainer">
-                    <img src="resources/image/eol1.svg">
+                    <img src="resources/image/eol-4.jpg">
                 </div>
                 <span class="rond rond-clair" id="rondClaireBuy"></span>
 
             </div>
             <div id="bigEolImage">
-                <img src="resources/image/eol1.svg">
+                <img src="resources/image/eol-1.jpg">
             </div>
             <div id="eolDescription">
-                <h2>Éolienne <span class="price">666€</span></h2>
+                <h2>Éolienne <span class="price">34,99€</span></h2>
                 <p class="desc">
-                    This is Photoshop's version of Lorem Ipsum.
-                    Proin kdagravida nibh vel velit auctor aliquet.
-                    aks Aenean sollicitudin, lorem quis bibendum
-                    auctor, nisi elit consequat ipsum kda, nec sagittis
-                    sem nibh id elit. Duis sed odio sit amet is life.
+                    Faible vitesse de démarrage, 6 lames, haute consommation d'énergie éolienne. 200W 4 lames
+                    Installation facile via une prise type USB intégrée. 500 tours par minutes max.
                 </p>
                 <form action="/addCart" method="POST">
                     <p class="number">

@@ -163,6 +163,7 @@ section {
   margin: 12px;
 }
 #thirdSec #buy #eolImages .eolContainer img {
+  max-height: 114px;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -172,11 +173,11 @@ section {
 }
 #thirdSec #buy #bigEolImage {
   position: relative;
-  margin: auto 0;
+  margin: auto 50px;
 }
 #thirdSec #buy #bigEolImage img {
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
 }
 #thirdSec #buy #eolDescription {
   position: relative;
