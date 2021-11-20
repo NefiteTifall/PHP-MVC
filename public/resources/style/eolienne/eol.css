@@ -130,7 +130,7 @@ section {
 }
 
 #thirdSec {
-  padding: 50px 5% 150px 5%;
+  padding: 50px 5% 150px;
 }
 #thirdSec #buy {
   position: relative;
@@ -205,7 +205,7 @@ section {
   font-family: "Montserrat Regular", serif;
 }
 #thirdSec #buy #eolDescription .desc {
-  margin: 75px 0 75px 0;
+  margin: 75px 0;
 }
 #thirdSec #buy #eolDescription p {
   color: white;
@@ -337,7 +337,7 @@ section {
 }
 @media screen and (max-width: 1100px) {
   #firstSec {
-    padding: 100px 40px 100px;
+    padding: 100px 40px;
   }
   #firstSec .right {
     position: relative;
@@ -432,7 +432,7 @@ section {
   }
 
   #thirdSec {
-    padding: 0 0 50px 0;
+    padding: 0 0 50px;
   }
   #thirdSec #buy {
     padding: 20px 10px;
@@ -440,5 +440,3 @@ section {
     box-shadow: none;
   }
 }
-
-/*# sourceMappingURL=eol.css.map */

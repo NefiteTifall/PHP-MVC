@@ -39,7 +39,7 @@ nav{
         width: auto;
         margin: auto 10px;
         object {
-            margin: 10px 0 0 0;
+            margin: 10px 0 0;
             color: white;
             svg {
                 color: white;
@@ -216,8 +216,8 @@ nav{
   height: 2px;
 }
 ::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
+    width: 0;
+    height: 0;
 }
 ::-webkit-scrollbar-thumb {
     background: #3C3C3C;
