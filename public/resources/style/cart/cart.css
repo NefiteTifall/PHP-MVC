@@ -124,7 +124,7 @@ body {
 #cart .resume p {
   font-family: "Montserrat Regular";
   color: white;
-  padding: 15px 15px;
+  padding: 15px;
   margin: 0;
   display: flex;
   justify-content: space-between;
@@ -134,7 +134,7 @@ body {
 }
 #cart .resume .button {
   display: inline-block;
-  margin: 0 auto 25px auto;
+  margin: 0 auto 25px;
   width: 80%;
   background-color: white;
   color: black;
@@ -208,5 +208,3 @@ body {
     min-width: 0;
   }
 }
-
-/*# sourceMappingURL=cart.css.map */

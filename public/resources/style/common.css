@@ -30,7 +30,6 @@
   src: url("/resources/style/font/Montserrat-Bold.ttf");
 }
 /* Fonts */
-/*# sourceMappingURL=fonts.css.map */
 /* Variable */
 footer {
   text-align: center;
@@ -38,7 +37,7 @@ footer {
 footer section {
   background: #525c30;
   background: linear-gradient(180deg, #525c30 0%, #10120a 100%);
-  padding: 80px 0 40px 0;
+  padding: 80px 0 40px;
 }
 footer img {
   width: 100%;
@@ -180,7 +179,7 @@ nav .nav-item {
   margin: auto 10px;
 }
 nav .nav-item object {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   color: white;
 }
 nav .nav-item object svg {
@@ -341,8 +340,8 @@ nav .nav-item div svg {
 }
 
 ::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -485,7 +484,7 @@ button {
 
 .full-button-white {
   background-color: white;
-  padding: 7px 17px 7px 17px;
+  padding: 7px 17px;
   border-radius: 50px;
   color: #7d8f41;
   font-family: "Lato Bold", serif;
@@ -501,7 +500,7 @@ button {
 
 .full-button-green {
   background-color: #7d8f41;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px;
   border-radius: 25px;
   border: 1px solid white;
   color: white;
@@ -770,7 +769,7 @@ button {
   background-color: #fff;
   border-radius: 4px;
   max-width: 500px;
-  top: 0px;
+  top: 0;
   position: relative;
   box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.2);
 }
@@ -854,5 +853,3 @@ button {
 .toast--yellow:before {
   background-color: #FF2828;
 }
-
-/*# sourceMappingURL=common.css.map */

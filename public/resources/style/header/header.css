@@ -49,7 +49,7 @@ nav .nav-item {
 }
 
 nav .nav-item object {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   color: white;
 }
 
@@ -227,8 +227,8 @@ nav .nav-item div svg {
 }
 
 ::-webkit-scrollbar-button {
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -252,4 +252,3 @@ nav .nav-item div svg {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-/*# sourceMappingURL=header.css.map */

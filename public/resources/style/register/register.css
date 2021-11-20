@@ -30,7 +30,6 @@
   src: url("/resources/style/font/Montserrat-Bold.ttf");
 }
 /* Fonts */
-/*# sourceMappingURL=fonts.css.map */
 /* Imports */
 /* SVG Forms */
 .topRight {
@@ -55,7 +54,7 @@
 }
 
 .bottomLeftFormSVG {
-  bottom: 0px;
+  bottom: 0;
   position: fixed;
   z-index: -100;
   left: -100px;
@@ -133,9 +132,9 @@ body {
   border-radius: 70px;
   display: flex;
   justify-content: center;
-  box-shadow: 10px 10px 0px 0px rgba(119, 68, 24, 0.4);
+  box-shadow: 10px 10px 0 0 rgba(119, 68, 24, 0.4);
   width: 60%;
-  margin: 80px 0 180px 0;
+  margin: 80px 0 180px;
   /* Titre du formulaire */
   /* Titre du formulaire */
   /* Inputs du formulaire */
@@ -213,7 +212,7 @@ body {
 /* Responsive */
 @media screen and (max-width: 1500px) {
   .Form {
-    margin: 80px 0 180px 0;
+    margin: 80px 0 180px;
   }
 }
 @media screen and (max-width: 1059px) {
@@ -236,23 +235,21 @@ body {
   }
 
   .Form {
-    margin: 80px 0 150px 0;
-    box-shadow: 0px 0px 0px 0px;
-    border-radius: 0px;
+    margin: 80px 0 150px;
+    box-shadow: 0 0 0 0;
+    border-radius: 0;
   }
   .Form h1 {
-    padding: 0px 0 0 0;
+    padding: 0;
     font-size: 38px;
   }
 }
 @media screen and (max-width: 767px) {
   .Form {
-    margin: 0 0 0 0;
+    margin: 0;
   }
   .Form h1 {
-    padding: 10px 0 0 0;
+    padding: 10px 0 0;
     font-size: 30px;
   }
 }
-
-/*# sourceMappingURL=register.css.map */

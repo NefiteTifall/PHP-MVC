@@ -73,7 +73,7 @@ section {
   align-items: center;
   padding: 50px 25px 25px;
   border-radius: 25px;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
   background-color: white;
   text-align: center;
   margin: 15px 0;
@@ -198,9 +198,9 @@ section {
   transform: rotate(70deg);
 }
 #donation button {
-  margin: 50px 0 0 0;
+  margin: 50px 0 0;
   font-size: 32px;
-  padding: 5px 25px 5px 25px;
+  padding: 5px 25px;
 }
 
 #why {
@@ -234,7 +234,7 @@ section {
 #why .left p, #why .right p {
   font-size: 26px;
   font-family: "Montserrat Bold";
-  margin: auto 0 auto 0;
+  margin: auto 0;
   width: 100%;
 }
 #why .right {
@@ -426,5 +426,3 @@ section {
     margin: 0 auto;
   }
 }
-
-/*# sourceMappingURL=accueil.css.map */

@@ -5,7 +5,7 @@ footer {
 footer section {
   background: #525c30;
   background: linear-gradient(180deg, #525c30 0%, #10120a 100%);
-  padding: 80px 0 40px 0;
+  padding: 80px 0 40px;
 }
 footer img {
   width: 100%;
@@ -107,5 +107,3 @@ footer .col-md-4 {
     min-height: 40px;
   }
 }
-
-/*# sourceMappingURL=footer.css.map */
