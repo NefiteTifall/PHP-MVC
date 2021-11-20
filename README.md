@@ -1,8 +1,8 @@
 ## ✨ FoxWind
 **This project is only for our learning, is not a real project**
 
-In the case of our studies at [EDEN School](https://www.edenschool.fr) we do this website.  
-
+In the case of our studies at [EDEN School](https://www.edenschool.fr) we do this website.
+This website is available at https://foxwind.fr
 
 ## 🐱‍👤 Our team: 
 - [@RedLinesNT-Leo](https://github.com/RedLinesNT-Leo) » Development  
